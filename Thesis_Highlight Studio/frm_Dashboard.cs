@@ -12,11 +12,15 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Runtime.InteropServices;
 
+
 namespace Thesis_Highlight_Studio
 {
     public partial class frm_Dashboard : MaterialForm
     {
+      
         private MaterialSkinManager skinManager;
+        Color btnBackColor = Color.FromArgb(36, 89, 82);
+        Color retBackColor = Color.FromArgb(55, 71, 79);
         private int _startWidth = 42;
         private int _endWidth = 200;
         private int _stepSize = 10;
@@ -51,6 +55,17 @@ namespace Thesis_Highlight_Studio
             internal static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
         }
 
+        void reset_buttons()
+        {
+            materialRaisedButton1.Enabled = true;
+            materialRaisedButton2.Enabled = true;
+            materialRaisedButton3.Enabled = true;
+            materialRaisedButton4.Enabled = true;
+            materialRaisedButton5.Enabled = true;
+            materialRaisedButton6.Enabled = true;
+
+            materialRaisedButton1.BackColor = retBackColor;
+        }
 
         private void timer_Open_Tick(object sender, EventArgs e)
         {
@@ -152,5 +167,36 @@ namespace Thesis_Highlight_Studio
                 timer_Close.Enabled = true;
             }
         }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                reset_buttons();
+                if (Mainpnl.Controls.Count < 1)
+                {
+                    reset_buttons();
+                    if (Mainpnl.Controls.Count < 1)
+                    {
+                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
+                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
+                    }
+                    else
+                    {
+                        Mainpnl.Controls.Clear();
+                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
+                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
+                    }
+                    Button btn = sender as Button;
+                    btn.Enabled = false;
+                    btn.BackColor = btnBackColor;
+                    UserPanel.Client_Views.Instance.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
     }
 }

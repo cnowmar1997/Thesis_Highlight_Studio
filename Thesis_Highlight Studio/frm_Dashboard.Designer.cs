@@ -100,6 +100,7 @@
             this.materialRaisedButton1.Text = "Manage Client";
             this.materialRaisedButton1.UseVisualStyleBackColor = false;
             this.materialRaisedButton1.Visible = false;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // materialRaisedButton2
             // 
