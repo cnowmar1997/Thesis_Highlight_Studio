@@ -20,7 +20,7 @@ namespace Thesis_Highlight_Studio
             }
         }
 
-        protected static string defaultConnectionString = "server=localhost; User id=root; password=; database=redcrossdb";
+        protected static string defaultConnectionString = "server=localhost; User id=root; password=; database=";
         protected static string filepath = AppDomain.CurrentDomain.BaseDirectory.ToString();
         protected static string filename = "dbserver.cfg";
         private static string ConString()
