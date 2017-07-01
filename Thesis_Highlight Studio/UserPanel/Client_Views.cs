@@ -28,5 +28,11 @@ namespace Thesis_Highlight_Studio.UserPanel
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            _AddClient add = new _AddClient();
+            DimForm.Show(this.ParentForm, add);
+        }
     }
 }

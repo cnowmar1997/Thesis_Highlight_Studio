@@ -60,11 +60,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMsgBox.Designer.cs">
+      <DependentUpon>CMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DimForm.Designer.cs">
+      <DependentUpon>DimForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Dashboard.Designer.cs">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +92,23 @@
     <Compile Include="UserPanel\Client_Views.Designer.cs">
       <DependentUpon>Client_Views.cs</DependentUpon>
     </Compile>
+    <Compile Include="_AddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_AddClient.Designer.cs">
+      <DependentUpon>_AddClient.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CMsgBox.resx">
+      <DependentUpon>CMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DimForm.resx">
+      <DependentUpon>DimForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Dashboard.resx">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,9 +118,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserPanel\Client_Views.resx">
       <DependentUpon>Client_Views.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_AddClient.resx">
+      <DependentUpon>_AddClient.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -103,7 +140,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="10624929_1468788220076131_7648855483895637143_n.jpg" />
+    <Content Include="add.png" />
+    <Content Include="photo-camera-png-image--photo-camera-png-image-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

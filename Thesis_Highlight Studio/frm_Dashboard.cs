@@ -17,7 +17,7 @@ namespace Thesis_Highlight_Studio
 {
     public partial class frm_Dashboard : MaterialForm
     {
-      
+        DimForm df = new DimForm();
         private MaterialSkinManager skinManager;
         Color btnBackColor = Color.FromArgb(36, 89, 82);
         Color retBackColor = Color.FromArgb(55, 71, 79);
@@ -39,8 +39,8 @@ namespace Thesis_Highlight_Studio
             NativeWinAPI.SetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE, style);
             skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
         }
         internal static class NativeWinAPI
@@ -195,8 +195,10 @@ namespace Thesis_Highlight_Studio
             }
             catch (Exception ex)
             {
+                
             }
         }
+
 
     }
 }
