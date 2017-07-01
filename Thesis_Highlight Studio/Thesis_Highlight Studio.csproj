@@ -66,6 +66,7 @@
     <Compile Include="CMsgBox.Designer.cs">
       <DependentUpon>CMsgBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dbase.cs" />
     <Compile Include="DimForm.cs">
       <SubType>Form</SubType>
     </Compile>
