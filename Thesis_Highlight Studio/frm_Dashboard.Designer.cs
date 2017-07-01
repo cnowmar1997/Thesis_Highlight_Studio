@@ -34,17 +34,31 @@
             this.timer_Open = new System.Windows.Forms.Timer(this.components);
             this.timer_Close = new System.Windows.Forms.Timer(this.components);
             this.Mainpnl = new System.Windows.Forms.Panel();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Menu_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.Menu_panel.Controls.Add(this.materialRaisedButton6);
+            this.Menu_panel.Controls.Add(this.materialRaisedButton5);
+            this.Menu_panel.Controls.Add(this.materialRaisedButton4);
+            this.Menu_panel.Controls.Add(this.materialRaisedButton3);
+            this.Menu_panel.Controls.Add(this.materialRaisedButton2);
+            this.Menu_panel.Controls.Add(this.materialRaisedButton1);
             this.Menu_panel.Controls.Add(this.Menu_label);
             this.Menu_panel.Location = new System.Drawing.Point(0, 64);
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(42, 705);
             this.Menu_panel.TabIndex = 0;
+            this.Menu_panel.MouseEnter += new System.EventHandler(this.Menu_panel_MouseEnter);
+            this.Menu_panel.MouseLeave += new System.EventHandler(this.Menu_panel_MouseLeave);
             // 
             // Menu_label
             // 
@@ -69,18 +83,96 @@
             // 
             // Mainpnl
             // 
-            this.Mainpnl.Location = new System.Drawing.Point(48, 77);
+            this.Mainpnl.Location = new System.Drawing.Point(48, 78);
             this.Mainpnl.Name = "Mainpnl";
             this.Mainpnl.Size = new System.Drawing.Size(1306, 679);
             this.Mainpnl.TabIndex = 1;
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(9, 75);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton1.TabIndex = 0;
+            this.materialRaisedButton1.Text = "Manage Client";
+            this.materialRaisedButton1.UseVisualStyleBackColor = false;
+            this.materialRaisedButton1.Visible = false;
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(12, 139);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton2.TabIndex = 0;
+            this.materialRaisedButton2.Text = "Buttons";
+            this.materialRaisedButton2.UseVisualStyleBackColor = false;
+            this.materialRaisedButton2.Visible = false;
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(12, 206);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton3.TabIndex = 0;
+            this.materialRaisedButton3.Text = "Buttons";
+            this.materialRaisedButton3.UseVisualStyleBackColor = false;
+            this.materialRaisedButton3.Visible = false;
+            // 
+            // materialRaisedButton4
+            // 
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Location = new System.Drawing.Point(12, 282);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton4.TabIndex = 0;
+            this.materialRaisedButton4.Text = "Buttons";
+            this.materialRaisedButton4.UseVisualStyleBackColor = false;
+            this.materialRaisedButton4.Visible = false;
+            // 
+            // materialRaisedButton5
+            // 
+            this.materialRaisedButton5.Depth = 0;
+            this.materialRaisedButton5.Location = new System.Drawing.Point(9, 346);
+            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton5.Name = "materialRaisedButton5";
+            this.materialRaisedButton5.Primary = true;
+            this.materialRaisedButton5.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton5.TabIndex = 0;
+            this.materialRaisedButton5.Text = "Buttons";
+            this.materialRaisedButton5.UseVisualStyleBackColor = false;
+            this.materialRaisedButton5.Visible = false;
+            // 
+            // materialRaisedButton6
+            // 
+            this.materialRaisedButton6.Depth = 0;
+            this.materialRaisedButton6.Location = new System.Drawing.Point(12, 409);
+            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton6.Name = "materialRaisedButton6";
+            this.materialRaisedButton6.Primary = true;
+            this.materialRaisedButton6.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton6.TabIndex = 0;
+            this.materialRaisedButton6.Text = "Buttons";
+            this.materialRaisedButton6.UseVisualStyleBackColor = false;
+            this.materialRaisedButton6.Visible = false;
             // 
             // frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.Mainpnl);
             this.Controls.Add(this.Menu_panel);
+            this.Controls.Add(this.Mainpnl);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_Dashboard";
@@ -100,6 +192,12 @@
         private System.Windows.Forms.Timer timer_Open;
         private System.Windows.Forms.Timer timer_Close;
         private System.Windows.Forms.Panel Mainpnl;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
 
     }
 }
