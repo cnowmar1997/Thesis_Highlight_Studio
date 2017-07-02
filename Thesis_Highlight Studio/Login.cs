@@ -26,11 +26,12 @@ namespace Thesis_Highlight_Studio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            skinManager.RemoveFormToManage(this);
             this.Hide();
             frm_Dashboard db = new frm_Dashboard();
             db.Show();

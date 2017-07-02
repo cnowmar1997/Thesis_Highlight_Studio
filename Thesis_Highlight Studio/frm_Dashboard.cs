@@ -18,6 +18,7 @@ namespace Thesis_Highlight_Studio
     public partial class frm_Dashboard : MaterialForm
     {
         DimForm df = new DimForm();
+        Provider P = new Provider();
         private MaterialSkinManager skinManager;
         Color btnBackColor = Color.FromArgb(36, 89, 82);
         Color retBackColor = Color.FromArgb(55, 71, 79);
@@ -31,9 +32,14 @@ namespace Thesis_Highlight_Studio
         private int _moveView = 48;
         private int _endmoveView = 219;
 
+
         public frm_Dashboard()
         {
             InitializeComponent();
+            Mainpnl.AutoScroll = true;
+     
+            // Mainpnl.AutoScrollMinSize = new Size(0, 0);
+            //Mainpnl.AutoScrollPosition = new Point(0,0);
             int style = NativeWinAPI.GetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE);
             style |= NativeWinAPI.WS_EX_COMPOSITED;
             NativeWinAPI.SetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE, style);
@@ -43,6 +49,7 @@ namespace Thesis_Highlight_Studio
             skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
         }
+
         internal static class NativeWinAPI
         {
             internal static readonly int GWL_EXSTYLE = -20;
@@ -53,6 +60,21 @@ namespace Thesis_Highlight_Studio
 
             [DllImport("user32")]
             internal static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+        }
+        void populate()
+        {
+            var list = P.Notes();
+            if (list.Any())
+            {
+                foreach (var tra in list)
+                {
+                    UserPanel.PnlNotes.Stack(this.Mainpnl, tra.WhatToDo, tra.description, tra.time, tra.date);
+                }
+            }
+            else
+            {
+                CMsgBox.Show("Empty");
+            }
         }
 
         void reset_buttons()
@@ -170,6 +192,7 @@ namespace Thesis_Highlight_Studio
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            Mainpnl.Controls.Clear();
             try
             {
                 reset_buttons();
@@ -177,7 +200,7 @@ namespace Thesis_Highlight_Studio
                 {
                     reset_buttons();
                     if (Mainpnl.Controls.Count < 1)
-                    {
+                    {  
                         Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
                         UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
                     }
@@ -195,10 +218,48 @@ namespace Thesis_Highlight_Studio
             }
             catch (Exception ex)
             {
-                
+                CMsgBox.Show(ex.Message);     
             }
         }
 
+        private void frm_Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (CMsgBox.Show("Are you sure you want to logout?", "Logging off........", CMsgBox.CMsgBtns.YesNo) == DialogResult.Yes)
+            {
+                skinManager.RemoveFormToManage(this);
+                Login log = new Login();
+                log.Show();
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
 
+        private void frm_Dashboard_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            Mainpnl.Controls.Clear();
+            try
+            {
+                reset_buttons();
+                if (Mainpnl.Controls.Count < 1)
+                {
+                    populate();
+                }
+                Button btn = sender as Button;
+                btn.Enabled = false;
+                btn.BackColor = btnBackColor;
+            }
+            catch (Exception ex)
+            {
+                CMsgBox.Show(ex.Message);
+            }
+        }
     }
 }

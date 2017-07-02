@@ -121,9 +121,10 @@
             this.materialRaisedButton2.Primary = true;
             this.materialRaisedButton2.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton2.TabIndex = 0;
-            this.materialRaisedButton2.Text = "Buttons";
+            this.materialRaisedButton2.Text = "Home";
             this.materialRaisedButton2.UseVisualStyleBackColor = false;
             this.materialRaisedButton2.Visible = false;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // materialRaisedButton1
             // 
@@ -172,14 +173,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.Menu_panel);
             this.Controls.Add(this.Mainpnl);
+            this.Controls.Add(this.Menu_panel);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_Dashboard";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hi-Light Studio Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Dashboard_FormClosing);
+            this.Load += new System.EventHandler(this.frm_Dashboard_Load);
             this.Menu_panel.ResumeLayout(false);
             this.Menu_panel.PerformLayout();
             this.ResumeLayout(false);
@@ -192,13 +196,13 @@
         private System.Windows.Forms.Label Menu_label;
         private System.Windows.Forms.Timer timer_Open;
         private System.Windows.Forms.Timer timer_Close;
-        private System.Windows.Forms.Panel Mainpnl;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private System.Windows.Forms.Panel Mainpnl;
 
     }
 }

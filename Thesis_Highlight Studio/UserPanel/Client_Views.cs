@@ -12,6 +12,7 @@ namespace Thesis_Highlight_Studio.UserPanel
 {
     public partial class Client_Views : UserControl
     {
+        private Point MouseDownLocation;
         private static Client_Views _instance;
         public static Client_Views Instance
         {
@@ -28,11 +29,25 @@ namespace Thesis_Highlight_Studio.UserPanel
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                MouseDownLocation = e.Location;
+            }
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                panel1.Left = e.X + panel1.Left - MouseDownLocation.X;
+                panel1.Top = e.Y + panel1.Top - MouseDownLocation.Y;
+            }
+        }
+        private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             _AddClient add = new _AddClient();
             DimForm.Show(this.ParentForm, add);
-        }
+        }   
     }
 }

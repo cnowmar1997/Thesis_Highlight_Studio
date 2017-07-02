@@ -20,9 +20,9 @@ namespace Thesis_Highlight_Studio
             }
         }
 
-        protected static string defaultConnectionString = "server=localhost; User id=root; password=; database=";
+        protected static string defaultConnectionString = "server=localhost; User id=root; password=; database=db_highlight_studio";
         protected static string filepath = AppDomain.CurrentDomain.BaseDirectory.ToString();
-        protected static string filename = "dbserver.cfg";
+        protected static string filename = "db_highlight_studio.cfg";
         private static string ConString()
         {
             string file = filepath+filename;
