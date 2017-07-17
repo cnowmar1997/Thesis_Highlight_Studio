@@ -1,6 +1,6 @@
 ﻿namespace Thesis_Highlight_Studio
 {
-    partial class frm_Dashboard
+    partial class frm_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -47,7 +49,9 @@
             // 
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.Menu_panel.Controls.Add(this.materialRaisedButton6);
+            this.Menu_panel.Controls.Add(this.materialRaisedButton8);
             this.Menu_panel.Controls.Add(this.materialRaisedButton5);
+            this.Menu_panel.Controls.Add(this.materialRaisedButton7);
             this.Menu_panel.Controls.Add(this.materialRaisedButton4);
             this.Menu_panel.Controls.Add(this.materialRaisedButton3);
             this.Menu_panel.Controls.Add(this.materialRaisedButton2);
@@ -69,9 +73,22 @@
             this.materialRaisedButton6.Primary = true;
             this.materialRaisedButton6.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton6.TabIndex = 0;
-            this.materialRaisedButton6.Text = "Buttons";
+            this.materialRaisedButton6.Text = "Sales";
             this.materialRaisedButton6.UseVisualStyleBackColor = false;
             this.materialRaisedButton6.Visible = false;
+            // 
+            // materialRaisedButton8
+            // 
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Location = new System.Drawing.Point(9, 391);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton8.TabIndex = 0;
+            this.materialRaisedButton8.Text = "Generate Report";
+            this.materialRaisedButton8.UseVisualStyleBackColor = false;
+            this.materialRaisedButton8.Visible = false;
             // 
             // materialRaisedButton5
             // 
@@ -82,9 +99,22 @@
             this.materialRaisedButton5.Primary = true;
             this.materialRaisedButton5.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton5.TabIndex = 0;
-            this.materialRaisedButton5.Text = "Buttons";
+            this.materialRaisedButton5.Text = "Manage Photo";
             this.materialRaisedButton5.UseVisualStyleBackColor = false;
             this.materialRaisedButton5.Visible = false;
+            // 
+            // materialRaisedButton7
+            // 
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Location = new System.Drawing.Point(9, 339);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(175, 46);
+            this.materialRaisedButton7.TabIndex = 0;
+            this.materialRaisedButton7.Text = "Manage Packages";
+            this.materialRaisedButton7.UseVisualStyleBackColor = false;
+            this.materialRaisedButton7.Visible = false;
             // 
             // materialRaisedButton4
             // 
@@ -95,7 +125,7 @@
             this.materialRaisedButton4.Primary = true;
             this.materialRaisedButton4.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton4.TabIndex = 0;
-            this.materialRaisedButton4.Text = "Buttons";
+            this.materialRaisedButton4.Text = "Products and Services";
             this.materialRaisedButton4.UseVisualStyleBackColor = false;
             this.materialRaisedButton4.Visible = false;
             // 
@@ -108,7 +138,7 @@
             this.materialRaisedButton3.Primary = true;
             this.materialRaisedButton3.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton3.TabIndex = 0;
-            this.materialRaisedButton3.Text = "Buttons";
+            this.materialRaisedButton3.Text = "Sales and Purchases";
             this.materialRaisedButton3.UseVisualStyleBackColor = false;
             this.materialRaisedButton3.Visible = false;
             // 
@@ -121,7 +151,7 @@
             this.materialRaisedButton2.Primary = true;
             this.materialRaisedButton2.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton2.TabIndex = 0;
-            this.materialRaisedButton2.Text = "Home";
+            this.materialRaisedButton2.Text = "Manage Client";
             this.materialRaisedButton2.UseVisualStyleBackColor = false;
             this.materialRaisedButton2.Visible = false;
             this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
@@ -135,7 +165,7 @@
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton1.TabIndex = 0;
-            this.materialRaisedButton1.Text = "Manage Client";
+            this.materialRaisedButton1.Text = "Manage Staff";
             this.materialRaisedButton1.UseVisualStyleBackColor = false;
             this.materialRaisedButton1.Visible = false;
             this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
@@ -168,7 +198,7 @@
             this.Mainpnl.Size = new System.Drawing.Size(1306, 679);
             this.Mainpnl.TabIndex = 1;
             // 
-            // frm_Dashboard
+            // frm_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,7 +207,7 @@
             this.Controls.Add(this.Menu_panel);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frm_Dashboard";
+            this.Name = "frm_Admin";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hi-Light Studio Dashboard";
@@ -203,6 +233,8 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private System.Windows.Forms.Panel Mainpnl;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
 
     }
 }

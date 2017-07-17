@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 
 namespace Thesis_Highlight_Studio
 {
-    public partial class frm_Dashboard : MaterialForm
+    public partial class frm_Admin : MaterialForm
     {
         DimForm df = new DimForm();
         Provider P = new Provider();
@@ -33,7 +33,7 @@ namespace Thesis_Highlight_Studio
         private int _endmoveView = 219;
 
 
-        public frm_Dashboard()
+        public frm_Admin()
         {
             InitializeComponent();
             Mainpnl.AutoScroll = true;
@@ -239,7 +239,7 @@ namespace Thesis_Highlight_Studio
 
         private void frm_Dashboard_Load(object sender, EventArgs e)
         {
-            populate();
+            //populate();
         }
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)
@@ -250,11 +250,23 @@ namespace Thesis_Highlight_Studio
                 reset_buttons();
                 if (Mainpnl.Controls.Count < 1)
                 {
-                    populate();
+                    reset_buttons();
+                    if (Mainpnl.Controls.Count < 1)
+                    {
+                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
+                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
+                    }
+                    else
+                    {
+                        Mainpnl.Controls.Clear();
+                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
+                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
+                    }
+                    Button btn = sender as Button;
+                    btn.Enabled = false;
+                    btn.BackColor = btnBackColor;
+                    UserPanel.Client_Views.Instance.Focus();
                 }
-                Button btn = sender as Button;
-                btn.Enabled = false;
-                btn.BackColor = btnBackColor;
             }
             catch (Exception ex)
             {

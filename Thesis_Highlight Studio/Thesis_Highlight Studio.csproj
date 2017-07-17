@@ -73,11 +73,29 @@
     <Compile Include="DimForm.Designer.cs">
       <DependentUpon>DimForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Dashboard.cs">
+    <Compile Include="frm_AddPhoto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Dashboard.Designer.cs">
-      <DependentUpon>frm_Dashboard.cs</DependentUpon>
+    <Compile Include="frm_AddPhoto.Designer.cs">
+      <DependentUpon>frm_AddPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AddUser.Designer.cs">
+      <DependentUpon>frm_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Admin.Designer.cs">
+      <DependentUpon>frm_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Client.Designer.cs">
+      <DependentUpon>frm_Client.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -85,29 +103,47 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partial.Designer.cs">
+      <DependentUpon>Partial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider.cs" />
-    <Compile Include="UserPanel\Client_Views.cs">
+    <Compile Include="userPanelViews\Client_View.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserPanel\Client_Views.Designer.cs">
-      <DependentUpon>Client_Views.cs</DependentUpon>
+    <Compile Include="userPanelViews\Client_View.Designer.cs">
+      <DependentUpon>Client_View.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserPanel\PnlNotes.cs">
+    <Compile Include="userPanelViews\frm_SalesandPurchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userPanelViews\frm_SalesandPurchases.Designer.cs">
+      <DependentUpon>frm_SalesandPurchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userPanelViews\Photo_View.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserPanel\PnlNotes.Designer.cs">
+    <Compile Include="userPanelViews\Photo_View.Designer.cs">
+      <DependentUpon>Photo_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userPanelViews\PnlNotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userPanelViews\PnlNotes.Designer.cs">
       <DependentUpon>PnlNotes.cs</DependentUpon>
     </Compile>
     <Compile Include="VerticalFlowPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="_AddClient.cs">
+    <Compile Include="frm_AddClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="_AddClient.Designer.cs">
-      <DependentUpon>_AddClient.cs</DependentUpon>
+    <Compile Include="frm_AddClient.Designer.cs">
+      <DependentUpon>frm_AddClient.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CMsgBox.resx">
       <DependentUpon>CMsgBox.cs</DependentUpon>
@@ -115,11 +151,23 @@
     <EmbeddedResource Include="DimForm.resx">
       <DependentUpon>DimForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Dashboard.resx">
-      <DependentUpon>frm_Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="frm_AddPhoto.resx">
+      <DependentUpon>frm_AddPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AddUser.resx">
+      <DependentUpon>frm_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Admin.resx">
+      <DependentUpon>frm_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Client.resx">
+      <DependentUpon>frm_Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partial.resx">
+      <DependentUpon>Partial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,14 +179,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserPanel\Client_Views.resx">
-      <DependentUpon>Client_Views.cs</DependentUpon>
+    <EmbeddedResource Include="userPanelViews\Client_View.resx">
+      <DependentUpon>Client_View.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserPanel\PnlNotes.resx">
+    <EmbeddedResource Include="userPanelViews\frm_SalesandPurchases.resx">
+      <DependentUpon>frm_SalesandPurchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userPanelViews\Photo_View.resx">
+      <DependentUpon>Photo_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userPanelViews\PnlNotes.resx">
       <DependentUpon>PnlNotes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="_AddClient.resx">
-      <DependentUpon>_AddClient.cs</DependentUpon>
+    <EmbeddedResource Include="frm_AddClient.resx">
+      <DependentUpon>frm_AddClient.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

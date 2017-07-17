@@ -33,7 +33,7 @@ namespace Thesis_Highlight_Studio
         {
             skinManager.RemoveFormToManage(this);
             this.Hide();
-            frm_Dashboard db = new frm_Dashboard();
+            frm_Admin db = new frm_Admin();
             db.Show();
         }
 

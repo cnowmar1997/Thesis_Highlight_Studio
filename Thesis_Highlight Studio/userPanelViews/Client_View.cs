@@ -46,8 +46,16 @@ namespace Thesis_Highlight_Studio.UserPanel
         }
         private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            _AddClient add = new _AddClient();
+            frm_AddClient add = new frm_AddClient();
             DimForm.Show(this.ParentForm, add);
-        }   
+        }
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
+                    contextMenuStrip1.Show(Cursor.Position);
+        }
+ 
     }
 }
