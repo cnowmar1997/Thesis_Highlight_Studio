@@ -1,6 +1,6 @@
 ﻿namespace Thesis_Highlight_Studio
 {
-    partial class frm_Admin
+    partial class frm_Main
     {
         /// <summary>
         /// Required designer variable.
@@ -125,7 +125,7 @@
             this.materialRaisedButton4.Primary = true;
             this.materialRaisedButton4.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton4.TabIndex = 0;
-            this.materialRaisedButton4.Text = "Products and Services";
+            this.materialRaisedButton4.Text = "Manage Client Schedule";
             this.materialRaisedButton4.UseVisualStyleBackColor = false;
             this.materialRaisedButton4.Visible = false;
             // 
@@ -138,7 +138,7 @@
             this.materialRaisedButton3.Primary = true;
             this.materialRaisedButton3.Size = new System.Drawing.Size(175, 46);
             this.materialRaisedButton3.TabIndex = 0;
-            this.materialRaisedButton3.Text = "Sales and Purchases";
+            this.materialRaisedButton3.Text = "Manage Packages";
             this.materialRaisedButton3.UseVisualStyleBackColor = false;
             this.materialRaisedButton3.Visible = false;
             // 
@@ -198,7 +198,7 @@
             this.Mainpnl.Size = new System.Drawing.Size(1306, 679);
             this.Mainpnl.TabIndex = 1;
             // 
-            // frm_Admin
+            // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,7 +207,7 @@
             this.Controls.Add(this.Menu_panel);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frm_Admin";
+            this.Name = "frm_Main";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hi-Light Studio Dashboard";

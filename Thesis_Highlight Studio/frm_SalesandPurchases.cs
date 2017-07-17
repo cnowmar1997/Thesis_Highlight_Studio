@@ -12,10 +12,11 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Runtime.InteropServices;
 
-namespace Thesis_Highlight_Studio.userPanelViews
+namespace Thesis_Highlight_Studio
 {
     public partial class frm_SalesandPurchases : MaterialForm
     {
+
         private readonly MaterialSkinManager skinManager;
         public frm_SalesandPurchases()
         {
@@ -41,6 +42,5 @@ namespace Thesis_Highlight_Studio.userPanelViews
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
-
     }
 }

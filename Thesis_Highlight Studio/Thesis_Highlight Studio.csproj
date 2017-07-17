@@ -91,11 +91,11 @@
     <Compile Include="frm_Admin.Designer.cs">
       <DependentUpon>frm_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Client.cs">
+    <Compile Include="frm_SalesandPurchases.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Client.Designer.cs">
-      <DependentUpon>frm_Client.cs</DependentUpon>
+    <Compile Include="frm_SalesandPurchases.Designer.cs">
+      <DependentUpon>frm_SalesandPurchases.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -117,12 +117,6 @@
     </Compile>
     <Compile Include="userPanelViews\Client_View.Designer.cs">
       <DependentUpon>Client_View.cs</DependentUpon>
-    </Compile>
-    <Compile Include="userPanelViews\frm_SalesandPurchases.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="userPanelViews\frm_SalesandPurchases.Designer.cs">
-      <DependentUpon>frm_SalesandPurchases.cs</DependentUpon>
     </Compile>
     <Compile Include="userPanelViews\Photo_View.cs">
       <SubType>UserControl</SubType>
@@ -160,8 +154,8 @@
     <EmbeddedResource Include="frm_Admin.resx">
       <DependentUpon>frm_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Client.resx">
-      <DependentUpon>frm_Client.cs</DependentUpon>
+    <EmbeddedResource Include="frm_SalesandPurchases.resx">
+      <DependentUpon>frm_SalesandPurchases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -181,9 +175,6 @@
     </Compile>
     <EmbeddedResource Include="userPanelViews\Client_View.resx">
       <DependentUpon>Client_View.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userPanelViews\frm_SalesandPurchases.resx">
-      <DependentUpon>frm_SalesandPurchases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userPanelViews\Photo_View.resx">
       <DependentUpon>Photo_View.cs</DependentUpon>
@@ -213,6 +204,7 @@
     <Content Include="add.png" />
     <Content Include="photo-camera-png-image--photo-camera-png-image-1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

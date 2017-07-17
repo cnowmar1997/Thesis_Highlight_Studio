@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 
 namespace Thesis_Highlight_Studio
 {
-    public partial class frm_Admin : MaterialForm
+    public partial class frm_Main : MaterialForm
     {
         DimForm df = new DimForm();
         Provider P = new Provider();
@@ -33,7 +33,7 @@ namespace Thesis_Highlight_Studio
         private int _endmoveView = 219;
 
 
-        public frm_Admin()
+        public frm_Main()
         {
             InitializeComponent();
             Mainpnl.AutoScroll = true;
