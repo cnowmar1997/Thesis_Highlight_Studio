@@ -53,7 +53,7 @@ namespace Thesis_Highlight_Studio.UserPanel
         }
         private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            frm_AddClient add = new frm_AddClient();
+            frmAddClient add = new frmAddClient();
             DimForm.Show(this.ParentForm, add);
         }
 

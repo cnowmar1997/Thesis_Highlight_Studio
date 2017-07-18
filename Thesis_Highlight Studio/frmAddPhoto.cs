@@ -12,12 +12,13 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Runtime.InteropServices;
 
+
 namespace Thesis_Highlight_Studio
 {
-    public partial class frm_AddUser : MaterialForm
+    public partial class frmAddPhoto :MaterialForm
     {
         private readonly MaterialSkinManager skinManager;
-        public frm_AddUser()
+        public frmAddPhoto()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
@@ -41,10 +42,5 @@ namespace Thesis_Highlight_Studio
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

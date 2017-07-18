@@ -1,6 +1,6 @@
 ﻿namespace Thesis_Highlight_Studio
 {
-    partial class frm_AddUser
+    partial class frmAddUser
     {
         /// <summary>
         /// Required designer variable.

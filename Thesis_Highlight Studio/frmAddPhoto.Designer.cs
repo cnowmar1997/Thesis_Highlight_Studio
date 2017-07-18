@@ -1,6 +1,6 @@
 ﻿namespace Thesis_Highlight_Studio
 {
-    partial class frm_AddPhoto
+    partial class frmAddPhoto
     {
         /// <summary>
         /// Required designer variable.

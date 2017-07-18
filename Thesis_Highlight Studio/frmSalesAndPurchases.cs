@@ -1,6 +1,4 @@
 ﻿using System;
-using MaterialSkin;
-using MaterialSkin.Controls;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System.Runtime.InteropServices;
 
 namespace Thesis_Highlight_Studio
 {
-    public partial class frm_AddClient : MaterialForm
+    public partial class frmSalesAndPurchases : MaterialForm
     {
+
         private readonly MaterialSkinManager skinManager;
-        public frm_AddClient()
+
+        
+
+        public frmSalesAndPurchases()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
@@ -26,6 +31,7 @@ namespace Thesis_Highlight_Studio
             skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
         }
+
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
@@ -45,10 +51,9 @@ namespace Thesis_Highlight_Studio
             this.Close();
         }
 
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        private void frm_SalesandPurchases_Load(object sender, EventArgs e)
         {
-            CMsgBox.Show("asjdajsbdjkasd");
+            
         }
-
     }
 }
