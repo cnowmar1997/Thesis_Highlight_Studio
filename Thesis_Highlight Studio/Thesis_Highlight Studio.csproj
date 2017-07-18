@@ -130,6 +130,12 @@
     <Compile Include="userPanelViews\PnlNotes.Designer.cs">
       <DependentUpon>PnlNotes.cs</DependentUpon>
     </Compile>
+    <Compile Include="userPanelViews\Staff_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userPanelViews\Staff_View.Designer.cs">
+      <DependentUpon>Staff_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerticalFlowPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AddClient.resx">
       <DependentUpon>frm_AddClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userPanelViews\Staff_View.resx">
+      <DependentUpon>Staff_View.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

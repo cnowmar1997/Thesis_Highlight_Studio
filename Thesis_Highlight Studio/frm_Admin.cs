@@ -79,16 +79,17 @@ namespace Thesis_Highlight_Studio
 
         void reset_buttons()
         {
-            materialRaisedButton1.Enabled = true;
-            materialRaisedButton2.Enabled = true;
-            materialRaisedButton3.Enabled = true;
-            materialRaisedButton4.Enabled = true;
-            materialRaisedButton5.Enabled = true;
-            materialRaisedButton6.Enabled = true;
+            btn_ManageStaff.Enabled = true;
+            btn_ManageClient.Enabled = true;
+            btn_ManagePackage.Enabled = true;
+            btn_ManageClientSched.Enabled = true;
+            btn_ManagePhotos.Enabled = true;
+            btn_SalesAndPurchases.Enabled = true;
+            btn_GenerateReport.Enabled = true;
 
-            materialRaisedButton1.BackColor = retBackColor;
+            btn_ManageStaff.BackColor = retBackColor;
         }
-
+        #region WindowEvents
         private void timer_Open_Tick(object sender, EventArgs e)
         {
             if (Menu_panel.Width == 42 & Mainpnl.Width == 1306 & Mainpnl.Left == 48)
@@ -158,12 +159,13 @@ namespace Thesis_Highlight_Studio
             if (mouse_on_control)
             {
                 Menu_label.ForeColor = Color.WhiteSmoke;
-                materialRaisedButton1.Visible = true;
-                materialRaisedButton2.Visible = true;
-                materialRaisedButton3.Visible = true;
-                materialRaisedButton4.Visible = true;
-                materialRaisedButton5.Visible = true;
-                materialRaisedButton6.Visible = true;
+                btn_ManageStaff.Visible = true;
+                btn_ManageClient.Visible = true;
+                btn_ManagePackage.Visible = true;
+                btn_ManageClientSched.Visible = true;
+                btn_ManagePhotos.Visible = true;
+                btn_SalesAndPurchases.Visible = true;
+                btn_GenerateReport.Visible = true;
                 timer_Open.Enabled = true;
                 timer_Close.Enabled = false;
             }
@@ -179,49 +181,18 @@ namespace Thesis_Highlight_Studio
             if (!mouse_on_control)
             {
                 Menu_label.ForeColor = SystemColors.ControlText;
-                materialRaisedButton1.Visible = false;
-                materialRaisedButton2.Visible = false;
-                materialRaisedButton3.Visible = false;
-                materialRaisedButton4.Visible = false;
-                materialRaisedButton5.Visible = false;
-                materialRaisedButton6.Visible = false;
+                btn_ManageStaff.Visible = false;
+                btn_ManageClient.Visible = false;
+                btn_ManagePackage.Visible = false;
+                btn_ManageClientSched.Visible = false;
+                btn_ManagePhotos.Visible = false;
+                btn_SalesAndPurchases.Visible = false;
+                btn_GenerateReport.Visible = false;
                 timer_Open.Enabled = false;
                 timer_Close.Enabled = true;
             }
         }
-
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
-        {
-            Mainpnl.Controls.Clear();
-            try
-            {
-                reset_buttons();
-                if (Mainpnl.Controls.Count < 1)
-                {
-                    reset_buttons();
-                    if (Mainpnl.Controls.Count < 1)
-                    {  
-                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
-                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
-                    }
-                    else
-                    {
-                        Mainpnl.Controls.Clear();
-                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
-                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
-                    }
-                    Button btn = sender as Button;
-                    btn.Enabled = false;
-                    btn.BackColor = btnBackColor;
-                    UserPanel.Client_Views.Instance.Focus();
-                }
-            }
-            catch (Exception ex)
-            {
-                CMsgBox.Show(ex.Message);     
-            }
-        }
-
+               
         private void frm_Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (CMsgBox.Show("Are you sure you want to logout?", "Logging off........", CMsgBox.CMsgBtns.YesNo) == DialogResult.Yes)
@@ -241,8 +212,10 @@ namespace Thesis_Highlight_Studio
         {
             //populate();
         }
+        #endregion
 
-        private void materialRaisedButton2_Click(object sender, EventArgs e)
+
+        private void btn_ManageStaff_Click(object sender, EventArgs e)
         {
             Mainpnl.Controls.Clear();
             try
@@ -253,19 +226,83 @@ namespace Thesis_Highlight_Studio
                     reset_buttons();
                     if (Mainpnl.Controls.Count < 1)
                     {
-                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
-                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
+                        Mainpnl.Controls.Add(userPanelViews.Staff_View.Instance);
+                        userPanelViews.Staff_View.Instance.Dock = DockStyle.Fill;
                     }
                     else
                     {
                         Mainpnl.Controls.Clear();
-                        Mainpnl.Controls.Add(UserPanel.Client_Views.Instance);
-                        UserPanel.Client_Views.Instance.Dock = DockStyle.Fill;
+                        Mainpnl.Controls.Add(userPanelViews.Staff_View.Instance);
+                        userPanelViews.Staff_View.Instance.Dock = DockStyle.Fill;
                     }
                     Button btn = sender as Button;
                     btn.Enabled = false;
                     btn.BackColor = btnBackColor;
-                    UserPanel.Client_Views.Instance.Focus();
+                    userPanelViews.Staff_View.Instance.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                CMsgBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_ManageClient_Click(object sender, EventArgs e)
+        {
+            Mainpnl.Controls.Clear();
+            try
+            {
+                reset_buttons();
+                if (Mainpnl.Controls.Count < 1)
+                {
+                    reset_buttons();
+                    if (Mainpnl.Controls.Count < 1)
+                    {
+                        Mainpnl.Controls.Add(UserPanel.Client_View.Instance);
+                        UserPanel.Client_View.Instance.Dock = DockStyle.Fill;
+                    }
+                    else
+                    {
+                        Mainpnl.Controls.Clear();
+                        Mainpnl.Controls.Add(UserPanel.Client_View.Instance);
+                        UserPanel.Client_View.Instance.Dock = DockStyle.Fill;
+                    }
+                    Button btn = sender as Button;
+                    btn.Enabled = false;
+                    btn.BackColor = btnBackColor;
+                    UserPanel.Client_View.Instance.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                CMsgBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_SalesAndPurchases_Click(object sender, EventArgs e)
+        {
+            Mainpnl.Controls.Clear();
+            try
+            {
+                reset_buttons();
+                if (Mainpnl.Controls.Count < 1)
+                {
+                    reset_buttons();
+                    if (Mainpnl.Controls.Count < 1)
+                    {
+                        Mainpnl.Controls.Add(UserPanel.Client_View.Instance);
+                        UserPanel.Client_View.Instance.Dock = DockStyle.Fill;
+                    }
+                    else
+                    {
+                        Mainpnl.Controls.Clear();
+                        Mainpnl.Controls.Add(UserPanel.Client_View.Instance);
+                        UserPanel.Client_View.Instance.Dock = DockStyle.Fill;
+                    }
+                    Button btn = sender as Button;
+                    btn.Enabled = false;
+                    btn.BackColor = btnBackColor;
+                    UserPanel.Client_View.Instance.Focus();
                 }
             }
             catch (Exception ex)

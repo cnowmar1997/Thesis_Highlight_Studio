@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace Thesis_Highlight_Studio
 {
-    class Dbase
+    class DB
     {
         private static MySqlConnection con;
         public static MySqlConnection Con

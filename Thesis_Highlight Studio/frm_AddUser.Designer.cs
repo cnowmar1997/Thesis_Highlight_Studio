@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialCheckBox6 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialCheckBox5 = new MaterialSkin.Controls.MaterialCheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.materialCheckBox4 = new MaterialSkin.Controls.MaterialCheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.materialCheckBox3 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialCheckBox2 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialSingleLineTextField9 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox2 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox3 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox4 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox5 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialCheckBox6 = new MaterialSkin.Controls.MaterialCheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +81,38 @@
             this.panel1.Size = new System.Drawing.Size(776, 514);
             this.panel1.TabIndex = 6;
             // 
+            // materialCheckBox6
+            // 
+            this.materialCheckBox6.AutoSize = true;
+            this.materialCheckBox6.Depth = 0;
+            this.materialCheckBox6.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox6.Location = new System.Drawing.Point(497, 376);
+            this.materialCheckBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox6.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox6.Name = "materialCheckBox6";
+            this.materialCheckBox6.Ripple = true;
+            this.materialCheckBox6.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox6.TabIndex = 0;
+            this.materialCheckBox6.Text = "materialCheckBox1";
+            this.materialCheckBox6.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox5
+            // 
+            this.materialCheckBox5.AutoSize = true;
+            this.materialCheckBox5.Depth = 0;
+            this.materialCheckBox5.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox5.Location = new System.Drawing.Point(265, 376);
+            this.materialCheckBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox5.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox5.Name = "materialCheckBox5";
+            this.materialCheckBox5.Ripple = true;
+            this.materialCheckBox5.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox5.TabIndex = 0;
+            this.materialCheckBox5.Text = "materialCheckBox1";
+            this.materialCheckBox5.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
@@ -111,9 +143,25 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(44, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 21);
+            this.label2.Size = new System.Drawing.Size(110, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Add New Client";
+            this.label2.Text = "Add New Staff";
+            // 
+            // materialCheckBox4
+            // 
+            this.materialCheckBox4.AutoSize = true;
+            this.materialCheckBox4.Depth = 0;
+            this.materialCheckBox4.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox4.Location = new System.Drawing.Point(33, 376);
+            this.materialCheckBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox4.Name = "materialCheckBox4";
+            this.materialCheckBox4.Ripple = true;
+            this.materialCheckBox4.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox4.TabIndex = 0;
+            this.materialCheckBox4.Text = "materialCheckBox1";
+            this.materialCheckBox4.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -136,6 +184,23 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "✖";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // materialCheckBox3
+            // 
+            this.materialCheckBox3.AutoSize = true;
+            this.materialCheckBox3.Depth = 0;
+            this.materialCheckBox3.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox3.Location = new System.Drawing.Point(497, 316);
+            this.materialCheckBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox3.Name = "materialCheckBox3";
+            this.materialCheckBox3.Ripple = true;
+            this.materialCheckBox3.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox3.TabIndex = 0;
+            this.materialCheckBox3.Text = "materialCheckBox1";
+            this.materialCheckBox3.UseVisualStyleBackColor = true;
             // 
             // materialRaisedButton1
             // 
@@ -148,6 +213,22 @@
             this.materialRaisedButton1.TabIndex = 40;
             this.materialRaisedButton1.Text = "Submit";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckBox2
+            // 
+            this.materialCheckBox2.AutoSize = true;
+            this.materialCheckBox2.Depth = 0;
+            this.materialCheckBox2.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox2.Location = new System.Drawing.Point(265, 316);
+            this.materialCheckBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox2.Name = "materialCheckBox2";
+            this.materialCheckBox2.Ripple = true;
+            this.materialCheckBox2.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox2.TabIndex = 0;
+            this.materialCheckBox2.Text = "materialCheckBox1";
+            this.materialCheckBox2.UseVisualStyleBackColor = true;
             // 
             // materialSingleLineTextField9
             // 
@@ -163,6 +244,22 @@
             this.materialSingleLineTextField9.Size = new System.Drawing.Size(215, 23);
             this.materialSingleLineTextField9.TabIndex = 33;
             this.materialSingleLineTextField9.UseSystemPasswordChar = false;
+            // 
+            // materialCheckBox1
+            // 
+            this.materialCheckBox1.AutoSize = true;
+            this.materialCheckBox1.Depth = 0;
+            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox1.Location = new System.Drawing.Point(33, 316);
+            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox1.Name = "materialCheckBox1";
+            this.materialCheckBox1.Ripple = true;
+            this.materialCheckBox1.Size = new System.Drawing.Size(150, 30);
+            this.materialCheckBox1.TabIndex = 0;
+            this.materialCheckBox1.Text = "materialCheckBox1";
+            this.materialCheckBox1.UseVisualStyleBackColor = true;
             // 
             // materialSingleLineTextField8
             // 
@@ -193,6 +290,19 @@
             this.materialSingleLineTextField7.Size = new System.Drawing.Size(215, 23);
             this.materialSingleLineTextField7.TabIndex = 31;
             this.materialSingleLineTextField7.UseSystemPasswordChar = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(12, 284);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(109, 19);
+            this.materialLabel3.TabIndex = 30;
+            this.materialLabel3.Text = "User Privileges";
             // 
             // materialLabel2
             // 
@@ -264,115 +374,6 @@
             this.materialLabel1.Size = new System.Drawing.Size(130, 19);
             this.materialLabel1.TabIndex = 23;
             this.materialLabel1.Text = "Client Information";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(12, 284);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(109, 19);
-            this.materialLabel3.TabIndex = 30;
-            this.materialLabel3.Text = "User Privileges";
-            // 
-            // materialCheckBox1
-            // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(33, 316);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox1.TabIndex = 0;
-            this.materialCheckBox1.Text = "materialCheckBox1";
-            this.materialCheckBox1.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckBox2
-            // 
-            this.materialCheckBox2.AutoSize = true;
-            this.materialCheckBox2.Depth = 0;
-            this.materialCheckBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F);
-            this.materialCheckBox2.Location = new System.Drawing.Point(265, 316);
-            this.materialCheckBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox2.Name = "materialCheckBox2";
-            this.materialCheckBox2.Ripple = true;
-            this.materialCheckBox2.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox2.TabIndex = 0;
-            this.materialCheckBox2.Text = "materialCheckBox1";
-            this.materialCheckBox2.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckBox3
-            // 
-            this.materialCheckBox3.AutoSize = true;
-            this.materialCheckBox3.Depth = 0;
-            this.materialCheckBox3.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F);
-            this.materialCheckBox3.Location = new System.Drawing.Point(497, 316);
-            this.materialCheckBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox3.Name = "materialCheckBox3";
-            this.materialCheckBox3.Ripple = true;
-            this.materialCheckBox3.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox3.TabIndex = 0;
-            this.materialCheckBox3.Text = "materialCheckBox1";
-            this.materialCheckBox3.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckBox4
-            // 
-            this.materialCheckBox4.AutoSize = true;
-            this.materialCheckBox4.Depth = 0;
-            this.materialCheckBox4.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F);
-            this.materialCheckBox4.Location = new System.Drawing.Point(33, 376);
-            this.materialCheckBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox4.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox4.Name = "materialCheckBox4";
-            this.materialCheckBox4.Ripple = true;
-            this.materialCheckBox4.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox4.TabIndex = 0;
-            this.materialCheckBox4.Text = "materialCheckBox1";
-            this.materialCheckBox4.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckBox5
-            // 
-            this.materialCheckBox5.AutoSize = true;
-            this.materialCheckBox5.Depth = 0;
-            this.materialCheckBox5.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F);
-            this.materialCheckBox5.Location = new System.Drawing.Point(265, 376);
-            this.materialCheckBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox5.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox5.Name = "materialCheckBox5";
-            this.materialCheckBox5.Ripple = true;
-            this.materialCheckBox5.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox5.TabIndex = 0;
-            this.materialCheckBox5.Text = "materialCheckBox1";
-            this.materialCheckBox5.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckBox6
-            // 
-            this.materialCheckBox6.AutoSize = true;
-            this.materialCheckBox6.Depth = 0;
-            this.materialCheckBox6.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F);
-            this.materialCheckBox6.Location = new System.Drawing.Point(497, 376);
-            this.materialCheckBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox6.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox6.Name = "materialCheckBox6";
-            this.materialCheckBox6.Ripple = true;
-            this.materialCheckBox6.Size = new System.Drawing.Size(150, 30);
-            this.materialCheckBox6.TabIndex = 0;
-            this.materialCheckBox6.Text = "materialCheckBox1";
-            this.materialCheckBox6.UseVisualStyleBackColor = true;
             // 
             // frm_AddUser
             // 

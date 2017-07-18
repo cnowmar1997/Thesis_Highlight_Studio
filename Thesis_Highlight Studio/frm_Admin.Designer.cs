@@ -30,32 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Menu_panel = new System.Windows.Forms.Panel();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_ManageClientSched = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_ManagePackage = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_ManageClient = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_ManageStaff = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Menu_label = new System.Windows.Forms.Label();
             this.timer_Open = new System.Windows.Forms.Timer(this.components);
             this.timer_Close = new System.Windows.Forms.Timer(this.components);
             this.Mainpnl = new System.Windows.Forms.Panel();
+            this.btn_ManagePhotos = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_SalesAndPurchases = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_GenerateReport = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Menu_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.Menu_panel.Controls.Add(this.materialRaisedButton6);
-            this.Menu_panel.Controls.Add(this.materialRaisedButton8);
-            this.Menu_panel.Controls.Add(this.materialRaisedButton5);
-            this.Menu_panel.Controls.Add(this.materialRaisedButton7);
-            this.Menu_panel.Controls.Add(this.materialRaisedButton4);
-            this.Menu_panel.Controls.Add(this.materialRaisedButton3);
-            this.Menu_panel.Controls.Add(this.materialRaisedButton2);
-            this.Menu_panel.Controls.Add(this.materialRaisedButton1);
+            this.Menu_panel.Controls.Add(this.btn_GenerateReport);
+            this.Menu_panel.Controls.Add(this.btn_SalesAndPurchases);
+            this.Menu_panel.Controls.Add(this.btn_ManagePhotos);
+            this.Menu_panel.Controls.Add(this.btn_ManageClientSched);
+            this.Menu_panel.Controls.Add(this.btn_ManagePackage);
+            this.Menu_panel.Controls.Add(this.btn_ManageClient);
+            this.Menu_panel.Controls.Add(this.btn_ManageStaff);
             this.Menu_panel.Controls.Add(this.Menu_label);
             this.Menu_panel.Location = new System.Drawing.Point(0, 64);
             this.Menu_panel.Name = "Menu_panel";
@@ -64,111 +62,59 @@
             this.Menu_panel.MouseEnter += new System.EventHandler(this.Menu_panel_MouseEnter);
             this.Menu_panel.MouseLeave += new System.EventHandler(this.Menu_panel_MouseLeave);
             // 
-            // materialRaisedButton6
+            // btn_ManageClientSched
             // 
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(12, 405);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton6.TabIndex = 0;
-            this.materialRaisedButton6.Text = "Sales";
-            this.materialRaisedButton6.UseVisualStyleBackColor = false;
-            this.materialRaisedButton6.Visible = false;
+            this.btn_ManageClientSched.Depth = 0;
+            this.btn_ManageClientSched.Location = new System.Drawing.Point(14, 246);
+            this.btn_ManageClientSched.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_ManageClientSched.Name = "btn_ManageClientSched";
+            this.btn_ManageClientSched.Primary = true;
+            this.btn_ManageClientSched.Size = new System.Drawing.Size(175, 46);
+            this.btn_ManageClientSched.TabIndex = 0;
+            this.btn_ManageClientSched.Text = "Manage Client Schedule";
+            this.btn_ManageClientSched.UseVisualStyleBackColor = false;
+            this.btn_ManageClientSched.Visible = false;
             // 
-            // materialRaisedButton8
+            // btn_ManagePackage
             // 
-            this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(9, 391);
-            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton8.Name = "materialRaisedButton8";
-            this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton8.TabIndex = 0;
-            this.materialRaisedButton8.Text = "Generate Report";
-            this.materialRaisedButton8.UseVisualStyleBackColor = false;
-            this.materialRaisedButton8.Visible = false;
+            this.btn_ManagePackage.Depth = 0;
+            this.btn_ManagePackage.Location = new System.Drawing.Point(14, 189);
+            this.btn_ManagePackage.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_ManagePackage.Name = "btn_ManagePackage";
+            this.btn_ManagePackage.Primary = true;
+            this.btn_ManagePackage.Size = new System.Drawing.Size(175, 46);
+            this.btn_ManagePackage.TabIndex = 0;
+            this.btn_ManagePackage.Text = "Manage Packages";
+            this.btn_ManagePackage.UseVisualStyleBackColor = false;
+            this.btn_ManagePackage.Visible = false;
             // 
-            // materialRaisedButton5
+            // btn_ManageClient
             // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(9, 339);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton5.TabIndex = 0;
-            this.materialRaisedButton5.Text = "Manage Photo";
-            this.materialRaisedButton5.UseVisualStyleBackColor = false;
-            this.materialRaisedButton5.Visible = false;
+            this.btn_ManageClient.Depth = 0;
+            this.btn_ManageClient.Location = new System.Drawing.Point(14, 132);
+            this.btn_ManageClient.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_ManageClient.Name = "btn_ManageClient";
+            this.btn_ManageClient.Primary = true;
+            this.btn_ManageClient.Size = new System.Drawing.Size(175, 46);
+            this.btn_ManageClient.TabIndex = 0;
+            this.btn_ManageClient.Text = "Manage Client";
+            this.btn_ManageClient.UseVisualStyleBackColor = false;
+            this.btn_ManageClient.Visible = false;
+            this.btn_ManageClient.Click += new System.EventHandler(this.btn_ManageClient_Click);
             // 
-            // materialRaisedButton7
+            // btn_ManageStaff
             // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(9, 339);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton7.TabIndex = 0;
-            this.materialRaisedButton7.Text = "Manage Packages";
-            this.materialRaisedButton7.UseVisualStyleBackColor = false;
-            this.materialRaisedButton7.Visible = false;
-            // 
-            // materialRaisedButton4
-            // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(9, 273);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton4.TabIndex = 0;
-            this.materialRaisedButton4.Text = "Manage Client Schedule";
-            this.materialRaisedButton4.UseVisualStyleBackColor = false;
-            this.materialRaisedButton4.Visible = false;
-            // 
-            // materialRaisedButton3
-            // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(9, 207);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton3.TabIndex = 0;
-            this.materialRaisedButton3.Text = "Manage Packages";
-            this.materialRaisedButton3.UseVisualStyleBackColor = false;
-            this.materialRaisedButton3.Visible = false;
-            // 
-            // materialRaisedButton2
-            // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(9, 141);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton2.TabIndex = 0;
-            this.materialRaisedButton2.Text = "Manage Client";
-            this.materialRaisedButton2.UseVisualStyleBackColor = false;
-            this.materialRaisedButton2.Visible = false;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
-            // 
-            // materialRaisedButton1
-            // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(9, 75);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(175, 46);
-            this.materialRaisedButton1.TabIndex = 0;
-            this.materialRaisedButton1.Text = "Manage Staff";
-            this.materialRaisedButton1.UseVisualStyleBackColor = false;
-            this.materialRaisedButton1.Visible = false;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            this.btn_ManageStaff.Depth = 0;
+            this.btn_ManageStaff.Location = new System.Drawing.Point(14, 75);
+            this.btn_ManageStaff.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_ManageStaff.Name = "btn_ManageStaff";
+            this.btn_ManageStaff.Primary = true;
+            this.btn_ManageStaff.Size = new System.Drawing.Size(175, 46);
+            this.btn_ManageStaff.TabIndex = 0;
+            this.btn_ManageStaff.Text = "Manage Staff";
+            this.btn_ManageStaff.UseVisualStyleBackColor = false;
+            this.btn_ManageStaff.Visible = false;
+            this.btn_ManageStaff.Click += new System.EventHandler(this.btn_ManageStaff_Click);
             // 
             // Menu_label
             // 
@@ -193,18 +139,58 @@
             // 
             // Mainpnl
             // 
-            this.Mainpnl.Location = new System.Drawing.Point(48, 78);
+            this.Mainpnl.Location = new System.Drawing.Point(45, 78);
             this.Mainpnl.Name = "Mainpnl";
             this.Mainpnl.Size = new System.Drawing.Size(1306, 679);
             this.Mainpnl.TabIndex = 1;
+            // 
+            // btn_ManagePhotos
+            // 
+            this.btn_ManagePhotos.Depth = 0;
+            this.btn_ManagePhotos.Location = new System.Drawing.Point(14, 303);
+            this.btn_ManagePhotos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_ManagePhotos.Name = "btn_ManagePhotos";
+            this.btn_ManagePhotos.Primary = true;
+            this.btn_ManagePhotos.Size = new System.Drawing.Size(175, 46);
+            this.btn_ManagePhotos.TabIndex = 0;
+            this.btn_ManagePhotos.Text = "Manage Photo/s";
+            this.btn_ManagePhotos.UseVisualStyleBackColor = false;
+            this.btn_ManagePhotos.Visible = false;
+            // 
+            // btn_SalesAndPurchases
+            // 
+            this.btn_SalesAndPurchases.Depth = 0;
+            this.btn_SalesAndPurchases.Location = new System.Drawing.Point(14, 355);
+            this.btn_SalesAndPurchases.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_SalesAndPurchases.Name = "btn_SalesAndPurchases";
+            this.btn_SalesAndPurchases.Primary = true;
+            this.btn_SalesAndPurchases.Size = new System.Drawing.Size(175, 46);
+            this.btn_SalesAndPurchases.TabIndex = 0;
+            this.btn_SalesAndPurchases.Text = "Sales and Purchases";
+            this.btn_SalesAndPurchases.UseVisualStyleBackColor = false;
+            this.btn_SalesAndPurchases.Visible = false;
+            this.btn_SalesAndPurchases.Click += new System.EventHandler(this.btn_SalesAndPurchases_Click);
+            // 
+            // btn_GenerateReport
+            // 
+            this.btn_GenerateReport.Depth = 0;
+            this.btn_GenerateReport.Location = new System.Drawing.Point(14, 412);
+            this.btn_GenerateReport.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_GenerateReport.Name = "btn_GenerateReport";
+            this.btn_GenerateReport.Primary = true;
+            this.btn_GenerateReport.Size = new System.Drawing.Size(175, 46);
+            this.btn_GenerateReport.TabIndex = 0;
+            this.btn_GenerateReport.Text = "Generate Report";
+            this.btn_GenerateReport.UseVisualStyleBackColor = false;
+            this.btn_GenerateReport.Visible = false;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.Mainpnl);
             this.Controls.Add(this.Menu_panel);
+            this.Controls.Add(this.Mainpnl);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_Main";
@@ -226,15 +212,14 @@
         private System.Windows.Forms.Label Menu_label;
         private System.Windows.Forms.Timer timer_Open;
         private System.Windows.Forms.Timer timer_Close;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_ManageClientSched;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_ManagePackage;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_ManageClient;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_ManageStaff;
         private System.Windows.Forms.Panel Mainpnl;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_SalesAndPurchases;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_ManagePhotos;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_GenerateReport;
 
     }
 }
