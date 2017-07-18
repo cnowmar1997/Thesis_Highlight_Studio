@@ -1,18 +1,22 @@
-C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.exe
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe.config
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.pdb
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\MaterialSkin.dll
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.csprojResolveAssemblyReference.cache
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.CMsgBox.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.DimForm.resources
-C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frm_AddPhoto.resources
-C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frm_AddUser.resources
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frmAddPhoto.resources
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frmAddUser.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frm_Main.resources
-C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frm_SalesandPurchases.resources
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frmSalesAndPurchases.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.Login.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.Partial.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.Properties.Resources.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.UserPanel.Client_View.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.UserPanel.Photo_View.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.UserPanel.PnlNotes.resources
-C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frm_AddClient.resources
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frmAddClient.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.userPanelViews.Staff_View.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.csproj.GenerateResource.Cache
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.exe
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.pdb
-C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe.config
