@@ -371,6 +371,7 @@
             this.Name = "frm_SalesandPurchases";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_SalesandPurchases";
+            this.Load += new System.EventHandler(this.frm_SalesandPurchases_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

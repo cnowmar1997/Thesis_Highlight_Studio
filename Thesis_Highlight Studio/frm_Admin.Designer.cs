@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.btn_GenerateReport = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_SalesAndPurchases = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btn_ManagePhotos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_ManageClientSched = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_ManagePackage = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_ManageClient = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -38,9 +41,6 @@
             this.timer_Open = new System.Windows.Forms.Timer(this.components);
             this.timer_Close = new System.Windows.Forms.Timer(this.components);
             this.Mainpnl = new System.Windows.Forms.Panel();
-            this.btn_ManagePhotos = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btn_SalesAndPurchases = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btn_GenerateReport = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Menu_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,46 @@
             this.Menu_panel.TabIndex = 0;
             this.Menu_panel.MouseEnter += new System.EventHandler(this.Menu_panel_MouseEnter);
             this.Menu_panel.MouseLeave += new System.EventHandler(this.Menu_panel_MouseLeave);
+            // 
+            // btn_GenerateReport
+            // 
+            this.btn_GenerateReport.Depth = 0;
+            this.btn_GenerateReport.Location = new System.Drawing.Point(14, 412);
+            this.btn_GenerateReport.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_GenerateReport.Name = "btn_GenerateReport";
+            this.btn_GenerateReport.Primary = true;
+            this.btn_GenerateReport.Size = new System.Drawing.Size(175, 46);
+            this.btn_GenerateReport.TabIndex = 0;
+            this.btn_GenerateReport.Text = "Generate Report";
+            this.btn_GenerateReport.UseVisualStyleBackColor = false;
+            this.btn_GenerateReport.Visible = false;
+            // 
+            // btn_SalesAndPurchases
+            // 
+            this.btn_SalesAndPurchases.Depth = 0;
+            this.btn_SalesAndPurchases.Location = new System.Drawing.Point(14, 355);
+            this.btn_SalesAndPurchases.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_SalesAndPurchases.Name = "btn_SalesAndPurchases";
+            this.btn_SalesAndPurchases.Primary = true;
+            this.btn_SalesAndPurchases.Size = new System.Drawing.Size(175, 46);
+            this.btn_SalesAndPurchases.TabIndex = 0;
+            this.btn_SalesAndPurchases.Text = "Sales and Purchases";
+            this.btn_SalesAndPurchases.UseVisualStyleBackColor = false;
+            this.btn_SalesAndPurchases.Visible = false;
+            this.btn_SalesAndPurchases.Click += new System.EventHandler(this.btn_SalesAndPurchases_Click);
+            // 
+            // btn_ManagePhotos
+            // 
+            this.btn_ManagePhotos.Depth = 0;
+            this.btn_ManagePhotos.Location = new System.Drawing.Point(14, 303);
+            this.btn_ManagePhotos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_ManagePhotos.Name = "btn_ManagePhotos";
+            this.btn_ManagePhotos.Primary = true;
+            this.btn_ManagePhotos.Size = new System.Drawing.Size(175, 46);
+            this.btn_ManagePhotos.TabIndex = 0;
+            this.btn_ManagePhotos.Text = "Manage Photo/s";
+            this.btn_ManagePhotos.UseVisualStyleBackColor = false;
+            this.btn_ManagePhotos.Visible = false;
             // 
             // btn_ManageClientSched
             // 
@@ -143,46 +183,6 @@
             this.Mainpnl.Name = "Mainpnl";
             this.Mainpnl.Size = new System.Drawing.Size(1306, 679);
             this.Mainpnl.TabIndex = 1;
-            // 
-            // btn_ManagePhotos
-            // 
-            this.btn_ManagePhotos.Depth = 0;
-            this.btn_ManagePhotos.Location = new System.Drawing.Point(14, 303);
-            this.btn_ManagePhotos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btn_ManagePhotos.Name = "btn_ManagePhotos";
-            this.btn_ManagePhotos.Primary = true;
-            this.btn_ManagePhotos.Size = new System.Drawing.Size(175, 46);
-            this.btn_ManagePhotos.TabIndex = 0;
-            this.btn_ManagePhotos.Text = "Manage Photo/s";
-            this.btn_ManagePhotos.UseVisualStyleBackColor = false;
-            this.btn_ManagePhotos.Visible = false;
-            // 
-            // btn_SalesAndPurchases
-            // 
-            this.btn_SalesAndPurchases.Depth = 0;
-            this.btn_SalesAndPurchases.Location = new System.Drawing.Point(14, 355);
-            this.btn_SalesAndPurchases.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btn_SalesAndPurchases.Name = "btn_SalesAndPurchases";
-            this.btn_SalesAndPurchases.Primary = true;
-            this.btn_SalesAndPurchases.Size = new System.Drawing.Size(175, 46);
-            this.btn_SalesAndPurchases.TabIndex = 0;
-            this.btn_SalesAndPurchases.Text = "Sales and Purchases";
-            this.btn_SalesAndPurchases.UseVisualStyleBackColor = false;
-            this.btn_SalesAndPurchases.Visible = false;
-            this.btn_SalesAndPurchases.Click += new System.EventHandler(this.btn_SalesAndPurchases_Click);
-            // 
-            // btn_GenerateReport
-            // 
-            this.btn_GenerateReport.Depth = 0;
-            this.btn_GenerateReport.Location = new System.Drawing.Point(14, 412);
-            this.btn_GenerateReport.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btn_GenerateReport.Name = "btn_GenerateReport";
-            this.btn_GenerateReport.Primary = true;
-            this.btn_GenerateReport.Size = new System.Drawing.Size(175, 46);
-            this.btn_GenerateReport.TabIndex = 0;
-            this.btn_GenerateReport.Text = "Generate Report";
-            this.btn_GenerateReport.UseVisualStyleBackColor = false;
-            this.btn_GenerateReport.Visible = false;
             // 
             // frm_Main
             // 

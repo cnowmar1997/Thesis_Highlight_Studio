@@ -32,6 +32,8 @@ namespace Thesis_Highlight_Studio
         private int _moveView = 48;
         private int _endmoveView = 219;
 
+        TextBox tbManageClient = new TextBox();
+        TextBox tbSalesAndPurchases = new TextBox();
 
         public frm_Main()
         {
@@ -281,6 +283,13 @@ namespace Thesis_Highlight_Studio
 
         private void btn_SalesAndPurchases_Click(object sender, EventArgs e)
         {
+
+            //tbManageClient.Text = "manageClient";
+            tbSalesAndPurchases.Text = "salesAndPurchases";
+            //Provider.GetClientView_ManageClient = tbManageClient.Text;
+            Provider.GetClientView_SalesandPurchases = tbSalesAndPurchases.Text;
+
+           
             Mainpnl.Controls.Clear();
             try
             {

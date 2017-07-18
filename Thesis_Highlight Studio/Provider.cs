@@ -17,6 +17,24 @@ namespace Thesis_Highlight_Studio
             public string time { get; set; }
             public string date { get; set; }
         }
+
+        static string getClientView_ManageClient = "";
+        static string getClientView_SalesandPurchases = "";
+
+        public static string GetClientView_ManageClient
+        {
+            get { return Provider.getClientView_ManageClient; }
+            set { Provider.getClientView_ManageClient = value; }
+        }
+        
+
+        public static string GetClientView_SalesandPurchases
+        {
+            get { return Provider.getClientView_SalesandPurchases; }
+            set { Provider.getClientView_SalesandPurchases = value; }
+        }
+
+         
         public List<Item> Notes()
         {
             var list = new List<Item>();

@@ -18,6 +18,9 @@ namespace Thesis_Highlight_Studio
     {
 
         private readonly MaterialSkinManager skinManager;
+
+        
+
         public frm_SalesandPurchases()
         {
             InitializeComponent();
@@ -46,6 +49,11 @@ namespace Thesis_Highlight_Studio
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frm_SalesandPurchases_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -17,6 +17,9 @@ namespace Thesis_Highlight_Studio.UserPanel
 
         Provider P = new Provider();
 
+        TextBox tbManageClient = new TextBox();
+        TextBox tbSalesAndPurchases = new TextBox();
+
         public static Client_View Instance
         {
             get
@@ -31,6 +34,7 @@ namespace Thesis_Highlight_Studio.UserPanel
         public Client_View()
         {
             InitializeComponent();
+            
         }
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -64,6 +68,9 @@ namespace Thesis_Highlight_Studio.UserPanel
         {
             listView1.Items.Clear();
             P.View_Data(listView1);
+
+            tbSalesAndPurchases.Text = Provider.GetClientView_SalesandPurchases;
+            CMsgBox.Show(tbSalesAndPurchases.Text);
         }
  
     }
