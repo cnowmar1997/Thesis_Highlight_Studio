@@ -15,3 +15,4 @@ C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight S
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.userPanelViews.Staff_View.resources
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.csproj.GenerateResource.Cache
 C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.pdb
+C:\Users\Nowmar Calidro\documents\visual studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe.config
