@@ -65,7 +65,7 @@
             // btn_GenerateReport
             // 
             this.btn_GenerateReport.Depth = 0;
-            this.btn_GenerateReport.Location = new System.Drawing.Point(14, 412);
+            this.btn_GenerateReport.Location = new System.Drawing.Point(14, 420);
             this.btn_GenerateReport.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_GenerateReport.Name = "btn_GenerateReport";
             this.btn_GenerateReport.Primary = true;

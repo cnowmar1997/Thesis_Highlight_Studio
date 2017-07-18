@@ -44,10 +44,7 @@
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.walaKoKebawoPaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
@@ -176,19 +173,6 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.walaKoKebawoPaToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(175, 26);
-            // 
-            // walaKoKebawoPaToolStripMenuItem
-            // 
-            this.walaKoKebawoPaToolStripMenuItem.Name = "walaKoKebawoPaToolStripMenuItem";
-            this.walaKoKebawoPaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.walaKoKebawoPaToolStripMenuItem.Text = "wala ko kebawo pa";
-            // 
             // Client_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -202,7 +186,6 @@
             this.Size = new System.Drawing.Size(1306, 679);
             this.Load += new System.EventHandler(this.Client_View_Load);
             this.contextMenuStrip1.ResumeLayout(false);
-            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -224,7 +207,5 @@
         private System.Windows.Forms.ToolStripMenuItem clientPhotosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem walaKoKebawoPaToolStripMenuItem;
     }
 }

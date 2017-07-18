@@ -17,8 +17,8 @@ namespace Thesis_Highlight_Studio.UserPanel
 
         Provider P = new Provider();
 
-        TextBox tbManageClient = new TextBox();
-        TextBox tbSalesAndPurchases = new TextBox();
+        //TextBox tbManageClient = new TextBox();
+        //TextBox tbSalesAndPurchases = new TextBox();
 
         public static Client_View Instance
         {
@@ -69,12 +69,12 @@ namespace Thesis_Highlight_Studio.UserPanel
             listView1.Items.Clear();
             P.View_Data(listView1);
 
-            tbSalesAndPurchases.Text = Provider.GetClientView_SalesandPurchases;
-            if (tbSalesAndPurchases.Text.Equals("salesAndPurchases"))
-            {
-                panel1.Visible = false;
-                contextMenuStrip1.Close();
-            }
+            //tbSalesAndPurchases.Text = Provider.GetClientView_SalesandPurchases;
+            //if (tbSalesAndPurchases.Text.Equals("salesAndPurchases"))
+            //{
+            //    panel1.Visible = false;
+            //    contextMenuStrip1.Close();
+            //}
         }
  
     }
