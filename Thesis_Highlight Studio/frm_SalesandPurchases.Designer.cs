@@ -41,9 +41,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.materialSingleLineTextField15 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField14 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField13 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField12 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField11 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
@@ -215,6 +219,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 56;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(67, 309);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 21);
+            this.comboBox1.TabIndex = 55;
+            this.comboBox1.Visible = false;
+            // 
             // materialSingleLineTextField15
             // 
             this.materialSingleLineTextField15.Depth = 0;
@@ -263,6 +276,52 @@
             this.materialSingleLineTextField13.UseSystemPasswordChar = false;
             this.materialSingleLineTextField13.Visible = false;
             // 
+            // materialSingleLineTextField12
+            // 
+            this.materialSingleLineTextField12.Depth = 0;
+            this.materialSingleLineTextField12.Hint = "Other Fees";
+            this.materialSingleLineTextField12.Location = new System.Drawing.Point(67, 431);
+            this.materialSingleLineTextField12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField12.Name = "materialSingleLineTextField12";
+            this.materialSingleLineTextField12.PasswordChar = '\0';
+            this.materialSingleLineTextField12.SelectedText = "";
+            this.materialSingleLineTextField12.SelectionLength = 0;
+            this.materialSingleLineTextField12.SelectionStart = 0;
+            this.materialSingleLineTextField12.Size = new System.Drawing.Size(215, 23);
+            this.materialSingleLineTextField12.TabIndex = 51;
+            this.materialSingleLineTextField12.UseSystemPasswordChar = false;
+            this.materialSingleLineTextField12.Visible = false;
+            // 
+            // materialSingleLineTextField11
+            // 
+            this.materialSingleLineTextField11.Depth = 0;
+            this.materialSingleLineTextField11.Hint = "Amount";
+            this.materialSingleLineTextField11.Location = new System.Drawing.Point(67, 369);
+            this.materialSingleLineTextField11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField11.Name = "materialSingleLineTextField11";
+            this.materialSingleLineTextField11.PasswordChar = '\0';
+            this.materialSingleLineTextField11.SelectedText = "";
+            this.materialSingleLineTextField11.SelectionLength = 0;
+            this.materialSingleLineTextField11.SelectionStart = 0;
+            this.materialSingleLineTextField11.Size = new System.Drawing.Size(215, 23);
+            this.materialSingleLineTextField11.TabIndex = 50;
+            this.materialSingleLineTextField11.UseSystemPasswordChar = false;
+            this.materialSingleLineTextField11.Visible = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(29, 265);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(178, 19);
+            this.materialLabel3.TabIndex = 49;
+            this.materialLabel3.Text = "Job Order/s and Payment";
+            this.materialLabel3.Visible = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
@@ -277,9 +336,13 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.materialSingleLineTextField15);
             this.panel1.Controls.Add(this.materialSingleLineTextField14);
             this.panel1.Controls.Add(this.materialSingleLineTextField13);
+            this.panel1.Controls.Add(this.materialSingleLineTextField12);
+            this.panel1.Controls.Add(this.materialSingleLineTextField11);
+            this.panel1.Controls.Add(this.materialLabel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.materialRaisedButton1);
@@ -333,9 +396,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField15;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField14;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField13;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField12;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField11;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
     }
