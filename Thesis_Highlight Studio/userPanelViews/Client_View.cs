@@ -70,7 +70,11 @@ namespace Thesis_Highlight_Studio.UserPanel
             P.View_Data(listView1);
 
             tbSalesAndPurchases.Text = Provider.GetClientView_SalesandPurchases;
-            CMsgBox.Show(tbSalesAndPurchases.Text);
+            if (tbSalesAndPurchases.Text.Equals("salesAndPurchases"))
+            {
+                panel1.Visible = false;
+                contextMenuStrip1.Close();
+            }
         }
  
     }
