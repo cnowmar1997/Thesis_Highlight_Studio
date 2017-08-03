@@ -17,24 +17,12 @@ namespace Thesis_Highlight_Studio
             public string time { get; set; }
             public string date { get; set; }
         }
+        #region Getters and Setters
+        static string filterFullName = "";
 
-        static string getClientView_ManageClient = "";
-        static string getClientView_SalesandPurchases = "";
 
-        public static string GetClientView_ManageClient
-        {
-            get { return Provider.getClientView_ManageClient; }
-            set { Provider.getClientView_ManageClient = value; }
-        }
-        
 
-        public static string GetClientView_SalesandPurchases
-        {
-            get { return Provider.getClientView_SalesandPurchases; }
-            set { Provider.getClientView_SalesandPurchases = value; }
-        }
-
-         
+        #endregion
         public List<Item> Notes()
         {
             var list = new List<Item>();
@@ -66,7 +54,8 @@ namespace Thesis_Highlight_Studio
             return list; ;
         }
 
-        public bool View_Data(ListView Listview_view)
+        #region tbl_User
+        public bool viewClient(ListView listviewClient)
         {
             bool ret = false;
 
@@ -74,21 +63,78 @@ namespace Thesis_Highlight_Studio
             {
                 DB.Con.Close();
                 DB.Con.Open();
-                MySqlCommand cmd = new MySqlCommand(@"SELECT `userId`, `fullName`, `nameOfSchool`, `courseTitle`, `mobileNumber`, `landline`, `emailAdd` FROM `tbluser`", DB.Con);
+                MySqlCommand cmd = new MySqlCommand(@"SELECT fullName, nameOfSchool, courseTitle, mobileNumber, landline, emailAdd FROM tbluser", DB.Con);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    ListViewItem item = new ListViewItem(reader["userId"] + "");
-                    item.SubItems.Add(reader["fullName"] + "");
+                    ListViewItem item = new ListViewItem(reader["fullName"] + "");
                     item.SubItems.Add(reader["nameOfSchool"] + "");
                     item.SubItems.Add(reader["courseTitle"] + "");
                     item.SubItems.Add(reader["mobileNumber"] + "");
                     item.SubItems.Add(reader["landline"] + "");
                     item.SubItems.Add(reader["emailAdd"] + "");
-                    Listview_view.Items.Add(item);
+                    listviewClient.Items.Add(item);
                 }
             }
             return ret;
         }
+
+        public bool insertClient(string typeOfUser, string userName, string passWord, string fullName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd)
+        {
+            bool ret = false;            
+            string query = "INSERT INTO tblUser(typeOfUser,userName,passWord,fullName,nameOfSchool,courseTitle,mobileNumber,landline,emailAdd) VALUES (@typeOfUser,@userName,@passWord,@fullName,@nameOfSchool,@courseTitle,@mobileNumber,@landline,@emailAdd)";
+
+            using (DB.Con)
+            {
+                DB.Con.Close();
+                DB.Con.Open();
+                MySqlCommand command = new MySqlCommand(query, DB.Con);
+                command.Parameters.AddWithValue(@"typeOfUser",typeOfUser);
+                command.Parameters.AddWithValue(@"userName", userName);
+                command.Parameters.AddWithValue(@"passWord", passWord);
+                command.Parameters.AddWithValue(@"fullName",fullName);
+                command.Parameters.AddWithValue(@"nameOfSchool",nameOfSchool);
+                command.Parameters.AddWithValue(@"courseTitle",courseTitle);
+                command.Parameters.AddWithValue(@"mobileNumber",mobileNumber);
+                command.Parameters.AddWithValue(@"landline",landline);
+                command.Parameters.AddWithValue(@"emailAdd",emailAdd);
+
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    ret = true;
+                }
+            }
+            return ret;
+        }
+
+        public bool updateClient( string userName, string passWord, string fullName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd)
+        {
+            bool ret = false;
+            string query = "UPDATE tblUser SET userName=@userName,passWord=@passWord,fullName=@fullName,nameOfSchool=@nameOfSchool,courseTitle=@courseTitle,mobileNumber=@mobileNumber,landline=@landline,emailAdd=@emailAdd WHERE ";
+
+            using (DB.Con)
+            {
+                DB.Con.Close();
+                DB.Con.Open();
+                MySqlCommand command = new MySqlCommand(query, DB.Con);
+
+                command.Parameters.AddWithValue(@"userName", userName);
+                command.Parameters.AddWithValue(@"passWord", passWord);
+                command.Parameters.AddWithValue(@"fullName", fullName);
+                command.Parameters.AddWithValue(@"nameOfSchool", nameOfSchool);
+                command.Parameters.AddWithValue(@"courseTitle", courseTitle);
+                command.Parameters.AddWithValue(@"mobileNumber", mobileNumber);
+                command.Parameters.AddWithValue(@"landline", landline);
+                command.Parameters.AddWithValue(@"emailAdd", emailAdd);
+
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    ret = true;
+                }
+            }
+            return ret;
+        }
+        #endregion
+
     }
 }

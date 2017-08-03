@@ -26,7 +26,7 @@ namespace Thesis_Highlight_Studio
         private static string ConString()
         {
             string file = filepath+filename;
-            string ret = null;
+            string ret = string.Empty;
 
             //create dbserver.cfg if it does not exist
             if (!File.Exists(file))
@@ -34,7 +34,7 @@ namespace Thesis_Highlight_Studio
                 CMsgBox.Show(filename + " not found! Creating a new configuration file...");
                 using (StreamWriter sw = new StreamWriter(file, false))
                 {
-                    sw.WriteLine();
+                    sw.WriteLine(defaultConnectionString);
                     sw.Close();
                 }
             }
@@ -43,12 +43,12 @@ namespace Thesis_Highlight_Studio
             {
                 using (StreamReader sr = new StreamReader(filestream))
                 {
-                    ret = string.IsNullOrEmpty(sr.ReadLine()) ? defaultConnectionString : sr.ReadLine();
+                    ret = sr.ReadLine();
                     sr.Close();
                 }
                 filestream.Close();
             }
-            return ret;
+            return string.IsNullOrEmpty(ret) ? null : ret;
         }
     }
 }

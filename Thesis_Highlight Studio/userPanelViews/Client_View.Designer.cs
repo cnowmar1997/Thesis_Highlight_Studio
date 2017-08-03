@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listviewClient = new System.Windows.Forms.ListView();
             this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnSchoolName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCourse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,35 +37,34 @@
             this.columnTeleNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnEmailAdd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientPhotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCustomerAccToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.refreshToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // listviewClient
             // 
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listviewClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listviewClient.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnName,
             this.columnSchoolName,
             this.columnCourse,
             this.columnMobileNum,
             this.columnTeleNum,
             this.columnEmailAdd});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(61, 64);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1193, 566);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
+            this.listviewClient.FullRowSelect = true;
+            this.listviewClient.GridLines = true;
+            this.listviewClient.Location = new System.Drawing.Point(61, 64);
+            this.listviewClient.MultiSelect = false;
+            this.listviewClient.Name = "listviewClient";
+            this.listviewClient.Size = new System.Drawing.Size(1193, 566);
+            this.listviewClient.TabIndex = 0;
+            this.listviewClient.UseCompatibleStateImageBehavior = false;
+            this.listviewClient.View = System.Windows.Forms.View.Details;
+            this.listviewClient.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listviewClient_MouseClick);
             // 
             // columnName
             // 
@@ -106,37 +105,24 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewInformationToolStripMenuItem,
-            this.refreshToolStripMenuItem});
+            this.updateCustomerAccToolStripMenuItem,
+            this.refreshToolStripMenuItem,
+            this.refreshToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(114, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(212, 70);
             // 
-            // viewInformationToolStripMenuItem
+            // updateCustomerAccToolStripMenuItem
             // 
-            this.viewInformationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientToolStripMenuItem,
-            this.clientPhotosToolStripMenuItem});
-            this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
-            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.viewInformationToolStripMenuItem.Text = "View";
-            // 
-            // clientToolStripMenuItem
-            // 
-            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.clientToolStripMenuItem.Text = "Client information";
-            // 
-            // clientPhotosToolStripMenuItem
-            // 
-            this.clientPhotosToolStripMenuItem.Name = "clientPhotosToolStripMenuItem";
-            this.clientPhotosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.clientPhotosToolStripMenuItem.Text = "Client photos";
+            this.updateCustomerAccToolStripMenuItem.Name = "updateCustomerAccToolStripMenuItem";
+            this.updateCustomerAccToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.updateCustomerAccToolStripMenuItem.Text = "Update customer account";
+            this.updateCustomerAccToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerAccToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.refreshToolStripMenuItem.Text = "Archive";
             // 
             // materialSingleLineTextField1
             // 
@@ -166,13 +152,19 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // refreshToolStripMenuItem1
+            // 
+            this.refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
+            this.refreshToolStripMenuItem1.Size = new System.Drawing.Size(211, 22);
+            this.refreshToolStripMenuItem1.Text = "Refresh";
+            // 
             // Client_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.materialSingleLineTextField1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listviewClient);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Client_View";
@@ -185,20 +177,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listviewClient;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem viewInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateCustomerAccToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnName;
         private System.Windows.Forms.ColumnHeader columnSchoolName;
         private System.Windows.Forms.ColumnHeader columnCourse;
         private System.Windows.Forms.ColumnHeader columnMobileNum;
         private System.Windows.Forms.ColumnHeader columnTeleNum;
         private System.Windows.Forms.ColumnHeader columnEmailAdd;
-        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientPhotosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem1;
     }
 }

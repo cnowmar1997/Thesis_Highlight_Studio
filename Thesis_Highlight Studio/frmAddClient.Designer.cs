@@ -29,27 +29,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnSubmit = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField12 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.materialSingleLineTextField11 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField9 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbLandline = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbMobileNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbCourse = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbSchoolName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbMiddleName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbGivenName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbFamilyName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.tbPassWord = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbUserName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,23 +56,22 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.materialSingleLineTextField12);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.materialSingleLineTextField11);
-            this.panel1.Controls.Add(this.materialRaisedButton2);
-            this.panel1.Controls.Add(this.materialRaisedButton1);
+            this.panel1.Controls.Add(this.tbPassWord);
+            this.panel1.Controls.Add(this.tbUserName);
             this.panel1.Controls.Add(this.materialLabel3);
-            this.panel1.Controls.Add(this.materialSingleLineTextField9);
-            this.panel1.Controls.Add(this.materialSingleLineTextField8);
-            this.panel1.Controls.Add(this.materialSingleLineTextField7);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnSubmit);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.tbEmail);
+            this.panel1.Controls.Add(this.tbLandline);
+            this.panel1.Controls.Add(this.tbMobileNumber);
             this.panel1.Controls.Add(this.materialLabel2);
-            this.panel1.Controls.Add(this.materialSingleLineTextField5);
-            this.panel1.Controls.Add(this.materialSingleLineTextField4);
-            this.panel1.Controls.Add(this.materialSingleLineTextField3);
-            this.panel1.Controls.Add(this.materialSingleLineTextField2);
-            this.panel1.Controls.Add(this.materialSingleLineTextField1);
+            this.panel1.Controls.Add(this.tbCourse);
+            this.panel1.Controls.Add(this.tbSchoolName);
+            this.panel1.Controls.Add(this.tbMiddleName);
+            this.panel1.Controls.Add(this.tbGivenName);
+            this.panel1.Controls.Add(this.tbFamilyName);
             this.panel1.Controls.Add(this.materialLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -81,13 +79,31 @@
             this.panel1.Size = new System.Drawing.Size(776, 514);
             this.panel1.TabIndex = 0;
             // 
-            // comboBox1
+            // btnCancel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(68, 389);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 21);
-            this.comboBox1.TabIndex = 59;
+            this.btnCancel.Depth = 0;
+            this.btnCancel.Location = new System.Drawing.Point(534, 442);
+            this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Primary = true;
+            this.btnCancel.Size = new System.Drawing.Size(215, 23);
+            this.btnCancel.TabIndex = 61;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Depth = 0;
+            this.btnSubmit.Location = new System.Drawing.Point(302, 442);
+            this.btnSubmit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Primary = true;
+            this.btnSubmit.Size = new System.Drawing.Size(215, 23);
+            this.btnSubmit.TabIndex = 60;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // panel2
             // 
@@ -123,21 +139,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Add New Client";
             // 
-            // materialSingleLineTextField12
-            // 
-            this.materialSingleLineTextField12.Depth = 0;
-            this.materialSingleLineTextField12.Hint = "Other Fees";
-            this.materialSingleLineTextField12.Location = new System.Drawing.Point(532, 389);
-            this.materialSingleLineTextField12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField12.Name = "materialSingleLineTextField12";
-            this.materialSingleLineTextField12.PasswordChar = '\0';
-            this.materialSingleLineTextField12.SelectedText = "";
-            this.materialSingleLineTextField12.SelectionLength = 0;
-            this.materialSingleLineTextField12.SelectionStart = 0;
-            this.materialSingleLineTextField12.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField12.TabIndex = 58;
-            this.materialSingleLineTextField12.UseSystemPasswordChar = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
@@ -161,91 +162,50 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // materialSingleLineTextField11
+            // tbEmail
             // 
-            this.materialSingleLineTextField11.Depth = 0;
-            this.materialSingleLineTextField11.Hint = "Amount";
-            this.materialSingleLineTextField11.Location = new System.Drawing.Point(300, 389);
-            this.materialSingleLineTextField11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField11.Name = "materialSingleLineTextField11";
-            this.materialSingleLineTextField11.PasswordChar = '\0';
-            this.materialSingleLineTextField11.SelectedText = "";
-            this.materialSingleLineTextField11.SelectionLength = 0;
-            this.materialSingleLineTextField11.SelectionStart = 0;
-            this.materialSingleLineTextField11.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField11.TabIndex = 57;
-            this.materialSingleLineTextField11.UseSystemPasswordChar = false;
+            this.tbEmail.Depth = 0;
+            this.tbEmail.Hint = "Email";
+            this.tbEmail.Location = new System.Drawing.Point(534, 277);
+            this.tbEmail.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.PasswordChar = '\0';
+            this.tbEmail.SelectedText = "";
+            this.tbEmail.SelectionLength = 0;
+            this.tbEmail.SelectionStart = 0;
+            this.tbEmail.Size = new System.Drawing.Size(215, 23);
+            this.tbEmail.TabIndex = 33;
+            this.tbEmail.UseSystemPasswordChar = false;
             // 
-            // materialRaisedButton1
+            // tbLandline
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(518, 453);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(215, 23);
-            this.materialRaisedButton1.TabIndex = 40;
-            this.materialRaisedButton1.Text = "Submit";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            this.tbLandline.Depth = 0;
+            this.tbLandline.Hint = "Landline";
+            this.tbLandline.Location = new System.Drawing.Point(302, 277);
+            this.tbLandline.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbLandline.Name = "tbLandline";
+            this.tbLandline.PasswordChar = '\0';
+            this.tbLandline.SelectedText = "";
+            this.tbLandline.SelectionLength = 0;
+            this.tbLandline.SelectionStart = 0;
+            this.tbLandline.Size = new System.Drawing.Size(215, 23);
+            this.tbLandline.TabIndex = 32;
+            this.tbLandline.UseSystemPasswordChar = false;
             // 
-            // materialLabel3
+            // tbMobileNumber
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(30, 347);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(192, 19);
-            this.materialLabel3.TabIndex = 56;
-            this.materialLabel3.Text = "Package Type and Payment";
-            // 
-            // materialSingleLineTextField9
-            // 
-            this.materialSingleLineTextField9.Depth = 0;
-            this.materialSingleLineTextField9.Hint = "Email";
-            this.materialSingleLineTextField9.Location = new System.Drawing.Point(532, 285);
-            this.materialSingleLineTextField9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField9.Name = "materialSingleLineTextField9";
-            this.materialSingleLineTextField9.PasswordChar = '\0';
-            this.materialSingleLineTextField9.SelectedText = "";
-            this.materialSingleLineTextField9.SelectionLength = 0;
-            this.materialSingleLineTextField9.SelectionStart = 0;
-            this.materialSingleLineTextField9.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField9.TabIndex = 33;
-            this.materialSingleLineTextField9.UseSystemPasswordChar = false;
-            // 
-            // materialSingleLineTextField8
-            // 
-            this.materialSingleLineTextField8.Depth = 0;
-            this.materialSingleLineTextField8.Hint = "Landline";
-            this.materialSingleLineTextField8.Location = new System.Drawing.Point(300, 285);
-            this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
-            this.materialSingleLineTextField8.PasswordChar = '\0';
-            this.materialSingleLineTextField8.SelectedText = "";
-            this.materialSingleLineTextField8.SelectionLength = 0;
-            this.materialSingleLineTextField8.SelectionStart = 0;
-            this.materialSingleLineTextField8.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField8.TabIndex = 32;
-            this.materialSingleLineTextField8.UseSystemPasswordChar = false;
-            // 
-            // materialSingleLineTextField7
-            // 
-            this.materialSingleLineTextField7.Depth = 0;
-            this.materialSingleLineTextField7.Hint = "Mobile Number";
-            this.materialSingleLineTextField7.Location = new System.Drawing.Point(68, 285);
-            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
-            this.materialSingleLineTextField7.PasswordChar = '\0';
-            this.materialSingleLineTextField7.SelectedText = "";
-            this.materialSingleLineTextField7.SelectionLength = 0;
-            this.materialSingleLineTextField7.SelectionStart = 0;
-            this.materialSingleLineTextField7.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField7.TabIndex = 31;
-            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
+            this.tbMobileNumber.Depth = 0;
+            this.tbMobileNumber.Hint = "Mobile Number";
+            this.tbMobileNumber.Location = new System.Drawing.Point(70, 277);
+            this.tbMobileNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbMobileNumber.Name = "tbMobileNumber";
+            this.tbMobileNumber.PasswordChar = '\0';
+            this.tbMobileNumber.SelectedText = "";
+            this.tbMobileNumber.SelectionLength = 0;
+            this.tbMobileNumber.SelectionStart = 0;
+            this.tbMobileNumber.Size = new System.Drawing.Size(215, 23);
+            this.tbMobileNumber.TabIndex = 31;
+            this.tbMobileNumber.UseSystemPasswordChar = false;
             // 
             // materialLabel2
             // 
@@ -253,87 +213,87 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(30, 243);
+            this.materialLabel2.Location = new System.Drawing.Point(32, 235);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(113, 19);
             this.materialLabel2.TabIndex = 30;
             this.materialLabel2.Text = "Contact Details";
             // 
-            // materialSingleLineTextField5
+            // tbCourse
             // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "Course";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(300, 189);
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField5.TabIndex = 28;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.tbCourse.Depth = 0;
+            this.tbCourse.Hint = "Course";
+            this.tbCourse.Location = new System.Drawing.Point(302, 183);
+            this.tbCourse.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbCourse.Name = "tbCourse";
+            this.tbCourse.PasswordChar = '\0';
+            this.tbCourse.SelectedText = "";
+            this.tbCourse.SelectionLength = 0;
+            this.tbCourse.SelectionStart = 0;
+            this.tbCourse.Size = new System.Drawing.Size(215, 23);
+            this.tbCourse.TabIndex = 28;
+            this.tbCourse.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField4
+            // tbSchoolName
             // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "School";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(68, 189);
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField4.TabIndex = 27;
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            this.tbSchoolName.Depth = 0;
+            this.tbSchoolName.Hint = "School";
+            this.tbSchoolName.Location = new System.Drawing.Point(70, 183);
+            this.tbSchoolName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbSchoolName.Name = "tbSchoolName";
+            this.tbSchoolName.PasswordChar = '\0';
+            this.tbSchoolName.SelectedText = "";
+            this.tbSchoolName.SelectionLength = 0;
+            this.tbSchoolName.SelectionStart = 0;
+            this.tbSchoolName.Size = new System.Drawing.Size(215, 23);
+            this.tbSchoolName.TabIndex = 27;
+            this.tbSchoolName.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField3
+            // tbMiddleName
             // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "Middle Name";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(532, 136);
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField3.TabIndex = 26;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.tbMiddleName.Depth = 0;
+            this.tbMiddleName.Hint = "Middle Name";
+            this.tbMiddleName.Location = new System.Drawing.Point(534, 130);
+            this.tbMiddleName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbMiddleName.Name = "tbMiddleName";
+            this.tbMiddleName.PasswordChar = '\0';
+            this.tbMiddleName.SelectedText = "";
+            this.tbMiddleName.SelectionLength = 0;
+            this.tbMiddleName.SelectionStart = 0;
+            this.tbMiddleName.Size = new System.Drawing.Size(215, 23);
+            this.tbMiddleName.TabIndex = 26;
+            this.tbMiddleName.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // tbGivenName
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "Given Name";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(300, 136);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField2.TabIndex = 25;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.tbGivenName.Depth = 0;
+            this.tbGivenName.Hint = "Given Name";
+            this.tbGivenName.Location = new System.Drawing.Point(302, 130);
+            this.tbGivenName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbGivenName.Name = "tbGivenName";
+            this.tbGivenName.PasswordChar = '\0';
+            this.tbGivenName.SelectedText = "";
+            this.tbGivenName.SelectionLength = 0;
+            this.tbGivenName.SelectionStart = 0;
+            this.tbGivenName.Size = new System.Drawing.Size(215, 23);
+            this.tbGivenName.TabIndex = 25;
+            this.tbGivenName.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // tbFamilyName
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "Family Name";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(68, 136);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField1.TabIndex = 24;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.tbFamilyName.Depth = 0;
+            this.tbFamilyName.Hint = "Family Name";
+            this.tbFamilyName.Location = new System.Drawing.Point(70, 130);
+            this.tbFamilyName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbFamilyName.Name = "tbFamilyName";
+            this.tbFamilyName.PasswordChar = '\0';
+            this.tbFamilyName.SelectedText = "";
+            this.tbFamilyName.SelectionLength = 0;
+            this.tbFamilyName.SelectionStart = 0;
+            this.tbFamilyName.Size = new System.Drawing.Size(215, 23);
+            this.tbFamilyName.TabIndex = 24;
+            this.tbFamilyName.UseSystemPasswordChar = false;
             // 
             // materialLabel1
             // 
@@ -341,25 +301,55 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(30, 102);
+            this.materialLabel1.Location = new System.Drawing.Point(32, 96);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(130, 19);
             this.materialLabel1.TabIndex = 23;
             this.materialLabel1.Text = "Client Information";
             // 
-            // materialRaisedButton2
+            // tbPassWord
             // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(297, 453);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(215, 23);
-            this.materialRaisedButton2.TabIndex = 40;
-            this.materialRaisedButton2.Text = "Cancel";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            this.tbPassWord.Depth = 0;
+            this.tbPassWord.Hint = "Password";
+            this.tbPassWord.Location = new System.Drawing.Point(302, 371);
+            this.tbPassWord.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbPassWord.Name = "tbPassWord";
+            this.tbPassWord.PasswordChar = '\0';
+            this.tbPassWord.SelectedText = "";
+            this.tbPassWord.SelectionLength = 0;
+            this.tbPassWord.SelectionStart = 0;
+            this.tbPassWord.Size = new System.Drawing.Size(215, 23);
+            this.tbPassWord.TabIndex = 65;
+            this.tbPassWord.UseSystemPasswordChar = false;
+            // 
+            // tbUserName
+            // 
+            this.tbUserName.Depth = 0;
+            this.tbUserName.Hint = "Username";
+            this.tbUserName.Location = new System.Drawing.Point(70, 371);
+            this.tbUserName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.PasswordChar = '\0';
+            this.tbUserName.SelectedText = "";
+            this.tbUserName.SelectionLength = 0;
+            this.tbUserName.SelectionStart = 0;
+            this.tbUserName.Size = new System.Drawing.Size(215, 23);
+            this.tbUserName.TabIndex = 66;
+            this.tbUserName.UseSystemPasswordChar = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(32, 328);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(126, 19);
+            this.materialLabel3.TabIndex = 64;
+            this.materialLabel3.Text = "Login Credentials";
             // 
             // frmAddClient
             // 
@@ -389,24 +379,23 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField9;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField8;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField7;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbEmail;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbLandline;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbMobileNumber;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbCourse;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbSchoolName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbMiddleName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbGivenName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbFamilyName;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField12;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField11;
+        private MaterialSkin.Controls.MaterialRaisedButton btnSubmit;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCancel;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbPassWord;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbUserName;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
 
     }
 }

@@ -16,7 +16,8 @@ namespace Thesis_Highlight_Studio.UserPanel
         private static Client_View _instance;
 
         Provider P = new Provider();
- 
+        TextBox tbFullNameFilter = new TextBox();
+
         public static Client_View Instance
         {
             get
@@ -28,6 +29,7 @@ namespace Thesis_Highlight_Studio.UserPanel
 
             }
         }
+
         public Client_View()
         {
             InitializeComponent();
@@ -53,18 +55,11 @@ namespace Thesis_Highlight_Studio.UserPanel
             frmAddClient add = new frmAddClient();
             DimForm.Show(this.ParentForm, add);
         }
-
-        private void listView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-                if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
-                    contextMenuStrip1.Show(Cursor.Position);
-        }
-
+         
         private void Client_View_Load(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
-            P.View_Data(listView1);
+            listviewClient.Items.Clear();
+            P.viewClient(listviewClient);
 
             //tbSalesAndPurchases.Text = Provider.GetClientView_SalesandPurchases;
             //if (tbSalesAndPurchases.Text.Equals("salesAndPurchases"))
@@ -72,6 +67,24 @@ namespace Thesis_Highlight_Studio.UserPanel
             //    panel1.Visible = false;
             //    contextMenuStrip1.Close();
             //}
+        }
+
+        private void updateCustomerAccToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditClient add = new frmEditClient();
+            DimForm.Show(this.ParentForm, add);
+        }
+
+        private void listviewClient_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                if (listviewClient.FocusedItem.Bounds.Contains(e.Location) == true)
+                    contextMenuStrip1.Show(Cursor.Position);
+
+            tbFullNameFilter.Text = listviewClient.SelectedItems[0].Text;
+
+
+
         }
  
     }

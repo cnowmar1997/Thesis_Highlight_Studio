@@ -17,5 +17,20 @@ namespace Thesis_Highlight_Studio
         {
             InitializeComponent();
         }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            string lastName = materialSingleLineTextField1.Text;
+            string firstName = materialSingleLineTextField2.Text;
+            string middleName = materialSingleLineTextField3.Text;
+
+            string fullName = lastName + "," + " " + firstName + " " + middleName;
+            MessageBox.Show(fullName);
+        }
+
+        private void Partial_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
