@@ -16,10 +16,7 @@ namespace Thesis_Highlight_Studio.UserPanel
         private static Client_View _instance;
 
         Provider P = new Provider();
-
-        //TextBox tbManageClient = new TextBox();
-        //TextBox tbSalesAndPurchases = new TextBox();
-
+ 
         public static Client_View Instance
         {
             get
@@ -60,7 +57,7 @@ namespace Thesis_Highlight_Studio.UserPanel
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
-                //if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
+                if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
                     contextMenuStrip1.Show(Cursor.Position);
         }
 

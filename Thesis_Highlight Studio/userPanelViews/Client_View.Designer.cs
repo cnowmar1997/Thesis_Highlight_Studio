@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnCustID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnSchoolName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCourse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,7 +50,6 @@
             // 
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnCustID,
             this.columnName,
             this.columnSchoolName,
             this.columnCourse,
@@ -69,22 +67,17 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
-            // columnCustID
-            // 
-            this.columnCustID.Text = "Customer ID";
-            this.columnCustID.Width = 102;
-            // 
             // columnName
             // 
             this.columnName.Text = "Name";
             this.columnName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnName.Width = 216;
+            this.columnName.Width = 279;
             // 
             // columnSchoolName
             // 
             this.columnSchoolName.Text = "School Name";
             this.columnSchoolName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnSchoolName.Width = 200;
+            this.columnSchoolName.Width = 221;
             // 
             // columnCourse
             // 
@@ -196,7 +189,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem viewInformationToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader columnCustID;
         private System.Windows.Forms.ColumnHeader columnName;
         private System.Windows.Forms.ColumnHeader columnSchoolName;
         private System.Windows.Forms.ColumnHeader columnCourse;
@@ -207,5 +199,6 @@
         private System.Windows.Forms.ToolStripMenuItem clientPhotosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

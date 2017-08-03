@@ -57,7 +57,7 @@
             this.Menu_panel.Controls.Add(this.Menu_label);
             this.Menu_panel.Location = new System.Drawing.Point(0, 64);
             this.Menu_panel.Name = "Menu_panel";
-            this.Menu_panel.Size = new System.Drawing.Size(42, 705);
+            this.Menu_panel.Size = new System.Drawing.Size(220, 705);
             this.Menu_panel.TabIndex = 0;
             this.Menu_panel.MouseEnter += new System.EventHandler(this.Menu_panel_MouseEnter);
             this.Menu_panel.MouseLeave += new System.EventHandler(this.Menu_panel_MouseLeave);
@@ -65,7 +65,7 @@
             // btn_GenerateReport
             // 
             this.btn_GenerateReport.Depth = 0;
-            this.btn_GenerateReport.Location = new System.Drawing.Point(14, 420);
+            this.btn_GenerateReport.Location = new System.Drawing.Point(14, 426);
             this.btn_GenerateReport.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_GenerateReport.Name = "btn_GenerateReport";
             this.btn_GenerateReport.Primary = true;
@@ -78,13 +78,13 @@
             // btn_SalesAndPurchases
             // 
             this.btn_SalesAndPurchases.Depth = 0;
-            this.btn_SalesAndPurchases.Location = new System.Drawing.Point(14, 355);
+            this.btn_SalesAndPurchases.Location = new System.Drawing.Point(14, 360);
             this.btn_SalesAndPurchases.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_SalesAndPurchases.Name = "btn_SalesAndPurchases";
             this.btn_SalesAndPurchases.Primary = true;
             this.btn_SalesAndPurchases.Size = new System.Drawing.Size(175, 46);
             this.btn_SalesAndPurchases.TabIndex = 0;
-            this.btn_SalesAndPurchases.Text = "Sales and Purchases";
+            this.btn_SalesAndPurchases.Text = "Generate Reports";
             this.btn_SalesAndPurchases.UseVisualStyleBackColor = false;
             this.btn_SalesAndPurchases.Visible = false;
             this.btn_SalesAndPurchases.Click += new System.EventHandler(this.btn_SalesAndPurchases_Click);
@@ -98,7 +98,7 @@
             this.btn_ManagePhotos.Primary = true;
             this.btn_ManagePhotos.Size = new System.Drawing.Size(175, 46);
             this.btn_ManagePhotos.TabIndex = 0;
-            this.btn_ManagePhotos.Text = "Manage Photo/s";
+            this.btn_ManagePhotos.Text = "Manage Photos";
             this.btn_ManagePhotos.UseVisualStyleBackColor = false;
             this.btn_ManagePhotos.Visible = false;
             // 
@@ -111,7 +111,7 @@
             this.btn_ManageClientSched.Primary = true;
             this.btn_ManageClientSched.Size = new System.Drawing.Size(175, 46);
             this.btn_ManageClientSched.TabIndex = 0;
-            this.btn_ManageClientSched.Text = "Manage Client Schedule";
+            this.btn_ManageClientSched.Text = "Manage Customer\'s Order";
             this.btn_ManageClientSched.UseVisualStyleBackColor = false;
             this.btn_ManageClientSched.Visible = false;
             // 
@@ -137,7 +137,7 @@
             this.btn_ManageClient.Primary = true;
             this.btn_ManageClient.Size = new System.Drawing.Size(175, 46);
             this.btn_ManageClient.TabIndex = 0;
-            this.btn_ManageClient.Text = "Manage Client";
+            this.btn_ManageClient.Text = "Manage Accounts";
             this.btn_ManageClient.UseVisualStyleBackColor = false;
             this.btn_ManageClient.Visible = false;
             this.btn_ManageClient.Click += new System.EventHandler(this.btn_ManageClient_Click);
@@ -151,7 +151,7 @@
             this.btn_ManageStaff.Primary = true;
             this.btn_ManageStaff.Size = new System.Drawing.Size(175, 46);
             this.btn_ManageStaff.TabIndex = 0;
-            this.btn_ManageStaff.Text = "Manage Staff";
+            this.btn_ManageStaff.Text = "Manage Own Account";
             this.btn_ManageStaff.UseVisualStyleBackColor = false;
             this.btn_ManageStaff.Visible = false;
             this.btn_ManageStaff.Click += new System.EventHandler(this.btn_ManageStaff_Click);

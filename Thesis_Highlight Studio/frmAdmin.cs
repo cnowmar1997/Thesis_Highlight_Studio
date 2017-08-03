@@ -299,19 +299,19 @@ namespace Thesis_Highlight_Studio
                     reset_buttons();
                     if (Mainpnl.Controls.Count < 1)
                     {
-                        Mainpnl.Controls.Add(UserPanel.Client_View.Instance);
-                        UserPanel.Client_View.Instance.Dock = DockStyle.Fill;
+                        Mainpnl.Controls.Add(userPanelViews.transactionClientView.Instance);
+                        userPanelViews.transactionClientView.Instance.Dock = DockStyle.Fill;
                     }
                     else
                     {
                         Mainpnl.Controls.Clear();
-                        Mainpnl.Controls.Add(UserPanel.Client_View.Instance);
-                        UserPanel.Client_View.Instance.Dock = DockStyle.Fill;
+                        Mainpnl.Controls.Add(userPanelViews.transactionClientView.Instance);
+                        userPanelViews.transactionClientView.Instance.Dock = DockStyle.Fill;
                     }
                     Button btn = sender as Button;
                     btn.Enabled = false;
                     btn.BackColor = btnBackColor;
-                    UserPanel.Client_View.Instance.Focus();
+                    userPanelViews.transactionClientView.Instance.Focus();
                 }
             }
             catch (Exception ex)

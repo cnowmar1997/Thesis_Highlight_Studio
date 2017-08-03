@@ -47,6 +47,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -284,6 +285,7 @@
             this.panel1.Controls.Add(this.materialLabel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.materialRaisedButton2);
             this.panel1.Controls.Add(this.materialRaisedButton1);
             this.panel1.Controls.Add(this.materialSingleLineTextField3);
             this.panel1.Controls.Add(this.materialSingleLineTextField2);
@@ -311,6 +313,18 @@
             this.materialLabel3.TabIndex = 49;
             this.materialLabel3.Text = "Payment";
             this.materialLabel3.Visible = false;
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(291, 447);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(215, 23);
+            this.materialRaisedButton2.TabIndex = 40;
+            this.materialRaisedButton2.Text = "Cancel";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
             // frmSalesAndPurchases
             // 
@@ -355,5 +369,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
     }
 }

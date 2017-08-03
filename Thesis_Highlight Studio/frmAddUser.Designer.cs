@@ -50,6 +50,7 @@
             this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,6 +64,7 @@
             this.panel1.Controls.Add(this.materialCheckBox4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.materialCheckBox3);
+            this.panel1.Controls.Add(this.materialRaisedButton2);
             this.panel1.Controls.Add(this.materialRaisedButton1);
             this.panel1.Controls.Add(this.materialCheckBox2);
             this.panel1.Controls.Add(this.materialSingleLineTextField9);
@@ -375,7 +377,19 @@
             this.materialLabel1.TabIndex = 23;
             this.materialLabel1.Text = "Client Information";
             // 
-            // frm_AddUser
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(265, 456);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(215, 23);
+            this.materialRaisedButton2.TabIndex = 40;
+            this.materialRaisedButton2.Text = "Cancel";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            // 
+            // frmAddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -384,7 +398,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_AddUser";
+            this.Name = "frmAddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add User";
             this.panel1.ResumeLayout(false);
@@ -420,6 +434,7 @@
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox2;
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
 
 
     }
