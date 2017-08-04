@@ -57,7 +57,7 @@
             this.Menu_panel.Controls.Add(this.Menu_label);
             this.Menu_panel.Location = new System.Drawing.Point(0, 64);
             this.Menu_panel.Name = "Menu_panel";
-            this.Menu_panel.Size = new System.Drawing.Size(220, 705);
+            this.Menu_panel.Size = new System.Drawing.Size(42, 705);
             this.Menu_panel.TabIndex = 0;
             this.Menu_panel.MouseEnter += new System.EventHandler(this.Menu_panel_MouseEnter);
             this.Menu_panel.MouseLeave += new System.EventHandler(this.Menu_panel_MouseLeave);
