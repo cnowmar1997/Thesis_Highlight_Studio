@@ -53,21 +53,20 @@ namespace Thesis_Highlight_Studio
          
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string lastName = tbFamilyName.Text;
-            string firstName = tbGivenName.Text;
-            string middleName = tbMiddleName.Text;                   
-            
+                        
             string typeOfUser  = "CLIENT";
             string userName = tbUserName.Text;
             string passWOrd = tbPassWord.Text;
-            string fullName = lastName + "," + " " + firstName + " " + middleName;
+            string familyName = tbFamilyName.Text;
+            string givenName = tbGivenName.Text;
+            string middleName = tbMiddleName.Text;
             string nameOfSchool = tbSchoolName.Text; 
             string courseTitle = tbCourse.Text; 
             string mobileNumber= tbMobileNumber.Text; 
             string landline = tbLandline.Text; 
             string emailAdd = tbEmail.Text;
 
-            if (provide.insertClient(typeOfUser, userName, passWOrd, fullName, nameOfSchool, courseTitle, mobileNumber, landline, emailAdd))
+            if (provide.insertClient(typeOfUser, userName, passWOrd, familyName, givenName, middleName, nameOfSchool, courseTitle, mobileNumber, landline, emailAdd))
             {
                 CMsgBox.Show("Customer information successfully added to database.", "INFORMATION",CMsgBox.CMsgBtns.OK);
             }

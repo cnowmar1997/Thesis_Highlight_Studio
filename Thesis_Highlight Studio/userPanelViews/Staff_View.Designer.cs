@@ -39,9 +39,9 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deactivateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,26 +137,26 @@
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.clientToolStripMenuItem.Text = "Account details";
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.refreshToolStripMenuItem.Text = "Deactivate";
-            // 
-            // deactivateToolStripMenuItem
-            // 
-            this.deactivateToolStripMenuItem.Name = "deactivateToolStripMenuItem";
-            this.deactivateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deactivateToolStripMenuItem.Text = "Refresh";
             // 
             // preToolStripMenuItem
             // 
             this.preToolStripMenuItem.Name = "preToolStripMenuItem";
             this.preToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.preToolStripMenuItem.Text = "Assign Privileges";
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.refreshToolStripMenuItem.Text = "Deactivate";
+            // 
+            // deactivateToolStripMenuItem
+            // 
+            this.deactivateToolStripMenuItem.Name = "deactivateToolStripMenuItem";
+            this.deactivateToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.deactivateToolStripMenuItem.Text = "Refresh";
             // 
             // Staff_View
             // 
