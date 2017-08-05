@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
+using System.Data;
+using Dapper;
 
 namespace Thesis_Highlight_Studio
 {
@@ -68,7 +70,7 @@ namespace Thesis_Highlight_Studio
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    ListViewItem item = new ListViewItem(reader["familyName"] + " ," + reader["givenName"] + "" + reader["middleName"] + "" );
+                    ListViewItem item = new ListViewItem(reader["familyName"] + ", " + reader["givenName"] + " " + reader["middleName"] + "" );
                     item.SubItems.Add(reader["nameOfSchool"] + "");
                     item.SubItems.Add(reader["courseTitle"] + "");
                     item.SubItems.Add(reader["mobileNumber"] + "");
@@ -79,6 +81,7 @@ namespace Thesis_Highlight_Studio
             }
             return ret;
         }
+
 
         public bool insertClient(string typeOfUser, string userName, string passWord, string familyName, string givenName, string middleName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd)
         {
@@ -154,7 +157,7 @@ namespace Thesis_Highlight_Studio
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    ListViewItem item = new ListViewItem(reader["familyName"] + " ," + reader["givenName"] + "" + reader["middleName"] + "");
+                    ListViewItem item = new ListViewItem(reader["familyName"] + ", " + reader["givenName"] + " " + reader["middleName"] + "");
                     item.SubItems.Add(reader["address"] + "");
                     item.SubItems.Add(reader["mobileNumber"] + "");
                     item.SubItems.Add(reader["emailAdd"] + "");
@@ -193,7 +196,7 @@ namespace Thesis_Highlight_Studio
             return ret;
         }
 
-        public bool insertStaff(string typeOfUser, string userName, string passWord, string familyName, string givenName, string middleName, string address, string mobileNumber, string landline, string emailAdd)
+        public bool updateStaff(string typeOfUser, string userName, string passWord, string familyName, string givenName, string middleName, string address, string mobileNumber, string landline, string emailAdd)
         {
             bool ret = false;
             string query = "UPDATE tblUser SET typeOfUser=@typeOfUser=@typeOfUser,userName=@userName,passWord=@passWord,familyname=@familyName,givenName=@givenName,middleName=@middleName,address=@address,mobileNumber=@mobileNumber,landline=@landline,emailAdd=@emailAdd";
@@ -221,7 +224,9 @@ namespace Thesis_Highlight_Studio
             }
             return ret;
         }
+       
 
+        }
         #endregion
-    }
+    
 }

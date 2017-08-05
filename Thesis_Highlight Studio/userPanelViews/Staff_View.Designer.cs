@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewStaff = new System.Windows.Forms.ListView();
             this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -73,24 +73,24 @@
             this.materialSingleLineTextField1.TabIndex = 5;
             this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
-            // listView1
+            // listViewStaff
             // 
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewStaff.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnName,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(57, 75);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1193, 566);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
+            this.listViewStaff.FullRowSelect = true;
+            this.listViewStaff.GridLines = true;
+            this.listViewStaff.Location = new System.Drawing.Point(57, 75);
+            this.listViewStaff.MultiSelect = false;
+            this.listViewStaff.Name = "listViewStaff";
+            this.listViewStaff.Size = new System.Drawing.Size(1193, 566);
+            this.listViewStaff.TabIndex = 4;
+            this.listViewStaff.UseCompatibleStateImageBehavior = false;
+            this.listViewStaff.View = System.Windows.Forms.View.Details;
+            this.listViewStaff.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // columnName
             // 
@@ -164,11 +164,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.materialSingleLineTextField1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewStaff);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Staff_View";
             this.Size = new System.Drawing.Size(1306, 679);
+            this.Load += new System.EventHandler(this.Staff_View_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -178,7 +179,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewStaff;
         private System.Windows.Forms.ColumnHeader columnName;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

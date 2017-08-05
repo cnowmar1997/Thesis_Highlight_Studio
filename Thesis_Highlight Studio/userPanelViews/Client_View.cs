@@ -15,8 +15,10 @@ namespace Thesis_Highlight_Studio.UserPanel
         private Point MouseDownLocation;
         private static Client_View _instance;
 
-        Provider P = new Provider();
-        TextBox tbFullNameFilter = new TextBox();
+        Provider provide = new Provider();
+        TextBox tbFamilyName = new TextBox();
+        TextBox tbGivenName = new TextBox();
+        TextBox tbMiddleName = new TextBox();
 
         public static Client_View Instance
         {
@@ -58,8 +60,8 @@ namespace Thesis_Highlight_Studio.UserPanel
          
         private void Client_View_Load(object sender, EventArgs e)
         {
-            listviewClient.Items.Clear();
-            P.viewClient(listviewClient);
+            listViewClient.Items.Clear();
+            provide.viewClient(listViewClient);
 
             //tbSalesAndPurchases.Text = Provider.GetClientView_SalesandPurchases;
             //if (tbSalesAndPurchases.Text.Equals("salesAndPurchases"))
@@ -78,11 +80,12 @@ namespace Thesis_Highlight_Studio.UserPanel
         private void listviewClient_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
-                if (listviewClient.FocusedItem.Bounds.Contains(e.Location) == true)
+                if (listViewClient.FocusedItem.Bounds.Contains(e.Location) == true)
                     contextMenuStrip1.Show(Cursor.Position);
 
-            tbFullNameFilter.Text = listviewClient.SelectedItems[0].Text;
+            tbFamilyName.Text = listViewClient.SelectedItems[0].Text;
 
+             
 
 
         }

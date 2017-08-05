@@ -1,3 +1,10 @@
+C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe.config
+C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe
+C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.pdb
+C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Dapper.dll
+C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\MaterialSkin.dll
+C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Dapper.xml
+C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.csprojResolveAssemblyReference.cache
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.CMsgBox.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.DimForm.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frmAddPhoto.resources
@@ -17,10 +24,5 @@ C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight S
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.userPanelViews.Staff_View.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.userPanelViews.transactionClientView.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.csproj.GenerateResource.Cache
-C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe.config
-C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.exe
-C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\Thesis_Highlight Studio.pdb
-C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\bin\Debug\MaterialSkin.dll
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.exe
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.pdb
-C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.csprojResolveAssemblyReference.cache

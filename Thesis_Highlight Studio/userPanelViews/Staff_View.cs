@@ -12,6 +12,7 @@ namespace Thesis_Highlight_Studio.userPanelViews
 {
     public partial class Staff_View : UserControl
     {
+        Provider provide = new Provider();
 
        private Point MouseDownLocation;
        private static Staff_View _instance;
@@ -59,6 +60,12 @@ namespace Thesis_Highlight_Studio.userPanelViews
             if (e.Button == MouseButtons.Right)
                 //if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
                 contextMenuStrip1.Show(Cursor.Position);
+        }
+
+        private void Staff_View_Load(object sender, EventArgs e)
+        {
+            listViewStaff.Items.Clear();
+             provide.viewClient(listViewStaff);
         }
     }
 }

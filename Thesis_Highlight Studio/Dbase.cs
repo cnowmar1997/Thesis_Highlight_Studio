@@ -25,7 +25,7 @@ namespace Thesis_Highlight_Studio
         protected static string filename = "db_highlight_studio.ini";
         private static string ConString()
         {
-            string file = filepath+filename;
+            string file = filepath + filename;
             string ret = string.Empty;
 
             //create dbserver.cfg if it does not exist
