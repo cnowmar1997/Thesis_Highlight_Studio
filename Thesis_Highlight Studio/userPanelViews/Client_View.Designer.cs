@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listViewClient = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnSchoolName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCourse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,13 +43,14 @@
             this.refreshToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tbSearch = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new MaterialSkin.Controls.MaterialFlatButton();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewClient
             // 
-            this.listViewClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewClient.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
             this.columnName,
             this.columnSchoolName,
             this.columnCourse,
@@ -57,49 +59,49 @@
             this.columnEmailAdd});
             this.listViewClient.FullRowSelect = true;
             this.listViewClient.GridLines = true;
-            this.listViewClient.Location = new System.Drawing.Point(61, 64);
+            this.listViewClient.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewClient.Location = new System.Drawing.Point(71, 106);
             this.listViewClient.MultiSelect = false;
             this.listViewClient.Name = "listViewClient";
-            this.listViewClient.Size = new System.Drawing.Size(1193, 566);
+            this.listViewClient.Size = new System.Drawing.Size(1215, 516);
             this.listViewClient.TabIndex = 0;
             this.listViewClient.UseCompatibleStateImageBehavior = false;
             this.listViewClient.View = System.Windows.Forms.View.Details;
             this.listViewClient.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listviewClient_MouseClick);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Client ID";
+            this.columnHeader1.Width = 0;
+            // 
             // columnName
             // 
             this.columnName.Text = "Name";
-            this.columnName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnName.Width = 279;
+            this.columnName.Width = 262;
             // 
             // columnSchoolName
             // 
             this.columnSchoolName.Text = "School Name";
-            this.columnSchoolName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnSchoolName.Width = 221;
             // 
             // columnCourse
             // 
             this.columnCourse.Text = "Course";
-            this.columnCourse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnCourse.Width = 177;
             // 
             // columnMobileNum
             // 
             this.columnMobileNum.Text = "Mobile Number";
-            this.columnMobileNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnMobileNum.Width = 164;
             // 
             // columnTeleNum
             // 
             this.columnTeleNum.Text = "Telephone Number";
-            this.columnTeleNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnTeleNum.Width = 164;
             // 
             // columnEmailAdd
             // 
             this.columnEmailAdd.Text = "Email Address";
-            this.columnEmailAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnEmailAdd.Width = 178;
             // 
             // contextMenuStrip1
@@ -134,7 +136,7 @@
             // 
             this.tbSearch.Depth = 0;
             this.tbSearch.Hint = "Search here";
-            this.tbSearch.Location = new System.Drawing.Point(61, 26);
+            this.tbSearch.Location = new System.Drawing.Point(71, 77);
             this.tbSearch.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PasswordChar = '\0';
@@ -154,14 +156,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(83, 77);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAdd.Depth = 0;
+            this.btnAdd.Location = new System.Drawing.Point(71, 21);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Primary = false;
+            this.btnAdd.Size = new System.Drawing.Size(115, 36);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add Customer";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Client_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewClient);
@@ -172,6 +192,7 @@
             this.Load += new System.EventHandler(this.Client_View_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -191,5 +212,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField tbSearch;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private MaterialSkin.Controls.MaterialFlatButton btnAdd;
     }
 }

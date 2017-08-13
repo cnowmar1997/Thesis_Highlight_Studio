@@ -19,13 +19,34 @@ namespace Thesis_Highlight_Studio
             public string time { get; set; }
             public string date { get; set; }
         }
-        #region Getters and Setters
-        static string filterFullName = "";
 
+        #region Tempo Data
+         static string filterUserId = "";
 
-
+         public static string filter_ID
+         {
+             get { return filterUserId; }
+             set { filterUserId = value; }
+         }
         #endregion
-        public List<Item> Notes()
+
+         #region filteringMethod
+         public List<User> retrieveUser(string userId)
+         {
+             var list = new List<User>();
+             string query = @"SELECT * from tblUser WHERE userId = '"+userId+"';";
+
+             using (IDbConnection con = DB.Con)
+             {
+                 if(con.State == ConnectionState.Closed)con.Open();
+                 list = con.Query<User>(query, commandType: CommandType.Text).ToList();
+
+             }
+             return list;
+         }
+        #endregion
+
+         public List<Item> Notes()
         {
             var list = new List<Item>();
             try
@@ -57,31 +78,19 @@ namespace Thesis_Highlight_Studio
         }
 
         
-        #region tbl_User Customer      
-        public bool viewClient(ListView listviewClient)
+        #region tbl_User CUSTOMER      
+        public List<User> viewClient()
         {
-            bool ret = false;
+            var list = new List<User>();
+            string query = "SELECT userId,familyName,givenName,middleName,nameOfSchool,courseTitle,mobileNumber,landline,emailAdd FROM tbluser";
 
-            using (DB.Con)
+            using (IDbConnection con =  DB.Con)
             {
-                DB.Con.Close();
-                DB.Con.Open();
-                MySqlCommand cmd = new MySqlCommand(@"SELECT familyName,givenName,middleName,nameOfSchool,courseTitle,mobileNumber,landline,emailAdd FROM tbluser", DB.Con);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    ListViewItem item = new ListViewItem(reader["familyName"] + ", " + reader["givenName"] + " " + reader["middleName"] + "" );
-                    item.SubItems.Add(reader["nameOfSchool"] + "");
-                    item.SubItems.Add(reader["courseTitle"] + "");
-                    item.SubItems.Add(reader["mobileNumber"] + "");
-                    item.SubItems.Add(reader["landline"] + "");
-                    item.SubItems.Add(reader["emailAdd"] + "");
-                    listviewClient.Items.Add(item);
-                }
+                if (con.State == ConnectionState.Closed) con.Open();
+                list = con.Query<User>(query, commandType: CommandType.Text).ToList();
             }
-            return ret;
+            return list;
         }
-
 
         public bool insertClient(string typeOfUser, string userName, string passWord, string familyName, string givenName, string middleName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd)
         {
@@ -113,10 +122,12 @@ namespace Thesis_Highlight_Studio
             return ret;
         }
 
-        public bool updateClient( string userName, string passWord, string familyName, string givenName, string middleName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd)
+
+
+        public bool updateClient( string userName, string passWord, string familyName, string givenName, string middleName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd, string userId)
         {
             bool ret = false;
-            string query = "UPDATE tblUser SET userName=@userName,passWord=@passWord,familyName=@familyName,givenName=@givenName,middleName=@middleName,nameOfSchool=@nameOfSchool,courseTitle=@courseTitle,mobileNumber=@mobileNumber,landline=@landline,emailAdd=@emailAdd WHERE ";
+            string query = "UPDATE tblUser SET userName=@userName,passWord=@passWord,familyName=@familyName,givenName=@givenName,middleName=@middleName,nameOfSchool=@nameOfSchool,courseTitle=@courseTitle,mobileNumber=@mobileNumber,landline=@landline,emailAdd=@emailAdd WHERE userId = '"+userId+"' ";
 
             using (DB.Con)
             {
@@ -142,9 +153,11 @@ namespace Thesis_Highlight_Studio
             }
             return ret;
         }
+
+        
         #endregion
 
-        #region tbl_User Staff
+        #region tbl_User STAFF
         public bool viewStaff(ListView listviewStaff)
         {
             bool ret = false;
@@ -224,9 +237,35 @@ namespace Thesis_Highlight_Studio
             }
             return ret;
         }
-       
+         #endregion
 
+        #region tblItem
+        public bool insertItem(string itemName, string itemDescription, string itemPrice)
+        {
+            bool ret = false;
+            string query = "INSERT INTO tblItem(itemName,itemDescription,itemPrice) VALUES (@itemName,@itemDescription,@itemPrice)";
+
+            using (DB.Con)
+            {
+                DB.Con.Close();
+                DB.Con.Open();
+                MySqlCommand command = new MySqlCommand(query, DB.Con);
+                command.Parameters.AddWithValue(@"itemName",itemName);
+                command.Parameters.AddWithValue(@"itemDescription", itemDescription);
+                command.Parameters.AddWithValue(@"itemPrice", itemPrice);
+
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    ret = true;
+                }
+            }
+            return ret;
         }
+
+
+
+
         #endregion
-    
+ 
+        }
 }

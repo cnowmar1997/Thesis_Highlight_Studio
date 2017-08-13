@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 
 namespace Thesis_Highlight_Studio
 {
-    public partial class frm_Main : MaterialForm
+    public partial class frmAdmin : MaterialForm
     {
         DimForm df = new DimForm();
         Provider P = new Provider();
@@ -35,7 +35,7 @@ namespace Thesis_Highlight_Studio
         //TextBox tbManageClient = new TextBox();
         //TextBox tbSalesAndPurchases = new TextBox();
 
-        public frm_Main()
+        public frmAdmin()
         {
             InitializeComponent();
             Mainpnl.AutoScroll = true;
@@ -81,15 +81,16 @@ namespace Thesis_Highlight_Studio
 
         void reset_buttons()
         {
-            btn_ManageStaff.Enabled = true;
-            btn_ManageClient.Enabled = true;
-            btn_ManagePackage.Enabled = true;
-            btn_ManageClientSched.Enabled = true;
-            btn_ManagePhotos.Enabled = true;
-            btn_SalesAndPurchases.Enabled = true;
-            btn_GenerateReport.Enabled = true;
+            //btn_ManageStaff.Enabled = true;
+            btnClient.Enabled = true;
+            btnPackages.Enabled = true;
+            btnPurchaseOrder.Enabled = true;
+            btnPhotos.Enabled = true;
+            btnItems.Enabled = true;
+            //btn_SalesAndPurchases.Enabled = true;
+            //btn_GenerateReport.Enabled = true;
 
-            btn_ManageStaff.BackColor = retBackColor;
+            //btn_ManageStaff.BackColor = retBackColor;
         }
         #region WindowEvents
         private void timer_Open_Tick(object sender, EventArgs e)
@@ -161,13 +162,14 @@ namespace Thesis_Highlight_Studio
             if (mouse_on_control)
             {
                 Menu_label.ForeColor = Color.WhiteSmoke;
-                btn_ManageStaff.Visible = true;
-                btn_ManageClient.Visible = true;
-                btn_ManagePackage.Visible = true;
-                btn_ManageClientSched.Visible = true;
-                btn_ManagePhotos.Visible = true;
-                btn_SalesAndPurchases.Visible = true;
-                btn_GenerateReport.Visible = true;
+                //btn_ManageStaff.Visible = true;
+                btnItems.Visible = true;
+                btnClient.Visible = true;
+                btnPackages.Visible = true;
+                btnPurchaseOrder.Visible = true;
+                btnPhotos.Visible = true;
+                //btn_SalesAndPurchases.Visible = true;
+                //btn_GenerateReport.Visible = true;
                 timer_Open.Enabled = true;
                 timer_Close.Enabled = false;
             }
@@ -183,13 +185,14 @@ namespace Thesis_Highlight_Studio
             if (!mouse_on_control)
             {
                 Menu_label.ForeColor = SystemColors.ControlText;
-                btn_ManageStaff.Visible = false;
-                btn_ManageClient.Visible = false;
-                btn_ManagePackage.Visible = false;
-                btn_ManageClientSched.Visible = false;
-                btn_ManagePhotos.Visible = false;
-                btn_SalesAndPurchases.Visible = false;
-                btn_GenerateReport.Visible = false;
+                //btn_ManageStaff.Visible = false;
+                btnItems.Visible = false;
+                btnClient.Visible = false;
+                btnPackages.Visible = false;
+                btnPurchaseOrder.Visible = false;
+                btnPhotos.Visible = false;
+                //btn_SalesAndPurchases.Visible = false;
+                //btn_GenerateReport.Visible = false;
                 timer_Open.Enabled = false;
                 timer_Close.Enabled = true;
             }
@@ -312,6 +315,38 @@ namespace Thesis_Highlight_Studio
                     btn.Enabled = false;
                     btn.BackColor = btnBackColor;
                     userPanelViews.transactionClientView.Instance.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                CMsgBox.Show(ex.Message);
+            }
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            Mainpnl.Controls.Clear();
+            try
+            {
+                reset_buttons();
+                if (Mainpnl.Controls.Count < 1)
+                {
+                    reset_buttons();
+                    if (Mainpnl.Controls.Count < 1)
+                    {
+                        Mainpnl.Controls.Add(userPanelViews.Item_View.Instance);
+                        userPanelViews.Item_View.Instance.Dock = DockStyle.Fill;
+                    }
+                    else
+                    {
+                        Mainpnl.Controls.Clear();
+                        Mainpnl.Controls.Add(userPanelViews.Item_View.Instance);
+                        userPanelViews.Item_View.Instance.Dock = DockStyle.Fill;
+                    }
+                    Button btn = sender as Button;
+                    btn.Enabled = false;
+                    btn.BackColor = btnBackColor;
+                    userPanelViews.Item_View.Instance.Focus();
                 }
             }
             catch (Exception ex)

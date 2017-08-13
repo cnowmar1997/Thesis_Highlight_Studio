@@ -51,8 +51,8 @@ namespace Thesis_Highlight_Studio
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string typeOfUser = "STAFF";
-            string userName = tbUserName.Text;
-            string passWOrd = tbPassWord.Text;
+            //string userName = tbUserName.Text;
+            //string passWOrd = tbPassWord.Text;
             string familyName = tbFamilyName.Text;
             string givenName = tbGivenName.Text;
             string middleName = tbMiddleName.Text;
@@ -61,10 +61,10 @@ namespace Thesis_Highlight_Studio
             string landline = tbLandline.Text;
             string emailAdd = tbEmail.Text;
 
-            if (provide.insertStaff(typeOfUser, userName, passWOrd, familyName, givenName, middleName, address, mobileNumber, landline, emailAdd))
-            {
-                CMsgBox.Show("Staff information successfully added to database.", "INFORMATION", CMsgBox.CMsgBtns.OK);
-            }
+            //if (provide.insertStaff(typeOfUser, userName, passWOrd, familyName, givenName, middleName, address, mobileNumber, landline, emailAdd))
+            //{
+            //    CMsgBox.Show("Staff information successfully added to database.", "INFORMATION", CMsgBox.CMsgBtns.OK);
+            //}
         }
     }
 }

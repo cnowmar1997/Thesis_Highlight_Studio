@@ -1,6 +1,4 @@
 ﻿using System;
-using MaterialSkin;
-using MaterialSkin.Controls;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System.Runtime.InteropServices;
 
 namespace Thesis_Highlight_Studio
 {
-    public partial class frmAddClient : MaterialForm
+    public partial class frmAddItem : MaterialForm
     {
-        Provider provide = new Provider();
+
         private readonly MaterialSkinManager skinManager;
-        
-        public frmAddClient()
+        Provider provide = new Provider();
+        public frmAddItem()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
@@ -26,10 +27,8 @@ namespace Thesis_Highlight_Studio
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-
         }
 
-        #region dllImport
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
@@ -43,41 +42,25 @@ namespace Thesis_Highlight_Studio
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
-        #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frmAddItem_Load(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
 
-         
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-                        
-            string typeOfUser  = "CLIENT";
-            //string userName = tbUserName.Text;
-            //string passWOrd = tbPassWord.Text;
-            string familyName = tbFamilyName.Text;
-            string givenName = tbGivenName.Text;
-            string middleName = tbMiddleName.Text;
-            string nameOfSchool = tbSchoolName.Text; 
-            string courseTitle = tbCourse.Text; 
-            string mobileNumber= tbMobileNumber.Text; 
-            string landline = tbLandline.Text; 
-            string emailAdd = tbEmail.Text;
+            var item = new Item();
 
-            //if (provide.insertClient(typeOfUser, userName, passWOrd, familyName, givenName, middleName, nameOfSchool, courseTitle, mobileNumber, landline, emailAdd))
-            //{
-            //    CMsgBox.Show("Customer information successfully added to database.", "INFORMATION",CMsgBox.CMsgBtns.OK);
-            //}
+            item.itemName = tbItemName.Text;
+            item.itemPrice = tbItemPrice.Text;
+            item.itemDescription = tbItemDescription.Text;
 
+            if (provide.insertItem(item.itemName, item.itemPrice, item.itemDescription))
+            {
+                CMsgBox.Show("Successfully added to database.", "INFORMATION");
+                this.Close();
+            }
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-         
-
     }
 }

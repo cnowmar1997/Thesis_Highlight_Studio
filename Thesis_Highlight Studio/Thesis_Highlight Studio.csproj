@@ -52,6 +52,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MySql.Web.dll</HintPath>
     </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.25410, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.2-alpha2\lib\net20\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,6 +80,18 @@
     </Compile>
     <Compile Include="DimForm.Designer.cs">
       <DependentUpon>DimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddPhoto.cs">
       <SubType>Form</SubType>
@@ -119,17 +135,12 @@
     <Compile Include="frmSalesAndPurchases.Designer.cs">
       <DependentUpon>frmSalesAndPurchases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Partial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Partial.Designer.cs">
-      <DependentUpon>Partial.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,6 +151,12 @@
     </Compile>
     <Compile Include="userPanelViews\Client_View.Designer.cs">
       <DependentUpon>Client_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userPanelViews\Item_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userPanelViews\Item_View.Designer.cs">
+      <DependentUpon>Item_View.cs</DependentUpon>
     </Compile>
     <Compile Include="userPanelViews\Photo_View.cs">
       <SubType>UserControl</SubType>
@@ -180,6 +197,12 @@
     <EmbeddedResource Include="DimForm.resx">
       <DependentUpon>DimForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddItem.resx">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddPhoto.resx">
       <DependentUpon>frmAddPhoto.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,9 +227,6 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Partial.resx">
-      <DependentUpon>Partial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -219,6 +239,9 @@
     </Compile>
     <EmbeddedResource Include="userPanelViews\Client_View.resx">
       <DependentUpon>Client_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userPanelViews\Item_View.resx">
+      <DependentUpon>Item_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userPanelViews\Photo_View.resx">
       <DependentUpon>Photo_View.cs</DependentUpon>

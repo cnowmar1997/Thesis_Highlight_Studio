@@ -18,6 +18,12 @@ namespace Thesis_Highlight_Studio
     {
 
         private readonly MaterialSkinManager skinManager;
+
+        Provider provide = new Provider();
+        TextBox tbUserId = new TextBox();
+
+        public static bool isChanged;
+
         public frmEditClient()
         {
             InitializeComponent();
@@ -26,6 +32,8 @@ namespace Thesis_Highlight_Studio
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+
+            tbUserId.Text = Provider.filter_ID;
 
         }
 
@@ -43,9 +51,64 @@ namespace Thesis_Highlight_Studio
             int nHeightEllipse // width of ellipse
         );
 
+        private void retrieveData()
+        {
+            var list = provide.retrieveUser(tbUserId.Text);
+            if (list != null)
+            {
+                foreach (User u in list)
+                {
+                    tbUsername.Text = u.userName;
+                    tbPassword.Text = u.passWord;
+                    tbFamilyName.Text = u.familyName;
+                    tbGivenName.Text = u.givenName;
+                    tbMiddleName.Text = u.middleName;
+                    tbSchoolName.Text = u.nameOfSchool;
+                    tbCourse.Text = u.courseTitle;
+                    tbMobileNumber.Text = u.mobileNumber;
+                    tbLandline.Text = u.landline;
+                    tbEmail.Text = u.emailAdd;
+                }
+            }
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            var user = new User();
+            
+            
+            string userId = tbUserId.Text;
+            string userName = string.IsNullOrWhiteSpace(tbUsername.Text) ? null : tbUsername.Text;
+            string passWord = string.IsNullOrWhiteSpace(tbPassword.Text) ? null : tbPassword.Text;
+            string familyName = string.IsNullOrWhiteSpace(tbFamilyName.Text) ? null : tbFamilyName.Text;
+            string givenName = string.IsNullOrWhiteSpace(tbGivenName.Text) ? null : tbGivenName.Text;
+            string middleName = string.IsNullOrWhiteSpace(tbMiddleName.Text) ? null : tbMiddleName.Text;
+            string nameOfSchool = string.IsNullOrWhiteSpace(tbSchoolName.Text) ? null : tbSchoolName.Text;
+            string courseTitle = string.IsNullOrWhiteSpace(tbCourse.Text) ? null : tbCourse.Text;
+            string mobileNumber = string.IsNullOrWhiteSpace(tbMobileNumber.Text) ? null : tbMobileNumber.Text;
+            string landline = string.IsNullOrWhiteSpace(tbLandline.Text) ? null : tbLandline.Text;
+            string emailAdd = string.IsNullOrWhiteSpace(tbEmail.Text) ? null : tbEmail.Text;
 
+ 
+            if (CMsgBox.Show(this, "Do you want to save this changes?", "Confirm", CMsgBox.CMsgBtns.YesNo) == DialogResult.Yes)
+            {
+                if (provide.updateClient(userName, passWord, familyName, givenName, middleName, nameOfSchool, courseTitle, mobileNumber, landline, emailAdd, userId))
+                {
+                    CMsgBox.Show("Successfully Updated!", "INFORMATION");
+                    this.Close(); 
+                }
+            }
+         
+        }
+
+        private void frmEditClient_Load(object sender, EventArgs e)
+        {
+            retrieveData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

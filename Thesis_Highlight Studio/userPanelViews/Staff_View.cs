@@ -64,8 +64,8 @@ namespace Thesis_Highlight_Studio.userPanelViews
 
         private void Staff_View_Load(object sender, EventArgs e)
         {
-            listViewStaff.Items.Clear();
-             provide.viewClient(listViewStaff);
+            //listViewStaff.Items.Clear();
+            // provide.viewClient(listViewStaff);
         }
     }
 }
