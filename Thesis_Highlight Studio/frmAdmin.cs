@@ -40,8 +40,8 @@ namespace Thesis_Highlight_Studio
             InitializeComponent();
             Mainpnl.AutoScroll = true;
      
-            // Mainpnl.AutoScrollMinSize = new Size(0, 0);
-            //Mainpnl.AutoScrollPosition = new Point(0,0);
+            Mainpnl.AutoScrollMinSize = new Size(0, 0);
+            Mainpnl.AutoScrollPosition = new Point(0,0);
             int style = NativeWinAPI.GetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE);
             style |= NativeWinAPI.WS_EX_COMPOSITED;
             NativeWinAPI.SetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE, style);
@@ -63,21 +63,22 @@ namespace Thesis_Highlight_Studio
             [DllImport("user32")]
             internal static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
         }
-        void populate()
-        {
-            var list = P.Notes();
-            if (list.Any())
-            {
-                foreach (var tra in list)
-                {
-                    UserPanel.PnlNotes.Stack(this.Mainpnl, tra.WhatToDo, tra.description, tra.time, tra.date);
-                }
-            }
-            else
-            {
-                CMsgBox.Show("Empty");
-            }
-        }
+
+        //void populate()
+        //{
+        //    var list = P.Notes();
+        //    if (list.Any())
+        //    {
+        //        foreach (var tra in list)
+        //        {
+        //            UserPanel.PnlNotes.Stack(this.Mainpnl, tra.WhatToDo, tra.description, tra.time, tra.date);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        CMsgBox.Show("Empty");
+        //    }
+        //}
 
         void reset_buttons()
         {
@@ -87,11 +88,13 @@ namespace Thesis_Highlight_Studio
             btnPurchaseOrder.Enabled = true;
             btnPhotos.Enabled = true;
             btnItems.Enabled = true;
+            btnRecycleBin.Enabled = true;
             //btn_SalesAndPurchases.Enabled = true;
             //btn_GenerateReport.Enabled = true;
 
             //btn_ManageStaff.BackColor = retBackColor;
         }
+
         #region WindowEvents
         private void timer_Open_Tick(object sender, EventArgs e)
         {
@@ -148,6 +151,11 @@ namespace Thesis_Highlight_Studio
             if (Menu_panel.Width == 42 || Mainpnl.Width == 1306 & Mainpnl.Left == 48)
             {
                 timer_Close.Enabled = false;
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = true;
             }
         }
 
@@ -168,6 +176,12 @@ namespace Thesis_Highlight_Studio
                 btnPackages.Visible = true;
                 btnPurchaseOrder.Visible = true;
                 btnPhotos.Visible = true;
+                btnRecycleBin.Visible = true;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
                 //btn_SalesAndPurchases.Visible = true;
                 //btn_GenerateReport.Visible = true;
                 timer_Open.Enabled = true;
@@ -191,6 +205,7 @@ namespace Thesis_Highlight_Studio
                 btnPackages.Visible = false;
                 btnPurchaseOrder.Visible = false;
                 btnPhotos.Visible = false;
+                btnRecycleBin.Visible = false;
                 //btn_SalesAndPurchases.Visible = false;
                 //btn_GenerateReport.Visible = false;
                 timer_Open.Enabled = false;
@@ -218,7 +233,6 @@ namespace Thesis_Highlight_Studio
             //populate();
         }
         #endregion
-
 
         private void btn_ManageStaff_Click(object sender, EventArgs e)
         {
@@ -285,14 +299,7 @@ namespace Thesis_Highlight_Studio
         }
 
         private void btn_SalesAndPurchases_Click(object sender, EventArgs e)
-        {
-
-            ////tbManageClient.Text = "manageClient";
-            //tbSalesAndPurchases.Text = "salesAndPurchases";
-            ////Provider.GetClientView_ManageClient = tbManageClient.Text;
-            //Provider.GetClientView_SalesandPurchases = tbSalesAndPurchases.Text;
-
-           
+        {           
             Mainpnl.Controls.Clear();
             try
             {
@@ -353,6 +360,11 @@ namespace Thesis_Highlight_Studio
             {
                 CMsgBox.Show(ex.Message);
             }
+        }
+
+        private void btnPackages_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

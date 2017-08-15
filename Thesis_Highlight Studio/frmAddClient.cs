@@ -16,8 +16,15 @@ namespace Thesis_Highlight_Studio
     public partial class frmAddClient : MaterialForm
     {
         Provider provide = new Provider();
+        
         private readonly MaterialSkinManager skinManager;
         
+
+        TextBox tbTypeofUser = new TextBox();
+        TextBox tbStatus = new TextBox();
+
+        
+
         public frmAddClient()
         {
             InitializeComponent();
@@ -27,6 +34,8 @@ namespace Thesis_Highlight_Studio
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
+            this.tbTypeofUser.Text = "CLIENT";
+            this.tbStatus.Text = "ACTIVE";
         }
 
         #region dllImport
@@ -45,39 +54,79 @@ namespace Thesis_Highlight_Studio
         );
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        #region Methods
+
+        private static Client clnt;
+
+        public Client getClient
         {
-            this.Close();
+            get
+            {
+                return StoreValues();
+            }
         }
 
-         
+        public bool ClientAdd()
+        {
+            var entry = StoreValues();
+            if (entry != null)
+            {
+                if (provide.addClient(entry))
+                {
+                    CMsgBox.Show("Customer information successfully added to database.", "INFORMATION", CMsgBox.CMsgBtns.OK);
+                    return true;
+                }
+            }
+
+            return false; 
+        }
+
+        private Client StoreValues()
+        {
+            try
+            {
+                clnt = new Client();
+                clnt.typeOfUser = string.IsNullOrWhiteSpace(tbTypeofUser.Text) ? null : tbTypeofUser.Text;
+                clnt.userName = string.IsNullOrWhiteSpace(tbUserName.Text) ? null : tbUserName.Text;
+                clnt.passWord = string.IsNullOrWhiteSpace(tbPassWord.Text) ? null : tbPassWord.Text;
+                clnt.familyName = string.IsNullOrWhiteSpace(tbFamilyName.Text) ? null : tbFamilyName.Text;
+                clnt.givenName = string.IsNullOrWhiteSpace(tbGivenName.Text) ? null : tbGivenName.Text;
+                clnt.middleName = string.IsNullOrWhiteSpace(tbMiddleName.Text) ? null : tbMiddleName.Text;
+                clnt.nameOfSchool = string.IsNullOrWhiteSpace(tbSchoolName.Text) ? null : tbSchoolName.Text;
+                clnt.courseTitle = string.IsNullOrWhiteSpace(tbCourse.Text) ? null : tbCourse.Text;
+                clnt.mobileNumber = string.IsNullOrWhiteSpace(tbMobileNumber.Text) ? null : tbMobileNumber.Text;
+                clnt.landline = string.IsNullOrWhiteSpace(tbLandline.Text) ? null : tbLandline.Text;
+                clnt.emailAdd = string.IsNullOrWhiteSpace(tbEmail.Text) ? null : tbEmail.Text;
+                clnt.status = string.IsNullOrWhiteSpace(tbStatus.Text) ? null : tbStatus.Text;
+            }
+            catch (Exception ex)
+            {
+
+                CMsgBox.Show(ex.ToString());
+                return null;
+            }
+
+            return clnt;
+        }
+        #endregion
+
+        #region Events      
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-                        
-            string typeOfUser  = "CLIENT";
-            //string userName = tbUserName.Text;
-            //string passWOrd = tbPassWord.Text;
-            string familyName = tbFamilyName.Text;
-            string givenName = tbGivenName.Text;
-            string middleName = tbMiddleName.Text;
-            string nameOfSchool = tbSchoolName.Text; 
-            string courseTitle = tbCourse.Text; 
-            string mobileNumber= tbMobileNumber.Text; 
-            string landline = tbLandline.Text; 
-            string emailAdd = tbEmail.Text;
-
-            //if (provide.insertClient(typeOfUser, userName, passWOrd, familyName, givenName, middleName, nameOfSchool, courseTitle, mobileNumber, landline, emailAdd))
-            //{
-            //    CMsgBox.Show("Customer information successfully added to database.", "INFORMATION",CMsgBox.CMsgBtns.OK);
-            //}
-
+            ClientAdd();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-         
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
     }
 }

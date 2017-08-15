@@ -14,12 +14,17 @@ using System.Runtime.InteropServices;
 
 namespace Thesis_Highlight_Studio
 {
-    public partial class frmAddItem : MaterialForm
+    public partial class frmEditItem : MaterialForm
     {
 
         private readonly MaterialSkinManager skinManager;
+
         Provider provide = new Provider();
-        public frmAddItem()
+
+        TextBox tbItemId = new TextBox();
+        TextBox _tbItemId = new TextBox();
+
+        public frmEditItem()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
@@ -27,8 +32,13 @@ namespace Thesis_Highlight_Studio
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+
+            _tbItemId.Text = Provider.filter_ID;
+            tbItemId.Text = Provider.filter_ID;
+            itemId = int.Parse(tbItemId.Text);
         }
 
+        #region DLLImport
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
@@ -41,26 +51,61 @@ namespace Thesis_Highlight_Studio
             int nBottomRect, // y-coordinate of lower-right corner
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
-        );
+        ); 
+        #endregion
 
-        private void frmAddItem_Load(object sender, EventArgs e)
+
+        #region Methods
+        private static int _itemId;
+
+        public int itemId
         {
-           
+            get { return _itemId; }
+            set { _itemId = value; }
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void getData()
         {
-            var item = new Itemlist();
-
-            item.name = tbName.Text;
-            item.price = tbPrice.Text;
-            item.description = tbDescription.Text;
-
-            if (provide.insertItem(item.name, item.price, item.description))
+            var itmList = provide.getItem(itemId);
+            if (itmList != null)
             {
-                CMsgBox.Show("Successfully added to database.", "INFORMATION");
-                this.Close();
+
+                tbName.Text = itmList.name;
+                tbDescription.Text = itmList.description;
+                tbPrice.Text = itmList.price;
+
             }
         }
+        public void updateItem()
+        {
+            var itmList = new Itemlist();
+            string _itemId = _tbItemId.Text;
+            itmList.name = tbName.Text;
+            itmList.description = tbDescription.Text;
+            itmList.price = tbPrice.Text;
+
+
+            if (provide.updateItem(tbName.Text, tbDescription.Text, tbPrice.Text, _tbItemId.Text))
+            {
+                CMsgBox.Show("Item successfully updated.");
+                this.Close();
+            }
+        } 
+        #endregion
+
+        #region EVENTS
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            updateItem();
+        }
+
+        private void frmEditItem_Load(object sender, EventArgs e)
+        {
+            getData();
+        } 
+        #endregion
+        
+
+
     }
 }

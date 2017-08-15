@@ -20,6 +20,14 @@ namespace Thesis_Highlight_Studio
             }
         }
 
+        public static string ConnectionString
+        {
+            get
+            {
+                return ConString();
+            }
+        }
+
         protected static string defaultConnectionString = "server=localhost; User id=root; password=; database=db_highlight_studio";
         protected static string filepath = AppDomain.CurrentDomain.BaseDirectory.ToString();
         protected static string filename = "db_highlight_studio.ini";

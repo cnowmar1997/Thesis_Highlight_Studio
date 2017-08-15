@@ -39,11 +39,11 @@
             this.columnEmailAdd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateCustomerAccToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tbSearch = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdd = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnPrintReports = new MaterialSkin.Controls.MaterialFlatButton();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,10 +60,10 @@
             this.listViewClient.FullRowSelect = true;
             this.listViewClient.GridLines = true;
             this.listViewClient.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewClient.Location = new System.Drawing.Point(71, 106);
+            this.listViewClient.Location = new System.Drawing.Point(10, 77);
             this.listViewClient.MultiSelect = false;
             this.listViewClient.Name = "listViewClient";
-            this.listViewClient.Size = new System.Drawing.Size(1215, 516);
+            this.listViewClient.Size = new System.Drawing.Size(1283, 579);
             this.listViewClient.TabIndex = 0;
             this.listViewClient.UseCompatibleStateImageBehavior = false;
             this.listViewClient.View = System.Windows.Forms.View.Details;
@@ -108,7 +108,7 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateCustomerAccToolStripMenuItem,
-            this.refreshToolStripMenuItem,
+            this.deleteToolStripMenuItem,
             this.refreshToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(212, 70);
@@ -120,11 +120,12 @@
             this.updateCustomerAccToolStripMenuItem.Text = "Update customer account";
             this.updateCustomerAccToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerAccToolStripMenuItem_Click);
             // 
-            // refreshToolStripMenuItem
+            // deleteToolStripMenuItem
             // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.refreshToolStripMenuItem.Text = "Archive";
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem1
             // 
@@ -136,7 +137,7 @@
             // 
             this.tbSearch.Depth = 0;
             this.tbSearch.Hint = "Search here";
-            this.tbSearch.Location = new System.Drawing.Point(71, 77);
+            this.tbSearch.Location = new System.Drawing.Point(10, 48);
             this.tbSearch.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PasswordChar = '\0';
@@ -147,26 +148,12 @@
             this.tbSearch.TabIndex = 3;
             this.tbSearch.UseSystemPasswordChar = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Thesis_Highlight_Studio.Properties.Resources.add;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(1135, 520);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(83, 77);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            // 
             // btnAdd
             // 
             this.btnAdd.AutoSize = true;
             this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAdd.Depth = 0;
-            this.btnAdd.Location = new System.Drawing.Point(71, 21);
+            this.btnAdd.Location = new System.Drawing.Point(1056, 35);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdd.Name = "btnAdd";
@@ -177,13 +164,28 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnPrintReports
+            // 
+            this.btnPrintReports.AutoSize = true;
+            this.btnPrintReports.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPrintReports.Depth = 0;
+            this.btnPrintReports.Location = new System.Drawing.Point(1179, 35);
+            this.btnPrintReports.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnPrintReports.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPrintReports.Name = "btnPrintReports";
+            this.btnPrintReports.Primary = false;
+            this.btnPrintReports.Size = new System.Drawing.Size(114, 36);
+            this.btnPrintReports.TabIndex = 5;
+            this.btnPrintReports.Text = "Print Reports";
+            this.btnPrintReports.UseVisualStyleBackColor = true;
+            // 
             // Client_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnPrintReports);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewClient);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -199,7 +201,6 @@
         #endregion
 
         private System.Windows.Forms.ListView listViewClient;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem updateCustomerAccToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnName;
@@ -208,11 +209,12 @@
         private System.Windows.Forms.ColumnHeader columnMobileNum;
         private System.Windows.Forms.ColumnHeader columnTeleNum;
         private System.Windows.Forms.ColumnHeader columnEmailAdd;
-        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private MaterialSkin.Controls.MaterialSingleLineTextField tbSearch;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private MaterialSkin.Controls.MaterialFlatButton btnAdd;
+        private MaterialSkin.Controls.MaterialFlatButton btnPrintReports;
     }
 }

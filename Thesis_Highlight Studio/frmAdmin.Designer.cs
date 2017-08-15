@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnItems = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnPhotos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnPurchaseOrder = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnPackages = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -38,13 +44,24 @@
             this.timer_Open = new System.Windows.Forms.Timer(this.components);
             this.timer_Close = new System.Windows.Forms.Timer(this.components);
             this.Mainpnl = new System.Windows.Forms.Panel();
-            this.btnItems = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnRecycleBin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Menu_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.Menu_panel.Controls.Add(this.btnRecycleBin);
+            this.Menu_panel.Controls.Add(this.pictureBox5);
+            this.Menu_panel.Controls.Add(this.pictureBox4);
+            this.Menu_panel.Controls.Add(this.pictureBox3);
+            this.Menu_panel.Controls.Add(this.pictureBox2);
+            this.Menu_panel.Controls.Add(this.pictureBox1);
             this.Menu_panel.Controls.Add(this.btnItems);
             this.Menu_panel.Controls.Add(this.btnPhotos);
             this.Menu_panel.Controls.Add(this.btnPurchaseOrder);
@@ -53,15 +70,79 @@
             this.Menu_panel.Controls.Add(this.Menu_label);
             this.Menu_panel.Location = new System.Drawing.Point(0, 64);
             this.Menu_panel.Name = "Menu_panel";
-            this.Menu_panel.Size = new System.Drawing.Size(198, 705);
+            this.Menu_panel.Size = new System.Drawing.Size(238, 705);
             this.Menu_panel.TabIndex = 0;
             this.Menu_panel.MouseEnter += new System.EventHandler(this.Menu_panel_MouseEnter);
             this.Menu_panel.MouseLeave += new System.EventHandler(this.Menu_panel_MouseLeave);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Thesis_Highlight_Studio.Properties.Resources.add;
+            this.pictureBox5.Location = new System.Drawing.Point(4, 115);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Thesis_Highlight_Studio.Properties.Resources._10624929_1468788220076131_7648855483895637143_n;
+            this.pictureBox4.Location = new System.Drawing.Point(4, 370);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Thesis_Highlight_Studio.Properties.Resources.photo_camera_png_image__photo_camera_png_image_1;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 307);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Thesis_Highlight_Studio.Properties.Resources.add;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 244);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Thesis_Highlight_Studio.Properties.Resources._10624929_1468788220076131_7648855483895637143_n;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 176);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnItems
+            // 
+            this.btnItems.Depth = 0;
+            this.btnItems.Location = new System.Drawing.Point(12, 238);
+            this.btnItems.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnItems.Name = "btnItems";
+            this.btnItems.Primary = true;
+            this.btnItems.Size = new System.Drawing.Size(175, 46);
+            this.btnItems.TabIndex = 2;
+            this.btnItems.Text = "Items";
+            this.btnItems.UseVisualStyleBackColor = true;
+            this.btnItems.Visible = false;
+            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
+            // 
             // btnPhotos
             // 
             this.btnPhotos.Depth = 0;
-            this.btnPhotos.Location = new System.Drawing.Point(12, 318);
+            this.btnPhotos.Location = new System.Drawing.Point(12, 364);
             this.btnPhotos.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPhotos.Name = "btnPhotos";
             this.btnPhotos.Primary = true;
@@ -74,7 +155,7 @@
             // btnPurchaseOrder
             // 
             this.btnPurchaseOrder.Depth = 0;
-            this.btnPurchaseOrder.Location = new System.Drawing.Point(12, 255);
+            this.btnPurchaseOrder.Location = new System.Drawing.Point(12, 301);
             this.btnPurchaseOrder.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPurchaseOrder.Name = "btnPurchaseOrder";
             this.btnPurchaseOrder.Primary = true;
@@ -87,7 +168,7 @@
             // btnPackages
             // 
             this.btnPackages.Depth = 0;
-            this.btnPackages.Location = new System.Drawing.Point(12, 126);
+            this.btnPackages.Location = new System.Drawing.Point(12, 172);
             this.btnPackages.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPackages.Name = "btnPackages";
             this.btnPackages.Primary = true;
@@ -96,11 +177,12 @@
             this.btnPackages.Text = "Packages";
             this.btnPackages.UseVisualStyleBackColor = false;
             this.btnPackages.Visible = false;
+            this.btnPackages.Click += new System.EventHandler(this.btnPackages_Click);
             // 
             // btnClient
             // 
             this.btnClient.Depth = 0;
-            this.btnClient.Location = new System.Drawing.Point(12, 380);
+            this.btnClient.Location = new System.Drawing.Point(12, 109);
             this.btnClient.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnClient.Name = "btnClient";
             this.btnClient.Primary = true;
@@ -139,18 +221,17 @@
             this.Mainpnl.Size = new System.Drawing.Size(1306, 679);
             this.Mainpnl.TabIndex = 1;
             // 
-            // btnItems
+            // btnRecycleBin
             // 
-            this.btnItems.Depth = 0;
-            this.btnItems.Location = new System.Drawing.Point(12, 192);
-            this.btnItems.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnItems.Name = "btnItems";
-            this.btnItems.Primary = true;
-            this.btnItems.Size = new System.Drawing.Size(175, 46);
-            this.btnItems.TabIndex = 2;
-            this.btnItems.Text = "Items";
-            this.btnItems.UseVisualStyleBackColor = true;
-            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
+            this.btnRecycleBin.Depth = 0;
+            this.btnRecycleBin.Location = new System.Drawing.Point(12, 429);
+            this.btnRecycleBin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRecycleBin.Name = "btnRecycleBin";
+            this.btnRecycleBin.Primary = true;
+            this.btnRecycleBin.Size = new System.Drawing.Size(175, 46);
+            this.btnRecycleBin.TabIndex = 7;
+            this.btnRecycleBin.Text = "Recycle Bin";
+            this.btnRecycleBin.UseVisualStyleBackColor = true;
             // 
             // frmAdmin
             // 
@@ -170,6 +251,11 @@
             this.Load += new System.EventHandler(this.frm_Dashboard_Load);
             this.Menu_panel.ResumeLayout(false);
             this.Menu_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,6 +272,12 @@
         private System.Windows.Forms.Panel Mainpnl;
         private MaterialSkin.Controls.MaterialRaisedButton btnPhotos;
         private MaterialSkin.Controls.MaterialRaisedButton btnItems;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialRaisedButton btnRecycleBin;
 
     }
 }

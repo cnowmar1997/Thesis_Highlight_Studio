@@ -38,14 +38,18 @@ namespace Thesis_Highlight_Studio.UserPanel
             
         }
 
+        #region Methods
+        Client c = new Client();
+
         private void viewClient()
         {
+            //c.status = "ACTIVE";
             listViewClient.Items.Clear();
             var list = provide.viewClient();
 
             if (list != null)
             {
-                foreach (User use in list)
+                foreach (Client use in list)
                 {
                     ListViewItem item = new ListViewItem(use.userId.ToString());
                     item.SubItems.Add(use.familyName + ", " + use.givenName + " " + use.middleName);
@@ -56,52 +60,32 @@ namespace Thesis_Highlight_Studio.UserPanel
                     item.SubItems.Add(use.emailAdd);
                     listViewClient.Items.Add(item);
 
-                    
-
                 }
             }
 
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void deleteClient()
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            c.status = "INACTIVE";
+            if (provide.deleteClient(int.Parse(tbuserId.Text), c.status))
             {
-                MouseDownLocation = e.Location;
+                CMsgBox.Show("Data successfully deleted!", "INFORMATION");
+                viewClient();
             }
-        }
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                panel1.Left = e.X + panel1.Left - MouseDownLocation.X;
-                panel1.Top = e.Y + panel1.Top - MouseDownLocation.Y;
-            }
-        }
-        private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            frmAddClient add = new frmAddClient();
-            DimForm.Show(this.ParentForm, add);
-        }
-         
+        } 
+        #endregion
+
+        #region EVENTS      
         private void Client_View_Load(object sender, EventArgs e)
         {
-
             viewClient();
-            //tbSalesAndPurchases.Text = Provider.GetClientView_SalesandPurchases;
-            //if (tbSalesAndPurchases.Text.Equals("salesAndPurchases"))
-            //{
-            //    panel1.Visible = false;
-            //    contextMenuStrip1.Close();
-            //}
         }
 
         private void updateCustomerAccToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            
-            frmEditClient add = new frmEditClient();
-            DimForm.Show(this.ParentForm, add);
+            frmEditClient client = new frmEditClient();
+            DimForm.Show(this.ParentForm, client);
         }
 
         private void listviewClient_MouseClick(object sender, MouseEventArgs e)
@@ -113,11 +97,6 @@ namespace Thesis_Highlight_Studio.UserPanel
             tbuserId.Text = listViewClient.SelectedItems[0].Text;
             Provider.filter_ID = tbuserId.Text;
             //MessageBox.Show(tbuserId.Text);
-           
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -126,6 +105,12 @@ namespace Thesis_Highlight_Studio.UserPanel
             frmAddClient add = new frmAddClient();
             DimForm.Show(this.ParentForm, add);
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteClient();
+        } 
+        #endregion
  
     }
 }

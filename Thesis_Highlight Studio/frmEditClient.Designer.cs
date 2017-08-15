@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnSubmit = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.tbPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.tbUsername = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbPassWord = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tbUserName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.tbEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tbLandline = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -101,25 +101,25 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnClose);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(776, 27);
             this.panel3.TabIndex = 42;
             // 
-            // button1
+            // btnClose
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(744, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 27);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "✖";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(744, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 27);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "✖";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSubmit
             // 
@@ -137,8 +137,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.tbPassword);
-            this.panel1.Controls.Add(this.tbUsername);
+            this.panel1.Controls.Add(this.tbPassWord);
+            this.panel1.Controls.Add(this.tbUserName);
             this.panel1.Controls.Add(this.materialLabel3);
             this.panel1.Controls.Add(this.tbEmail);
             this.panel1.Controls.Add(this.panel2);
@@ -181,35 +181,35 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // tbPassword
+            // tbPassWord
             // 
-            this.tbPassword.Depth = 0;
-            this.tbPassword.Hint = "Password";
-            this.tbPassword.Location = new System.Drawing.Point(381, 380);
-            this.tbPassword.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '\0';
-            this.tbPassword.SelectedText = "";
-            this.tbPassword.SelectionLength = 0;
-            this.tbPassword.SelectionStart = 0;
-            this.tbPassword.Size = new System.Drawing.Size(133, 23);
-            this.tbPassword.TabIndex = 45;
-            this.tbPassword.UseSystemPasswordChar = false;
+            this.tbPassWord.Depth = 0;
+            this.tbPassWord.Hint = "Password";
+            this.tbPassWord.Location = new System.Drawing.Point(381, 380);
+            this.tbPassWord.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbPassWord.Name = "tbPassWord";
+            this.tbPassWord.PasswordChar = '\0';
+            this.tbPassWord.SelectedText = "";
+            this.tbPassWord.SelectionLength = 0;
+            this.tbPassWord.SelectionStart = 0;
+            this.tbPassWord.Size = new System.Drawing.Size(133, 23);
+            this.tbPassWord.TabIndex = 45;
+            this.tbPassWord.UseSystemPasswordChar = false;
             // 
-            // tbUsername
+            // tbUserName
             // 
-            this.tbUsername.Depth = 0;
-            this.tbUsername.Hint = "Username";
-            this.tbUsername.Location = new System.Drawing.Point(146, 384);
-            this.tbUsername.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.PasswordChar = '\0';
-            this.tbUsername.SelectedText = "";
-            this.tbUsername.SelectionLength = 0;
-            this.tbUsername.SelectionStart = 0;
-            this.tbUsername.Size = new System.Drawing.Size(133, 23);
-            this.tbUsername.TabIndex = 45;
-            this.tbUsername.UseSystemPasswordChar = false;
+            this.tbUserName.Depth = 0;
+            this.tbUserName.Hint = "Username";
+            this.tbUserName.Location = new System.Drawing.Point(146, 384);
+            this.tbUserName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.PasswordChar = '\0';
+            this.tbUserName.SelectedText = "";
+            this.tbUserName.SelectionLength = 0;
+            this.tbUserName.SelectionStart = 0;
+            this.tbUserName.Size = new System.Drawing.Size(133, 23);
+            this.tbUserName.TabIndex = 45;
+            this.tbUserName.UseSystemPasswordChar = false;
             // 
             // materialLabel3
             // 
@@ -528,11 +528,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClose;
         private MaterialSkin.Controls.MaterialRaisedButton btnSubmit;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField tbPassword;
-        private MaterialSkin.Controls.MaterialSingleLineTextField tbUsername;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbPassWord;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tbUserName;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialSingleLineTextField tbEmail;
         private MaterialSkin.Controls.MaterialSingleLineTextField tbLandline;

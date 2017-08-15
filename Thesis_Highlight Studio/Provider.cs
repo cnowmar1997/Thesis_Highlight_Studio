@@ -30,131 +30,167 @@ namespace Thesis_Highlight_Studio
          }
         #endregion
 
-         #region filteringMethod
-         public List<User> retrieveUser(string userId)
-         {
-             var list = new List<User>();
-             string query = @"SELECT * from tblUser WHERE userId = '"+userId+"';";
+        // public List<Item> Notes()
+        //{
+        //    var list = new List<Item>();
+        //    try
+        //    {
+        //        using (DB.Con)
+        //        {
+        //            DB.Con.Close();
+        //            DB.Con.Open();
+        //            MySqlCommand command = new MySqlCommand(@"SELECT Title,description,date,time FROM tbl_task_todo", DB.Con);
+        //            MySqlDataReader dr = command.ExecuteReader();
+        //            while (dr.Read())
+        //            {
+        //                list.Add(new Item
+        //                {
+        //                    WhatToDo = dr["Title"].ToString(),
+        //                    description = dr["description"].ToString(),
+        //                    time = dr["time"].ToString(),
+        //                    date = dr["time"].ToString()
 
-             using (IDbConnection con = DB.Con)
-             {
-                 if(con.State == ConnectionState.Closed)con.Open();
-                 list = con.Query<User>(query, commandType: CommandType.Text).ToList();
+        //                });
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        CMsgBox.Show(ex.Message);
+        //    }
+        //    return list; ;
+        //}
 
-             }
-             return list;
-         }
-        #endregion
-
-         public List<Item> Notes()
+        
+        #region tbl_User CUSTOMER      
+        public List<Client> viewClient()
         {
-            var list = new List<Item>();
+            var list = new List<Client>();
+            string query = "SELECT userId,familyName,givenName,middleName,nameOfSchool,courseTitle,mobileNumber,landline,emailAdd FROM tbluser WHERE status = 'ACTIVE'";
+
+            using (IDbConnection con =  DB.Con)
+            {
+                if (con.State == ConnectionState.Closed) con.Open();
+                list = con.Query<Client>(query, commandType: CommandType.Text).ToList();
+            }
+            return list;
+        }
+
+        public bool addClient(Client clnt)
+        {
             try
             {
-                using (DB.Con)
-                {
-                    DB.Con.Close();
-                    DB.Con.Open();
-                    MySqlCommand cmd = new MySqlCommand(@"SELECT Title,description,date,time FROM tbl_task_todo", DB.Con);
-                    MySqlDataReader dr = cmd.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        list.Add(new Item
-                        {
-                            WhatToDo = dr["Title"].ToString(),
-                            description = dr["description"].ToString(),
-                            time = dr["time"].ToString(),
-                            date = dr["time"].ToString()
+                string query = "INSERT INTO tblUser(typeOfUser,userName,passWord,familyName,givenName,middleName,nameOfSchool,courseTitle,mobileNumber,landline,emailAdd,status) VALUES (@typeOfUser,@userName,@passWord,@familyName,@givenName,@middleName,@nameOfSchool,@courseTitle,@mobileNumber,@landline,@emailAdd,@status)";
 
-                        });
+
+
+                using (MySqlConnection connect = new MySqlConnection(DB.ConnectionString))
+                {
+                    if (connect.State == ConnectionState.Closed) connect.Open();
+                    using (MySqlCommand command = connect.CreateCommand())
+                    {
+                        command.CommandText = query;
+
+                        command.Parameters.AddWithValue(@"typeOfUser", clnt.typeOfUser);
+                        command.Parameters.AddWithValue(@"userName", clnt.userName);
+                        command.Parameters.AddWithValue(@"passWord", clnt.passWord);
+                        command.Parameters.AddWithValue(@"familyName", clnt.familyName);
+                        command.Parameters.AddWithValue(@"givenName", clnt.givenName);
+                        command.Parameters.AddWithValue(@"middleName", clnt.middleName);
+                        command.Parameters.AddWithValue(@"nameOfSchool", clnt.nameOfSchool);
+                        command.Parameters.AddWithValue(@"courseTitle", clnt.courseTitle);
+                        command.Parameters.AddWithValue(@"mobileNumber", clnt.mobileNumber);
+                        command.Parameters.AddWithValue(@"landline", clnt.landline);
+                        command.Parameters.AddWithValue(@"emailAdd", clnt.emailAdd);
+                        command.Parameters.AddWithValue(@"status", clnt.status);
+
+
+                        command.ExecuteNonQuery();
+                        return true;
                     }
                 }
             }
             catch (Exception ex)
             {
-                CMsgBox.Show(ex.Message);
+
+                MessageBox.Show(ex.ToString());
+                return false;
             }
-            return list; ;
+
         }
 
-        
-        #region tbl_User CUSTOMER      
-        public List<User> viewClient()
+        public Client getClient(int userId)
         {
-            var list = new List<User>();
-            string query = "SELECT userId,familyName,givenName,middleName,nameOfSchool,courseTitle,mobileNumber,landline,emailAdd FROM tbluser";
+            Client clnt = new Client();
+            string query = @"SELECT * from tblUser WHERE userId = '" + userId + "';";
 
-            using (IDbConnection con =  DB.Con)
+            using (MySqlConnection connect = new MySqlConnection(DB.ConnectionString))
             {
-                if (con.State == ConnectionState.Closed) con.Open();
-                list = con.Query<User>(query, commandType: CommandType.Text).ToList();
-            }
-            return list;
-        }
-
-        public bool insertClient(string typeOfUser, string userName, string passWord, string familyName, string givenName, string middleName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd)
-        {
-            bool ret = false;            
-            string query = "INSERT INTO tblUser(typeOfUser,userName,passWord,familyName,givenName,middleName,nameOfSchool,courseTitle,mobileNumber,landline,emailAdd) VALUES (@typeOfUser,@userName,@passWord,@familyName,@givenName,@middleName,@nameOfSchool,@courseTitle,@mobileNumber,@landline,@emailAdd)";
-
-            using (DB.Con)
-            {
-                DB.Con.Close();
-                DB.Con.Open();
-                MySqlCommand command = new MySqlCommand(query, DB.Con);
-                command.Parameters.AddWithValue(@"typeOfUser",typeOfUser);
-                command.Parameters.AddWithValue(@"userName", userName);
-                command.Parameters.AddWithValue(@"passWord", passWord);
-                command.Parameters.AddWithValue(@"familyName", familyName);
-                command.Parameters.AddWithValue(@"givenName", givenName);
-                command.Parameters.AddWithValue(@"middleName", middleName);
-                command.Parameters.AddWithValue(@"nameOfSchool",nameOfSchool);
-                command.Parameters.AddWithValue(@"courseTitle",courseTitle);
-                command.Parameters.AddWithValue(@"mobileNumber",mobileNumber);
-                command.Parameters.AddWithValue(@"landline",landline);
-                command.Parameters.AddWithValue(@"emailAdd",emailAdd);
-
-                if (command.ExecuteNonQuery() > 0)
+                if (connect.State == ConnectionState.Closed) connect.Open();
+                using (MySqlCommand command = connect.CreateCommand())
                 {
-                    ret = true;
+                    command.Connection = connect;
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue(@"userId", userId);
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        clnt.userId = reader.GetInt32(0);
+                        clnt.userName = reader.GetString(1).ToString();
+                        clnt.passWord = reader.GetString(2).ToString();
+                        clnt.familyName = reader.GetString(4).ToString();
+                        clnt.givenName = reader.GetString(5).ToString();
+                        clnt.middleName = reader.GetString(6).ToString();
+                        clnt.nameOfSchool = reader.GetString(8).ToString();
+                        clnt.courseTitle = reader.GetString(9).ToString();
+                        clnt.mobileNumber = reader.GetString(10).ToString();
+                        clnt.landline = reader.GetString(11).ToString();
+                        clnt.emailAdd = reader.GetString(12).ToString();
+                    }
+
                 }
+
+
             }
-            return ret;
+            return clnt;
+
         }
 
+        public bool updateClient(string query)
+        {            
+            bool ret = false;
 
+            using (MySqlConnection connect = new MySqlConnection(DB.ConnectionString))
+            {
+                if (connect.State == ConnectionState.Closed) connect.Open();
+                using (MySqlCommand command = connect.CreateCommand())
+                {
+                    command.CommandText = query;
+                    if (command.ExecuteNonQuery() > 0)
+                        ret = true;
+                }
+                return ret;
+            }
+        }
 
-        public bool updateClient( string userName, string passWord, string familyName, string givenName, string middleName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd, string userId)
+        public bool deleteClient(int userId, string status)
         {
             bool ret = false;
-            string query = "UPDATE tblUser SET userName=@userName,passWord=@passWord,familyName=@familyName,givenName=@givenName,middleName=@middleName,nameOfSchool=@nameOfSchool,courseTitle=@courseTitle,mobileNumber=@mobileNumber,landline=@landline,emailAdd=@emailAdd WHERE userId = '"+userId+"' ";
+            string query = "UPDATE tblUser SET status = '"+status+"' WHERE userId = '"+userId+"' ";
 
-            using (DB.Con)
+            using (MySqlConnection connect = new MySqlConnection(DB.ConnectionString))
             {
-                DB.Con.Close();
-                DB.Con.Open();
-                MySqlCommand command = new MySqlCommand(query, DB.Con);
-
-                command.Parameters.AddWithValue(@"userName", userName);
-                command.Parameters.AddWithValue(@"passWord", passWord);
-                command.Parameters.AddWithValue(@"familyName", familyName);
-                command.Parameters.AddWithValue(@"givenName", givenName);
-                command.Parameters.AddWithValue(@"middleName", middleName);
-                command.Parameters.AddWithValue(@"nameOfSchool", nameOfSchool);
-                command.Parameters.AddWithValue(@"courseTitle", courseTitle);
-                command.Parameters.AddWithValue(@"mobileNumber", mobileNumber);
-                command.Parameters.AddWithValue(@"landline", landline);
-                command.Parameters.AddWithValue(@"emailAdd", emailAdd);
-
-                if (command.ExecuteNonQuery() > 0)
+                if (connect.State == ConnectionState.Closed) connect.Open();
+                using (MySqlCommand command = connect.CreateCommand())
                 {
-                    ret = true;
+                    command.CommandText = query;
+
+                    command.ExecuteNonQuery();
+                    return ret;
                 }
             }
-            return ret;
         }
-
-        
         #endregion
 
         #region tbl_User STAFF
@@ -166,8 +202,8 @@ namespace Thesis_Highlight_Studio
             {
                 DB.Con.Close();
                 DB.Con.Open();
-                MySqlCommand cmd = new MySqlCommand(@"SELECT familyName,givenName,middleName,address,mobileNumber,emailAdd FROM tbluser", DB.Con);
-                MySqlDataReader reader = cmd.ExecuteReader();
+                MySqlCommand command = new MySqlCommand(@"SELECT familyName,givenName,middleName,address,mobileNumber,emailAdd FROM tbluser", DB.Con);
+                MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     ListViewItem item = new ListViewItem(reader["familyName"] + ", " + reader["givenName"] + " " + reader["middleName"] + "");
@@ -240,19 +276,32 @@ namespace Thesis_Highlight_Studio
          #endregion
 
         #region tblItem
-        public bool insertItem(string itemName, string itemDescription, string itemPrice)
+        public List<Itemlist> viewItem()
+        {
+            var list = new List<Itemlist>();
+            string query = "SELECT itemId,name,description,price FROM tblItem";
+
+            using (IDbConnection con = DB.Con)
+            {
+                if (con.State == ConnectionState.Closed) con.Open();
+                list = con.Query<Itemlist>(query, commandType: CommandType.Text).ToList();
+            }
+            return list;
+        }
+
+        public bool insertItem(string name, string description, string price)
         {
             bool ret = false;
-            string query = "INSERT INTO tblItem(itemName,itemDescription,itemPrice) VALUES (@itemName,@itemDescription,@itemPrice)";
+            string query = "INSERT INTO tblItem(name,description,price) VALUES (@name,@description,@price)";
 
             using (DB.Con)
             {
                 DB.Con.Close();
                 DB.Con.Open();
                 MySqlCommand command = new MySqlCommand(query, DB.Con);
-                command.Parameters.AddWithValue(@"itemName",itemName);
-                command.Parameters.AddWithValue(@"itemDescription", itemDescription);
-                command.Parameters.AddWithValue(@"itemPrice", itemPrice);
+                command.Parameters.AddWithValue(@"name",name);
+                command.Parameters.AddWithValue(@"description", description);
+                command.Parameters.AddWithValue(@"price", price);
 
                 if (command.ExecuteNonQuery() > 0)
                 {
@@ -262,9 +311,58 @@ namespace Thesis_Highlight_Studio
             return ret;
         }
 
+        public Itemlist getItem(int itemId)
+        {
+            Itemlist itmList = new Itemlist();
+            string query = @"SELECT * from tblItem WHERE itemId = '" + itemId + "';";
 
+            using (MySqlConnection connect = new MySqlConnection(DB.ConnectionString))
+            {
+                if (connect.State == ConnectionState.Closed) connect.Open();
+                using (MySqlCommand command = connect.CreateCommand())
+                {
+                    command.Connection = connect;
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue(@"itemId", itemId);
+                    MySqlDataReader reader = command.ExecuteReader();
 
+                    while (reader.Read())
+                    {
+                        //itmList.itemId = reader.GetInt32(0);
+                        itmList.name = reader.GetString(1).ToString();
+                        itmList.description = reader.GetString(2).ToString();
+                        itmList.price = reader.GetString(3).ToString();                   
+                }
 
+            }
+            return itmList;
+
+        }
+
+        }
+
+        public bool updateItem(string name, string description, string price, string itemId)
+        {
+            bool ret = false;
+            string query = "UPDATE tblItem SET name=@name,description=@description,price=@Price WHERE itemId = '" + itemId + "'";
+
+             using (DB.Con)
+            {
+                DB.Con.Close();
+                DB.Con.Open();
+                MySqlCommand command = new MySqlCommand(query, DB.Con);
+
+                command.Parameters.AddWithValue(@"name", name);
+                command.Parameters.AddWithValue(@"description", description);
+                command.Parameters.AddWithValue(@"price", price);
+
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    ret = true;
+                }
+            }
+             return ret;
+        }
         #endregion
  
         }

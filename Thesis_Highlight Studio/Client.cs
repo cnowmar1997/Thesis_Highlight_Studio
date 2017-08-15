@@ -9,7 +9,7 @@ using System.Data;
 using Dapper;
 namespace Thesis_Highlight_Studio
 {
-    class User
+    public class Client
     {
 
         public int userId { get; set; }
@@ -25,33 +25,7 @@ namespace Thesis_Highlight_Studio
         public string mobileNumber { get; set; }
         public string landline { get; set; }
         public string emailAdd { get; set; }
-
-        public User()
-        {
-
-        }
-
-        public User(int userId, string familyName, string givenName, string middleName, string nameOfSchool, string courseTitle, string mobileNumber, string landline, string emailAdd)
-        {
-            this.userId = userId;
-            this.familyName = familyName;
-            this.givenName = givenName;
-            this.middleName = middleName;
-            this.nameOfSchool = nameOfSchool;
-            this.courseTitle = courseTitle;
-            this.mobileNumber = mobileNumber;
-            this.landline = landline;
-            this.emailAdd = emailAdd;
-        }
-
-       
-
-        
-
+        public string status { get; set; }
          
-
-        
-
-        
     }
 }
