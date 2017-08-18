@@ -228,6 +228,7 @@
             this.lvStaff.TabIndex = 8;
             this.lvStaff.UseCompatibleStateImageBehavior = false;
             this.lvStaff.View = System.Windows.Forms.View.Details;
+            this.lvStaff.Visible = false;
             // 
             // columnHeader2
             // 
