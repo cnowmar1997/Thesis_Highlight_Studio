@@ -1,6 +1,7 @@
 ﻿using System;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using MaterialSkin.Animations;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

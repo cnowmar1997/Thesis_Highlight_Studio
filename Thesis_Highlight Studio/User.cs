@@ -9,7 +9,7 @@ using System.Data;
 using Dapper;
 namespace Thesis_Highlight_Studio
 {
-    public class Client
+    public class User
     {
 
         public int userId { get; set; }

@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -49,20 +50,22 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.Location = new System.Drawing.Point(76, 220);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(43, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(41, 20);
             this.materialLabel3.TabIndex = 15;
             this.materialLabel3.Text = "Price";
             // 
             // tbPrice
             // 
             this.tbPrice.Depth = 0;
+            this.tbPrice.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.tbPrice.Hint = "";
             this.tbPrice.Location = new System.Drawing.Point(209, 216);
+            //this.tbPrice.MaxLength = 32767;
             this.tbPrice.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.PasswordChar = '\0';
@@ -71,26 +74,29 @@
             this.tbPrice.SelectionStart = 0;
             this.tbPrice.Size = new System.Drawing.Size(195, 23);
             this.tbPrice.TabIndex = 14;
+            this.tbPrice.TabStop = false;
             this.tbPrice.UseSystemPasswordChar = false;
             // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(76, 182);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(86, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(85, 20);
             this.materialLabel2.TabIndex = 13;
             this.materialLabel2.Text = "Description";
             // 
             // tbDescription
             // 
             this.tbDescription.Depth = 0;
+            this.tbDescription.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.tbDescription.Hint = "";
             this.tbDescription.Location = new System.Drawing.Point(209, 178);
+            //this.tbDescription.MaxLength = 32767;
             this.tbDescription.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.PasswordChar = '\0';
@@ -99,26 +105,29 @@
             this.tbDescription.SelectionStart = 0;
             this.tbDescription.Size = new System.Drawing.Size(195, 23);
             this.tbDescription.TabIndex = 12;
+            this.tbDescription.TabStop = false;
             this.tbDescription.UseSystemPasswordChar = false;
             // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(76, 141);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(49, 20);
             this.materialLabel1.TabIndex = 11;
             this.materialLabel1.Text = "Name";
             // 
             // tbName
             // 
             this.tbName.Depth = 0;
+            this.tbName.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.tbName.Hint = "e.g 1 by 1 ID Picture";
             this.tbName.Location = new System.Drawing.Point(209, 137);
+            //this.tbName.MaxLength = 32767;
             this.tbName.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
@@ -127,28 +136,35 @@
             this.tbName.SelectionStart = 0;
             this.tbName.Size = new System.Drawing.Size(195, 23);
             this.tbName.TabIndex = 10;
+            this.tbName.TabStop = false;
             this.tbName.UseSystemPasswordChar = false;
             // 
             // btnCancel
             // 
+            this.btnCancel.AutoSize = true;
+            this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancel.Depth = 0;
+            //this.btnCancel.Icon = null;
             this.btnCancel.Location = new System.Drawing.Point(353, 333);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Primary = true;
-            this.btnCancel.Size = new System.Drawing.Size(116, 31);
+            this.btnCancel.Size = new System.Drawing.Size(73, 36);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnSubmit
             // 
+            this.btnSubmit.AutoSize = true;
+            this.btnSubmit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSubmit.Depth = 0;
+            //this.btnSubmit.Icon = null;
             this.btnSubmit.Location = new System.Drawing.Point(231, 333);
             this.btnSubmit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Primary = true;
-            this.btnSubmit.Size = new System.Drawing.Size(116, 31);
+            this.btnSubmit.Size = new System.Drawing.Size(71, 36);
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -210,12 +226,26 @@
             this.btnClose.Text = "✖";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(12, 93);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(147, 20);
+            this.materialLabel7.TabIndex = 73;
+            this.materialLabel7.Text = "Client Information";
+            // 
             // frmAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 376);
             this.ControlBox = false;
+            this.Controls.Add(this.materialLabel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.materialLabel3);
@@ -257,6 +287,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClose;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
 
     }
 }

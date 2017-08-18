@@ -16,8 +16,7 @@ namespace Thesis_Highlight_Studio
 {
     public partial class frmAddUser : MaterialForm
     {
-        private readonly MaterialSkinManager skinManager;
-        Provider provide = new Provider();
+
         public frmAddUser()
         {
             InitializeComponent();
@@ -27,8 +26,16 @@ namespace Thesis_Highlight_Studio
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
+            this.tbStatus.Text = "ACTIVE";
+            cmbTypeofUser.SelectedItem = userTypes[0];
+            cmbTypeofUser.Items.Add(userTypes[1]);
+            cmbTypeofUser.Items.Add(userTypes[2]);
+
         }
 
+        
+
+        #region DLL import
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
@@ -41,30 +48,138 @@ namespace Thesis_Highlight_Studio
             int nBottomRect, // y-coordinate of lower-right corner
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
-        );
+        ); 
+        #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        #region Declaration
+        private readonly MaterialSkinManager skinManager;
+
+        Provider provide = new Provider();
+
+        TextBox tbStatus = new TextBox();
+
+        private string[] userTypes = { "SELECT", "STAFF", "CUSTOMER" };
+
+        private static User cust;
+
+        public User getCustomer
+        {
+            get
+            {
+                return customer_StoreValues();
+            }
+        } 
+        #endregion
+
+        #region Methods 
+        //STAFF
+        private User staff_StoreValues()
+        {
+            try
+            {
+                cust = new User();
+                cust.typeOfUser = string.IsNullOrWhiteSpace(cmbTypeofUser.Text) ? null : cmbTypeofUser.Text;
+                cust.userName = string.IsNullOrWhiteSpace(tbUserName.Text) ? null : tbUserName.Text;
+                cust.passWord = string.IsNullOrWhiteSpace(tbPassWord.Text) ? null : tbPassWord.Text;
+                cust.familyName = string.IsNullOrWhiteSpace(tbFamilyName.Text) ? null : tbFamilyName.Text;
+                cust.givenName = string.IsNullOrWhiteSpace(tbGivenName.Text) ? null : tbGivenName.Text;
+                cust.middleName = string.IsNullOrWhiteSpace(tbMiddleName.Text) ? null : tbMiddleName.Text;
+                cust.nameOfSchool = string.IsNullOrWhiteSpace(tbSchoolName.Text) ? null : tbSchoolName.Text;
+                cust.courseTitle = string.IsNullOrWhiteSpace(tbCourse.Text) ? null : tbCourse.Text;
+                cust.mobileNumber = string.IsNullOrWhiteSpace(tbMobileNumber.Text) ? null : tbMobileNumber.Text;
+                cust.landline = string.IsNullOrWhiteSpace(tbLandline.Text) ? null : tbLandline.Text;
+                cust.emailAdd = string.IsNullOrWhiteSpace(tbEmail.Text) ? null : tbEmail.Text;
+                cust.status = string.IsNullOrWhiteSpace(tbStatus.Text) ? null : tbStatus.Text;
+            }
+            catch (Exception ex)
+            {
+
+                CMsgBox.Show(ex.ToString());
+                return null;
+            }
+
+            return cust;
+        }
+
+        //CUSTOMER
+        private bool customer_Add()
+        {
+            var entry = customer_StoreValues();
+            if (entry != null)
+            {
+                if (provide.addCustomer(entry))
+                {
+                    CMsgBox.Show("Customer information successfully added to database.", "INFORMATION", CMsgBox.CMsgBtns.OK);
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private User customer_StoreValues()
+        {
+            try
+            {
+                cust = new User();
+                cust.typeOfUser = string.IsNullOrWhiteSpace(cmbTypeofUser.Text) ? null : cmbTypeofUser.Text;
+                cust.userName = string.IsNullOrWhiteSpace(tbUserName.Text) ? null : tbUserName.Text;
+                cust.passWord = string.IsNullOrWhiteSpace(tbPassWord.Text) ? null : tbPassWord.Text;
+                cust.familyName = string.IsNullOrWhiteSpace(tbFamilyName.Text) ? null : tbFamilyName.Text;
+                cust.givenName = string.IsNullOrWhiteSpace(tbGivenName.Text) ? null : tbGivenName.Text;
+                cust.middleName = string.IsNullOrWhiteSpace(tbMiddleName.Text) ? null : tbMiddleName.Text;
+                cust.nameOfSchool = string.IsNullOrWhiteSpace(tbSchoolName.Text) ? null : tbSchoolName.Text;
+                cust.courseTitle = string.IsNullOrWhiteSpace(tbCourse.Text) ? null : tbCourse.Text;
+                cust.mobileNumber = string.IsNullOrWhiteSpace(tbMobileNumber.Text) ? null : tbMobileNumber.Text;
+                cust.landline = string.IsNullOrWhiteSpace(tbLandline.Text) ? null : tbLandline.Text;
+                cust.emailAdd = string.IsNullOrWhiteSpace(tbEmail.Text) ? null : tbEmail.Text;
+                cust.status = string.IsNullOrWhiteSpace(tbStatus.Text) ? null : tbStatus.Text;
+            }
+            catch (Exception ex)
+            {
+
+                CMsgBox.Show(ex.ToString());
+                return null;
+            }
+
+            return cust;
+        }
+        #endregion
+
+        #region EVENTS
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbTypeofUser_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbTypeofUser.SelectedItem == "STAFF")
+            {
+                materialLabel15.Visible = false;
+                materialLabel14.Visible = false;
+
+                tbSchoolName.Visible = false;
+                tbCourse.Visible = false;
+
+                gbUserPrivilege.Visible = false;
+            }
+            else if (cmbTypeofUser.SelectedItem == "CUSTOMER")
+            {
+                materialLabel15.Visible = true;
+                materialLabel14.Visible = true;
+
+                tbSchoolName.Visible = true;
+                tbCourse.Visible = true;
+
+                gbUserPrivilege.Visible = true;
+            }
+        } 
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            string typeOfUser = "STAFF";
-            //string userName = tbUserName.Text;
-            //string passWOrd = tbPassWord.Text;
-            string familyName = tbFamilyName.Text;
-            string givenName = tbGivenName.Text;
-            string middleName = tbMiddleName.Text;
-            string address = tbAddress.Text;
-            string mobileNumber = tbMobileNumber.Text;
-            string landline = tbLandline.Text;
-            string emailAdd = tbEmail.Text;
-
-            //if (provide.insertStaff(typeOfUser, userName, passWOrd, familyName, givenName, middleName, address, mobileNumber, landline, emailAdd))
-            //{
-            //    CMsgBox.Show("Staff information successfully added to database.", "INFORMATION", CMsgBox.CMsgBtns.OK);
-            //}
-        }
+        #endregion
     }
 }

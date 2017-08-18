@@ -56,7 +56,7 @@ namespace Thesis_Highlight_Studio
         #region Methods
         private static int _userId;
 
-        private Client oldClient;
+        private User oldClient;
 
         private bool isEdited;
 
@@ -88,9 +88,9 @@ namespace Thesis_Highlight_Studio
             return this.isEdited;
         }
 
-        public Client StoreValues()
+        public User StoreValues()
         {       
-            var newClient = new Client();
+            var newClient = new User();
             try
             {
                 this.isEdited = false;
@@ -167,7 +167,7 @@ namespace Thesis_Highlight_Studio
 
         private void LoadValues()
         {
-            var clnt = provide.getClient(userId);
+            var clnt = provide.getCustomer(userId);
             if (clnt != null)
             {
                 tbUserName.Text = clnt.userName;
@@ -183,7 +183,7 @@ namespace Thesis_Highlight_Studio
             }
         }
 
-        private string GenUpdateString(Client client)
+        private string GenUpdateString(User client)
         {
 
             string query = string.Empty;

@@ -58,9 +58,9 @@ namespace Thesis_Highlight_Studio
 
         #region Methods
 
-        private static Client clnt;
+        private static User clnt;
 
-        public Client getClient
+        public User getClient
         {
             get
             {
@@ -73,7 +73,7 @@ namespace Thesis_Highlight_Studio
             var entry = StoreValues();
             if (entry != null)
             {
-                if (provide.addClient(entry))
+                if (provide.addCustomer(entry))
                 {
                     CMsgBox.Show("Customer information successfully added to database.", "INFORMATION", CMsgBox.CMsgBtns.OK);
                     return true;
@@ -83,11 +83,11 @@ namespace Thesis_Highlight_Studio
             return false; 
         }
 
-        private Client StoreValues()
+        private User StoreValues()
         {
             try
             {
-                clnt = new Client();
+                clnt = new User();
                 clnt.typeOfUser = string.IsNullOrWhiteSpace(tbTypeofUser.Text) ? null : tbTypeofUser.Text;
                 clnt.userName = string.IsNullOrWhiteSpace(tbUserName.Text) ? null : tbUserName.Text;
                 clnt.passWord = string.IsNullOrWhiteSpace(tbPassWord.Text) ? null : tbPassWord.Text;

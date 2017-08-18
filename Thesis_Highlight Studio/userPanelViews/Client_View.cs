@@ -39,17 +39,17 @@ namespace Thesis_Highlight_Studio.UserPanel
         }
 
         #region Methods
-        Client c = new Client();
+        User c = new User();
 
         private void viewClient()
         {
             //c.status = "ACTIVE";
             listViewClient.Items.Clear();
-            var list = provide.viewClient();
+            var list = provide.viewCustomer();
 
             if (list != null)
             {
-                foreach (Client use in list)
+                foreach (User use in list)
                 {
                     ListViewItem item = new ListViewItem(use.userId.ToString());
                     item.SubItems.Add(use.familyName + ", " + use.givenName + " " + use.middleName);
@@ -68,7 +68,7 @@ namespace Thesis_Highlight_Studio.UserPanel
         private void deleteClient()
         {
             c.status = "INACTIVE";
-            if (provide.deleteClient(int.Parse(tbuserId.Text), c.status))
+            if (provide.deleteCustomer(int.Parse(tbuserId.Text), c.status))
             {
                 CMsgBox.Show("Data successfully deleted!", "INFORMATION");
                 viewClient();
