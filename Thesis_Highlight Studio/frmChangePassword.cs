@@ -28,6 +28,7 @@ namespace Thesis_Highlight_Studio
 
         }
 
+        #region DLL Import
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
@@ -40,6 +41,12 @@ namespace Thesis_Highlight_Studio
             int nBottomRect, // y-coordinate of lower-right corner
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
-        );
+        ); 
+        #endregion
+
+        private void frmChangePassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

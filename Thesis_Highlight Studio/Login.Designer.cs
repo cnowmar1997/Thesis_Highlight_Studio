@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Username = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
             this.Password = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.Username = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,10 +48,39 @@
             this.panel1.Controls.Add(this.materialRaisedButton1);
             this.panel1.Controls.Add(this.materialCheckBox1);
             this.panel1.Controls.Add(this.Password);
-            this.panel1.Location = new System.Drawing.Point(2, 350);
+            this.panel1.Location = new System.Drawing.Point(1, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(368, 191);
+            this.panel1.Size = new System.Drawing.Size(368, 241);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(331, -6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(44, 37);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "✖";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Username
+            // 
+            this.Username.Depth = 0;
+            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.Hint = "Username";
+            this.Username.Location = new System.Drawing.Point(69, 28);
+            this.Username.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Username.Name = "Username";
+            this.Username.PasswordChar = '\0';
+            this.Username.SelectedText = "";
+            this.Username.SelectionLength = 0;
+            this.Username.SelectionStart = 0;
+            this.Username.Size = new System.Drawing.Size(227, 23);
+            this.Username.TabIndex = 6;
+            this.Username.UseSystemPasswordChar = false;
             // 
             // materialLabel2
             // 
@@ -125,53 +153,13 @@
             this.Password.TabIndex = 5;
             this.Password.UseSystemPasswordChar = false;
             // 
-            // Username
-            // 
-            this.Username.Depth = 0;
-            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Hint = "Username";
-            this.Username.Location = new System.Drawing.Point(69, 28);
-            this.Username.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Username.Name = "Username";
-            this.Username.PasswordChar = '\0';
-            this.Username.SelectedText = "";
-            this.Username.SelectionLength = 0;
-            this.Username.SelectionStart = 0;
-            this.Username.Size = new System.Drawing.Size(227, 23);
-            this.Username.TabIndex = 6;
-            this.Username.UseSystemPasswordChar = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Thesis_Highlight_Studio.Properties.Resources._10624929_1468788220076131_7648855483895637143_n;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(372, 350);
-            this.panel2.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(331, -6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 37);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "✖";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(372, 540);
+            this.ClientSize = new System.Drawing.Size(372, 307);
             this.ControlBox = false;
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -191,7 +179,6 @@
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
         private MaterialSkin.Controls.MaterialSingleLineTextField Password;
         private MaterialSkin.Controls.MaterialSingleLineTextField Username;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
 
     }

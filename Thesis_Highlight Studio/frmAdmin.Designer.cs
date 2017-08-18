@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.btnRecycleBin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,6 @@
             this.timer_Open = new System.Windows.Forms.Timer(this.components);
             this.timer_Close = new System.Windows.Forms.Timer(this.components);
             this.Mainpnl = new System.Windows.Forms.Panel();
-            this.btnRecycleBin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.Menu_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -70,10 +70,22 @@
             this.Menu_panel.Controls.Add(this.Menu_label);
             this.Menu_panel.Location = new System.Drawing.Point(0, 64);
             this.Menu_panel.Name = "Menu_panel";
-            this.Menu_panel.Size = new System.Drawing.Size(238, 705);
+            this.Menu_panel.Size = new System.Drawing.Size(42, 705);
             this.Menu_panel.TabIndex = 0;
             this.Menu_panel.MouseEnter += new System.EventHandler(this.Menu_panel_MouseEnter);
             this.Menu_panel.MouseLeave += new System.EventHandler(this.Menu_panel_MouseLeave);
+            // 
+            // btnRecycleBin
+            // 
+            this.btnRecycleBin.Depth = 0;
+            this.btnRecycleBin.Location = new System.Drawing.Point(12, 429);
+            this.btnRecycleBin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRecycleBin.Name = "btnRecycleBin";
+            this.btnRecycleBin.Primary = true;
+            this.btnRecycleBin.Size = new System.Drawing.Size(175, 46);
+            this.btnRecycleBin.TabIndex = 7;
+            this.btnRecycleBin.Text = "Recycle Bin";
+            this.btnRecycleBin.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
@@ -220,18 +232,6 @@
             this.Mainpnl.Name = "Mainpnl";
             this.Mainpnl.Size = new System.Drawing.Size(1306, 679);
             this.Mainpnl.TabIndex = 1;
-            // 
-            // btnRecycleBin
-            // 
-            this.btnRecycleBin.Depth = 0;
-            this.btnRecycleBin.Location = new System.Drawing.Point(12, 429);
-            this.btnRecycleBin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRecycleBin.Name = "btnRecycleBin";
-            this.btnRecycleBin.Primary = true;
-            this.btnRecycleBin.Size = new System.Drawing.Size(175, 46);
-            this.btnRecycleBin.TabIndex = 7;
-            this.btnRecycleBin.Text = "Recycle Bin";
-            this.btnRecycleBin.UseVisualStyleBackColor = true;
             // 
             // frmAdmin
             // 

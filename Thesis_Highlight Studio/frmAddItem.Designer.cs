@@ -51,7 +51,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(64, 196);
+            this.materialLabel3.Location = new System.Drawing.Point(76, 220);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(43, 19);
@@ -62,7 +62,7 @@
             // 
             this.tbPrice.Depth = 0;
             this.tbPrice.Hint = "";
-            this.tbPrice.Location = new System.Drawing.Point(197, 192);
+            this.tbPrice.Location = new System.Drawing.Point(209, 216);
             this.tbPrice.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.PasswordChar = '\0';
@@ -79,7 +79,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(64, 158);
+            this.materialLabel2.Location = new System.Drawing.Point(76, 182);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(86, 19);
@@ -90,7 +90,7 @@
             // 
             this.tbDescription.Depth = 0;
             this.tbDescription.Hint = "";
-            this.tbDescription.Location = new System.Drawing.Point(197, 154);
+            this.tbDescription.Location = new System.Drawing.Point(209, 178);
             this.tbDescription.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.PasswordChar = '\0';
@@ -107,7 +107,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(64, 117);
+            this.materialLabel1.Location = new System.Drawing.Point(76, 141);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(49, 19);
@@ -118,7 +118,7 @@
             // 
             this.tbName.Depth = 0;
             this.tbName.Hint = "e.g 1 by 1 ID Picture";
-            this.tbName.Location = new System.Drawing.Point(197, 113);
+            this.tbName.Location = new System.Drawing.Point(209, 137);
             this.tbName.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
@@ -132,7 +132,7 @@
             // btnCancel
             // 
             this.btnCancel.Depth = 0;
-            this.btnCancel.Location = new System.Drawing.Point(276, 276);
+            this.btnCancel.Location = new System.Drawing.Point(353, 333);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Primary = true;
@@ -144,7 +144,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Depth = 0;
-            this.btnSubmit.Location = new System.Drawing.Point(154, 276);
+            this.btnSubmit.Location = new System.Drawing.Point(231, 333);
             this.btnSubmit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Primary = true;
