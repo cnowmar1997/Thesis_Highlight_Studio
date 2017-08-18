@@ -107,19 +107,20 @@
             this.gbUserPrivilege.Controls.Add(this.materialCheckBox3);
             this.gbUserPrivilege.Controls.Add(this.materialCheckBox2);
             this.gbUserPrivilege.Controls.Add(this.materialCheckBox1);
-            this.gbUserPrivilege.Location = new System.Drawing.Point(22, 379);
+            this.gbUserPrivilege.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbUserPrivilege.Location = new System.Drawing.Point(30, 364);
             this.gbUserPrivilege.Name = "gbUserPrivilege";
-            this.gbUserPrivilege.Size = new System.Drawing.Size(733, 86);
+            this.gbUserPrivilege.Size = new System.Drawing.Size(718, 101);
             this.gbUserPrivilege.TabIndex = 99;
             this.gbUserPrivilege.TabStop = false;
-            this.gbUserPrivilege.Text = "User Privileges";
+            this.gbUserPrivilege.Text = "Account Privileges";
             // 
             // materialCheckBox6
             // 
             this.materialCheckBox6.AutoSize = true;
             this.materialCheckBox6.Depth = 0;
             this.materialCheckBox6.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox6.Location = new System.Drawing.Point(523, 53);
+            this.materialCheckBox6.Location = new System.Drawing.Point(523, 57);
             this.materialCheckBox6.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox6.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -135,7 +136,7 @@
             this.materialCheckBox5.AutoSize = true;
             this.materialCheckBox5.Depth = 0;
             this.materialCheckBox5.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox5.Location = new System.Drawing.Point(291, 53);
+            this.materialCheckBox5.Location = new System.Drawing.Point(291, 57);
             this.materialCheckBox5.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox5.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -151,7 +152,7 @@
             this.materialCheckBox4.AutoSize = true;
             this.materialCheckBox4.Depth = 0;
             this.materialCheckBox4.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox4.Location = new System.Drawing.Point(59, 53);
+            this.materialCheckBox4.Location = new System.Drawing.Point(59, 57);
             this.materialCheckBox4.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox4.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -214,7 +215,8 @@
             // 
             this.groupBox4.Controls.Add(this.cmbTypeofUser);
             this.groupBox4.Controls.Add(this.materialLabel17);
-            this.groupBox4.Location = new System.Drawing.Point(22, 82);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(30, 86);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(289, 62);
             this.groupBox4.TabIndex = 98;
@@ -261,19 +263,20 @@
             this.groupBox3.Controls.Add(this.tbMiddleName);
             this.groupBox3.Controls.Add(this.tbGivenName);
             this.groupBox3.Controls.Add(this.tbAddress);
-            this.groupBox3.Location = new System.Drawing.Point(22, 159);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(30, 165);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(394, 210);
+            this.groupBox3.Size = new System.Drawing.Size(394, 189);
             this.groupBox3.TabIndex = 97;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Client Information";
+            this.groupBox3.Text = "Account Information";
             // 
             // tbSchoolName
             // 
             this.tbSchoolName.Depth = 0;
             this.tbSchoolName.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.tbSchoolName.Hint = "School";
-            this.tbSchoolName.Location = new System.Drawing.Point(146, 146);
+            this.tbSchoolName.Location = new System.Drawing.Point(146, 116);
             this.tbSchoolName.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbSchoolName.Name = "tbSchoolName";
             this.tbSchoolName.PasswordChar = '\0';
@@ -290,7 +293,7 @@
             this.tbCourse.Depth = 0;
             this.tbCourse.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F);
             this.tbCourse.Hint = "Course";
-            this.tbCourse.Location = new System.Drawing.Point(146, 176);
+            this.tbCourse.Location = new System.Drawing.Point(146, 146);
             this.tbCourse.MouseState = MaterialSkin.MouseState.HOVER;
             this.tbCourse.Name = "tbCourse";
             this.tbCourse.PasswordChar = '\0';
@@ -308,7 +311,7 @@
             this.materialLabel14.Depth = 0;
             this.materialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel14.Location = new System.Drawing.Point(32, 184);
+            this.materialLabel14.Location = new System.Drawing.Point(32, 154);
             this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel14.Name = "materialLabel14";
             this.materialLabel14.Size = new System.Drawing.Size(91, 19);
@@ -321,7 +324,7 @@
             this.materialLabel15.Depth = 0;
             this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel15.Location = new System.Drawing.Point(32, 154);
+            this.materialLabel15.Location = new System.Drawing.Point(32, 124);
             this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel15.Name = "materialLabel15";
             this.materialLabel15.Size = new System.Drawing.Size(56, 19);
@@ -450,7 +453,8 @@
             this.groupBox2.Controls.Add(this.materialLabel12);
             this.groupBox2.Controls.Add(this.materialLabel13);
             this.groupBox2.Controls.Add(this.tbPassWord);
-            this.groupBox2.Location = new System.Drawing.Point(422, 262);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(430, 247);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(318, 107);
             this.groupBox2.TabIndex = 96;
@@ -523,7 +527,8 @@
             this.groupBox1.Controls.Add(this.tbMobileNumber);
             this.groupBox1.Controls.Add(this.tbLandline);
             this.groupBox1.Controls.Add(this.tbEmail);
-            this.groupBox1.Location = new System.Drawing.Point(422, 125);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(430, 86);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(318, 131);
             this.groupBox1.TabIndex = 95;

@@ -64,55 +64,54 @@ namespace Thesis_Highlight_Studio
 
         #region tblUser
          //STAFF
-         public bool viewStaff(ListView listviewStaff)
+         public List<User> viewStaff()
          {
-             bool ret = false;
+             var list = new List<User>();
+             string query = "SELECT userId,familyName,givenName,middleName,address,mobileNumber,emailAdd FROM tbluser WHERE status = 'ACTIVE'";
 
-             using (DB.Con)
+             using (MySqlConnection connect = new MySqlConnection(DB.ConnectionString))
              {
-                 DB.Con.Close();
-                 DB.Con.Open();
-                 MySqlCommand command = new MySqlCommand(@"SELECT familyName,givenName,middleName,address,mobileNumber,emailAdd FROM tbluser", DB.Con);
-                 MySqlDataReader reader = command.ExecuteReader();
-                 while (reader.Read())
-                 {
-                     ListViewItem item = new ListViewItem(reader["familyName"] + ", " + reader["givenName"] + " " + reader["middleName"] + "");
-                     item.SubItems.Add(reader["address"] + "");
-                     item.SubItems.Add(reader["mobileNumber"] + "");
-                     item.SubItems.Add(reader["emailAdd"] + "");
-                     listviewStaff.Items.Add(item);
-                 }
+                 if (connect.State == ConnectionState.Closed) connect.Open();
+                 list = connect.Query<User>(query, commandType: CommandType.Text).ToList();
              }
-             return ret;
+             return list;
          }
 
-         public bool insertStaff(string typeOfUser, string userName, string passWord, string familyName, string givenName, string middleName, string address, string mobileNumber, string landline, string emailAdd)
+         public bool addStaff(User add_Staff)
          {
-             bool ret = false;
-             string query = "INSERT INTO tblUser(typeOfUser,userName,passWord,familyname,givenName,middleName,address,mobileNumber,landline,emailAdd) VALUES (@typeOfUser,@userName,@passWord,@familyName,@givenName,@middleName,@address,@mobileNumber,@landline,@emailAdd)";
+             //try
+             //{
+                 string query = "INSERT INTO tblUser(typeOfUser,userName,passWord,familyname,givenName,middleName,address,mobileNumber,landline,emailAdd) VALUES (@typeOfUser,@userName,@passWord,@familyName,@givenName,@middleName,@address,@mobileNumber,@landline,@emailAdd)";
 
-             using (DB.Con)
-             {
-                 DB.Con.Close();
-                 DB.Con.Open();
-                 MySqlCommand command = new MySqlCommand(query, DB.Con);
-                 command.Parameters.AddWithValue(@"typeOfUser", typeOfUser);
-                 command.Parameters.AddWithValue(@"userName", userName);
-                 command.Parameters.AddWithValue(@"passWord", passWord);
-                 command.Parameters.AddWithValue(@"familyName", familyName);
-                 command.Parameters.AddWithValue(@"givenName", givenName);
-                 command.Parameters.AddWithValue(@"middleName", middleName);
-                 command.Parameters.AddWithValue(@"address", address);
-                 command.Parameters.AddWithValue(@"mobileNumber", mobileNumber);
-                 command.Parameters.AddWithValue(@"landline", landline);
-                 command.Parameters.AddWithValue(@"emailAdd", emailAdd);
-
-                 if (command.ExecuteNonQuery() > 0)
+                 using (MySqlConnection connect = new MySqlConnection(DB.ConnectionString))
                  {
-                     ret = true;
+                     if (connect.State == ConnectionState.Closed) connect.Open();
+
+                     using (MySqlCommand command = connect.CreateCommand())
+                     {
+                         command.CommandText = query;
+
+                         command.Parameters.AddWithValue(@"typeOfUser", add_Staff.typeOfUser);
+                         command.Parameters.AddWithValue(@"userName", add_Staff.userName);
+                         command.Parameters.AddWithValue(@"passWord", add_Staff.passWord);
+                         command.Parameters.AddWithValue(@"familyName", add_Staff.familyName);
+                         command.Parameters.AddWithValue(@"givenName", add_Staff.givenName);
+                         command.Parameters.AddWithValue(@"middleName", add_Staff.middleName);
+                         command.Parameters.AddWithValue(@"address", add_Staff.address);
+                         command.Parameters.AddWithValue(@"mobileNumber", add_Staff.mobileNumber);
+                         command.Parameters.AddWithValue(@"landline", add_Staff.landline);
+                         command.Parameters.AddWithValue(@"emailAdd", add_Staff.emailAdd);
+
+                         command.ExecuteNonQuery();
+                         return true;
+                     }
                  }
-             }
-             return ret;
+             //}
+             //catch (Exception ex)
+             //{
+             //    MessageBox.Show(ex.ToString());
+             //    return false;
+             //}
          }
 
          public bool updateStaff(string typeOfUser, string userName, string passWord, string familyName, string givenName, string middleName, string address, string mobileNumber, string landline, string emailAdd)
@@ -158,7 +157,7 @@ namespace Thesis_Highlight_Studio
             return list;
         }
 
-        public bool addCustomer(User cust)
+        public bool addCustomer(User add_Cust)
         {
             try
             {
@@ -171,18 +170,18 @@ namespace Thesis_Highlight_Studio
                     {
                         command.CommandText = query;
 
-                        command.Parameters.AddWithValue(@"typeOfUser", cust.typeOfUser);
-                        command.Parameters.AddWithValue(@"userName", cust.userName);
-                        command.Parameters.AddWithValue(@"passWord", cust.passWord);
-                        command.Parameters.AddWithValue(@"familyName", cust.familyName);
-                        command.Parameters.AddWithValue(@"givenName", cust.givenName);
-                        command.Parameters.AddWithValue(@"middleName", cust.middleName);
-                        command.Parameters.AddWithValue(@"nameOfSchool", cust.nameOfSchool);
-                        command.Parameters.AddWithValue(@"courseTitle", cust.courseTitle);
-                        command.Parameters.AddWithValue(@"mobileNumber", cust.mobileNumber);
-                        command.Parameters.AddWithValue(@"landline", cust.landline);
-                        command.Parameters.AddWithValue(@"emailAdd", cust.emailAdd);
-                        command.Parameters.AddWithValue(@"status", cust.status);
+                        command.Parameters.AddWithValue(@"typeOfUser", add_Cust.typeOfUser);
+                        command.Parameters.AddWithValue(@"userName", add_Cust.userName);
+                        command.Parameters.AddWithValue(@"passWord", add_Cust.passWord);
+                        command.Parameters.AddWithValue(@"familyName", add_Cust.familyName);
+                        command.Parameters.AddWithValue(@"givenName", add_Cust.givenName);
+                        command.Parameters.AddWithValue(@"middleName", add_Cust.middleName);
+                        command.Parameters.AddWithValue(@"nameOfSchool", add_Cust.nameOfSchool);
+                        command.Parameters.AddWithValue(@"courseTitle", add_Cust.courseTitle);
+                        command.Parameters.AddWithValue(@"mobileNumber", add_Cust.mobileNumber);
+                        command.Parameters.AddWithValue(@"landline", add_Cust.landline);
+                        command.Parameters.AddWithValue(@"emailAdd", add_Cust.emailAdd);
+                        command.Parameters.AddWithValue(@"status", add_Cust.status);
 
 
                         command.ExecuteNonQuery();

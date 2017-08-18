@@ -41,10 +41,28 @@ namespace Thesis_Highlight_Studio.UserPanel
         #region Methods
         User c = new User();
 
+        private void viewStaff()
+        {
+            lvStaff.Items.Clear();
+            var list = provide.viewStaff();
+
+            if (list != null)
+            {
+                foreach (User use in list)
+                {
+                    ListViewItem item = new ListViewItem(use.userId.ToString());
+                    item.SubItems.Add(use.familyName + ", " + use.givenName + " " + use.middleName);
+                    item.SubItems.Add(use.mobileNumber + "/" + use.landline);
+                    item.SubItems.Add(use.emailAdd);
+                    lvStaff.Items.Add(item);
+                }
+            }
+        }
+
         private void viewClient()
         {
             //c.status = "ACTIVE";
-            listViewClient.Items.Clear();
+            lvCustomer.Items.Clear();
             var list = provide.viewCustomer();
 
             if (list != null)
@@ -55,10 +73,9 @@ namespace Thesis_Highlight_Studio.UserPanel
                     item.SubItems.Add(use.familyName + ", " + use.givenName + " " + use.middleName);
                     item.SubItems.Add(use.nameOfSchool);
                     item.SubItems.Add(use.courseTitle);
-                    item.SubItems.Add(use.mobileNumber);
-                    item.SubItems.Add(use.landline);
+                    item.SubItems.Add(use.mobileNumber + "/" + use.landline);
                     item.SubItems.Add(use.emailAdd);
-                    listViewClient.Items.Add(item);
+                    lvCustomer.Items.Add(item);
 
                 }
             }
@@ -91,10 +108,10 @@ namespace Thesis_Highlight_Studio.UserPanel
         private void listviewClient_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
-                if (listViewClient.FocusedItem.Bounds.Contains(e.Location) == true)
+                if (lvCustomer.FocusedItem.Bounds.Contains(e.Location) == true)
                     contextMenuStrip1.Show(Cursor.Position);
 
-            tbuserId.Text = listViewClient.SelectedItems[0].Text;
+            tbuserId.Text = lvCustomer.SelectedItems[0].Text;
             Provider.filter_ID = tbuserId.Text;
             //MessageBox.Show(tbuserId.Text);
 
@@ -102,7 +119,7 @@ namespace Thesis_Highlight_Studio.UserPanel
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmAddClient add = new frmAddClient();
+            frmAddUser add = new frmAddUser();
             DimForm.Show(this.ParentForm, add);
         }
 
@@ -111,6 +128,20 @@ namespace Thesis_Highlight_Studio.UserPanel
             deleteClient();
         } 
         #endregion
+
+        private void btnCustTable_Click(object sender, EventArgs e)
+        {
+            lvCustomer.Visible = true;
+            lvStaff.Visible = false;
+            viewClient(); ;
+        }
+
+        private void btnStaffTable_Click(object sender, EventArgs e)
+        {
+            lvCustomer.Visible = false;
+            lvStaff.Visible = true;
+            viewStaff();
+        }
  
     }
 }

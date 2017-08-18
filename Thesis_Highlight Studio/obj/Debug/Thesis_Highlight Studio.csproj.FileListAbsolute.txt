@@ -16,7 +16,6 @@ C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight S
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.userPanelViews.Item_View.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.UserPanel.Photo_View.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.UserPanel.PnlNotes.resources
-C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.frmAddClient.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.userPanelViews.Staff_View.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight_Studio.userPanelViews.transactionClientView.resources
 C:\Users\Nowmar Calidro\Documents\Visual Studio 2012\Projects\Thesis_Highlight Studio\Thesis_Highlight Studio\obj\Debug\Thesis_Highlight Studio.csproj.GenerateResource.Cache
